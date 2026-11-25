@@ -10,8 +10,10 @@ import {SUMMARY_CATEGORIES,OBSERVE_PROMPT} from './summary-contract';
 import {SYSTEM} from './agent';
 import {tokenCount,fitEvidence,splitText} from './tokens';
 import {RuntimeLimit} from './model-runtime';
+import {IncompleteModelResponse} from './profile-references';
+export {IncompleteModelResponse} from './profile-references';
 import type {Message,PersonSummary,SummaryAttribute} from './types';
-export type JobState={stage:'read'|'reduce'|'synthesise'|'verify'|'done';position:number;batches:string[][];observations:any[];reduced:any[];candidate?:any;includeBehaviour:boolean;calls:number;input_tokens:number;output_tokens:number;covered:string[];error?:string;levels:number;reduction_version?:number;source_warnings?:{stage:string;reason:string;count:number}[];completed_batches?:number[];cache_hits?:number;started?:string;first_preview_seconds?:number};
+export type JobState={stage:'read'|'reduce'|'synthesise'|'verify'|'done';position:number;batches:string[][];observations:any[];reduced:any[];candidate?:any;includeBehaviour:boolean;calls:number;input_tokens:number;output_tokens:number;covered:string[];error?:string;levels:number;reduction_version?:number;source_warnings?:{stage:string;reason:string;count:number}[];completed_batches?:number[];cache_hits?:number;started?:string;first_preview_seconds?:number;batch_depths?:number[];split_count?:number};
 export function profileParts(messages:Message[]){return messages.flatMap(m=>{let offset=0;return (m.body.length?splitText(m.body,400):['']).map(body=>{const start=m.start+offset;offset+=body.length;return {...m,parent_id:m.id,id:`${m.id}@${start}:${m.start+offset}`,start,end:m.start+offset,body}})})}
 export function profileBatches(messages:Message[]){const episodes=exchangeMap(messages);const batches:string[][]=[];let batch:any[]=[];for(const m of messages){const compact={id:m.id,speaker:m.speaker,timestamp:m.timestamp,exchange_id:episodes.get(m.id),body:m.body};if(batch.length&&tokenCount([...batch,compact])>4000){batches.push(batch.map(x=>x.id));batch=[]}batch.push(compact)}if(batch.length)batches.push(batch.map(x=>x.id));return batches;}
 export function profileObservations(value:any,allowed:Set<string>,behaviour:boolean,parts:Message[]=[],context=''){
@@ -36,6 +38,34 @@ export function profileObservations(value:any,allowed:Set<string>,behaviour:bool
 }
 export const PROFILE_READ_CONCURRENCY=1;
 export function pendingProfileBatches(state:JobState){const completed=new Set(state.completed_batches||Array.from({length:state.stage==='read'?state.position:state.batches.length},(_,i)=>i));return state.batches.map((_,i)=>i).filter(i=>!completed.has(i));}
+export const MAX_PROFILE_SPLIT_DEPTH=8;
+// Keep completed checkpoint indices aligned after replacing one unfinished batch.
+export function splitProfileBatch(state:JobState,index:number){
+ const batch=state.batches[index];const completed=state.completed_batches||Array.from({length:state.position},(_,i)=>i);
+ if(!batch||completed.includes(index))throw Error('Cannot split a completed or missing reading batch.');
+ const depths=state.batch_depths?.length===state.batches.length?[...state.batch_depths]:state.batches.map(()=>0);const depth=depths[index]||0;
+ if(batch.length<2||depth>=MAX_PROFILE_SPLIT_DEPTH)throw Error('The model output limit was reached for a reading batch that cannot be split further. Completed batches are saved; try another model or a shorter source.');
+ const mid=Math.ceil(batch.length/2);state.batches.splice(index,1,batch.slice(0,mid),batch.slice(mid));depths.splice(index,1,depth+1,depth+1);state.batch_depths=depths;
+ state.completed_batches=completed.map(i=>i>index?i+1:i);state.position=state.completed_batches.length;state.split_count=(state.split_count||0)+1;
+}
+export function profileOutputLimit(error:unknown){
+ if(!(error instanceof IncompleteModelResponse))return false;
+ const d=error.details;if(d.reason==='max_output_tokens'||d.finish_reason==='length')return true;
+ // Some providers omit incomplete_details despite consuming almost the whole cap.
+ // Treat that narrow case as likely truncation, never an explicit different reason.
+ return d.status==='incomplete'&&(d.reason===undefined||d.reason===null||d.reason==='')&&typeof d.output_limit==='number'&&Number.isFinite(d.output_limit)&&d.output_limit>0&&typeof d.output_tokens==='number'&&Number.isFinite(d.output_tokens)&&d.output_tokens>=Math.ceil(d.output_limit*0.995)&&d.output_tokens<=d.output_limit;
+}
+export function recoverProfileOutputLimit(state:JobState,index:number,error:unknown){
+ if(!profileOutputLimit(error))return false;
+ const details=(error as IncompleteModelResponse).details;if(Number.isFinite(details.input_tokens))state.input_tokens+=Number(details.input_tokens);if(Number.isFinite(details.output_tokens))state.output_tokens+=Number(details.output_tokens);
+ splitProfileBatch(state,index);return true;
+}
+// Existing failed jobs may have saved usage details before split recovery existed.
+export function recoverSavedProfileSplit(state:JobState,jobId:string,record:any){
+ if(state.stage!=='read'||!state.error||!record||record.job_id!==jobId||record.stage!=='summary_observe'||record.error!==state.error||!record.incomplete||typeof record.incomplete!=='object')return false;
+ const index=pendingProfileBatches(state)[0];if(index===undefined)return false;
+ return recoverProfileOutputLimit(state,index,new IncompleteModelResponse(record.incomplete,true));
+}
 export async function readProfileWave<T>(indices:number[],provider:string,worker:(index:number)=>Promise<T>){const selected=[...indices].sort((a,b)=>a-b).slice(0,1);const results=await Promise.allSettled(selected.map(worker));return results.map((result,i)=>({index:selected[i],result}));}
 export async function profileBatchKey(owner:string,profileId:string,config:unknown,packet:unknown){const bytes=new TextEncoder().encode(JSON.stringify({revision:'parallel-profile-v1',owner,profileId,config,packet,prompt:OBSERVE_PROMPT,system:SYSTEM}));return Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))).map(b=>b.toString(16).padStart(2,'0')).join('');}
 export function preliminaryProfile(state:JobState,person:any,messages:Message[]){
@@ -47,7 +77,7 @@ export function preliminaryProfile(state:JobState,person:any,messages:Message[])
  const dates=evidence.map(m=>m.timestamp.slice(0,10)).sort();
  return {attributes,reviewed_messages:new Set(evidence.map(m=>m.parent_id)).size,total_messages:messages.length,from:dates[0],to:dates.at(-1),preliminary:true};
 }
-export function profileProgress(job:any,state:JobState,person:any,messages:Message[]){const preview=preliminaryProfile(state,person,messages);return {id:job.id,status:job.status,stage:state.stage,processed_messages:new Set(state.covered.map(id=>id.split('@')[0])).size,total_messages:messages.length,processed_batches:state.completed_batches?.length??(state.stage==='read'?state.position:state.batches.length),total_batches:state.batches.length,model_calls:state.calls,reused_batches:state.cache_hits||0,parallel_batches:isPoeProvider(job.provider)?PROFILE_READ_CONCURRENCY:1,error:state.error,preview,retry_after:job.provider==='hku'?13:1};}
+export function profileProgress(job:any,state:JobState,person:any,messages:Message[]){const preview=preliminaryProfile(state,person,messages);return {id:job.id,status:job.status,stage:state.stage,processed_messages:new Set(state.covered.map(id=>id.split('@')[0])).size,total_messages:messages.length,processed_batches:state.completed_batches?.length??(state.stage==='read'?state.position:state.batches.length),total_batches:state.batches.length,model_calls:state.calls,reused_batches:state.cache_hits||0,parallel_batches:isPoeProvider(job.provider)?PROFILE_READ_CONCURRENCY:1,split_count:state.split_count||0,error:state.error,preview,retry_after:job.provider==='hku'?13:1};}
 export async function startProfileJob(owner:string,person:any,messages:Message[],provider:Provider,includeBehaviour:boolean){const parts=profileParts(messages);if(!parts.some(p=>p.body.length))throw new HttpError(400,'Upload a conversation containing readable text first.');const id=crypto.randomUUID(),now=new Date().toISOString();const state:JobState={stage:'read',position:0,batches:profileBatches(parts.filter(p=>p.body.length>0)),observations:[],reduced:[],includeBehaviour,calls:0,input_tokens:0,output_tokens:0,covered:[],levels:0,completed_batches:[],cache_hits:0,started:now};await db().prepare('INSERT INTO profile_jobs(id,owner,profile_id,version,provider,state,status,created,updated) VALUES(?,?,?,?,?,?,?,?,?)').bind(id,owner,person.id,person.version,provider,JSON.stringify(state),'pending',now,now).run();return profileProgress({id,status:'pending',provider},state,person,messages);}
 export async function stepProfileJob(owner:string,job:any,person:any,messages:Message[]){if(job.version!==person.version)throw new HttpError(409,'Chat changed; start a new profile job.');let state:JobState=JSON.parse(job.state);if(job.status==='complete')return {id:job.id,status:'complete'};if(job.status==='failed')throw new HttpError(422,state.error||'Profile job failed. Start a new run to retry explicitly.');const lease=new Date().toISOString();const locked=await db().prepare("UPDATE profile_jobs SET status='running',updated=? WHERE id=? AND owner=? AND status='pending'").bind(lease,job.id,owner).run();if(!locked.meta.changes)return {...profileProgress(job,state,person,messages),retry_after:5};const parts=profileParts(messages),refs=new Map(parts.map(m=>[m.id,m])),episodes=exchangeMap(parts);state.covered=[...new Set([...state.covered,...parts.filter(p=>!p.body.length).map(p=>p.id)])];const cfg=modelConfig(job.provider,owner,'profile');cfg.jobId=job.id;const packet=(ms:Message[])=>ms.map(m=>({id:m.id,speaker:m.speaker,timestamp:m.timestamp,exchange_id:episodes.get(m.id),body:m.body}));const base={person:person.name,user_context:person.context,include_behaviour:state.includeBehaviour,response_language:'en',today:hongKongToday(),timezone:'Asia/Hong_Kong'};let status='pending',summary:PersonSummary|undefined;
  try{prepareReduction(state);if(state.calls>=MAX_PROFILE_CALLS)throw Error('Profile preprocessing reached its 1,000-call ceiling. Nothing was silently truncated.');const accept=(value:any,allowed:Set<string>)=>{const checked=profileObservations(value,allowed,state.includeBehaviour,parts,person.context||'');state.source_warnings=[...(state.source_warnings||[]),...checked.warnings.map(w=>({...w,stage:state.stage}))];return checked.attributes};const ask=async(stage:string,data:unknown)=>{state.calls++;const r=await callProvider(cfg,stage,data,profileRequestTimeout(job.provider));state.input_tokens+=r.input_tokens;state.output_tokens+=r.output_tokens;return r.value};
@@ -65,7 +95,7 @@ export async function stepProfileJob(owner:string,job:any,person:any,messages:Me
    return {ids,attributes:checked.attributes,warnings:checked.warnings,reused};
   });
   let failure:unknown;
-  for(const {index,result} of wave){if(result.status==='fulfilled'){const r=result.value;state.observations.push(...r.attributes);state.covered=[...new Set([...state.covered,...r.ids])];state.completed_batches.push(index);state.cache_hits=(state.cache_hits||0)+(r.reused?1:0);state.source_warnings=[...(state.source_warnings||[]),...r.warnings.map(w=>({...w,stage:'read'}))];}else{if(result.reason instanceof RuntimeLimit&&result.reason.retryAfter)state.calls=Math.max(0,state.calls-1);else failure=result.reason;}}
+  for(const {index,result} of wave){if(result.status==='fulfilled'){const r=result.value;state.observations.push(...r.attributes);state.covered=[...new Set([...state.covered,...r.ids])];state.completed_batches.push(index);state.cache_hits=(state.cache_hits||0)+(r.reused?1:0);state.source_warnings=[...(state.source_warnings||[]),...r.warnings.map(w=>({...w,stage:'read'}))];}else{if(result.reason instanceof RuntimeLimit&&result.reason.retryAfter)state.calls=Math.max(0,state.calls-1);else{try{if(!recoverProfileOutputLimit(state,index,result.reason))failure=result.reason;}catch(e){failure=e;}}}}
   state.position=state.completed_batches.length;
   if(state.covered.length&&state.first_preview_seconds===undefined)state.first_preview_seconds=(Date.now()-Date.parse(state.started||job.created))/1000;
   if(failure)throw failure;

@@ -1,3 +1,4 @@
+import {socialTurn,unclearTurn} from './social-turn';
 import {callProvider,validate} from './agent';
 import {withRequestWindow} from './model-runtime';
 import {modelConfig,type Provider} from './model-config';
@@ -20,6 +21,8 @@ function rankMemories(values:Episode[],question:string){
  for(const x of ranked)add(x.e);return chosen;
 }
 export async function runConversation(options:ConversationOptions,providerCall=callProvider):Promise<any>{
+ const social=socialTurn(options.question);if(social)return social;
+ const unclear=unclearTurn(options.question);if(unclear)return unclear;
  const {question,messages,profiles,context,cache}=options,plan=conversationPlan(messages),cfg=modelConfig(options.provider,options.owner,'conversation');
  const trace:any[]=[],metrics:any={engine:CONVERSATION_REVISION,model:cfg.model,provider:cfg.provider,model_calls:0,tool_calls:0,input_tokens:0,output_tokens:0,cache_hits:0,whole_history_read:plan.full,available_messages:messages.length};const start=Date.now();
  const ask=async(stage:string,data:any)=>{if(metrics.model_calls>=6)throw Error('Conversation request call ceiling reached. Reading checkpoints are saved.');metrics.model_calls++;trace.push({stage,evidence_messages:data.evidence?.length||0});try{const r=await withRequestWindow(()=>providerCall(cfg,stage,data,180000),seconds=>{metrics.cooldown_seconds=(metrics.cooldown_seconds||0)+seconds;trace.push({stage:'provider_cooldown',waiting_for:stage,retry_after:seconds,reason:'Waiting for a local request slot; no provider request was made.'})});metrics.input_tokens+=r.input_tokens;metrics.output_tokens+=r.output_tokens;return r.value}catch(err){const details=(err as any)?.details;if(Number.isFinite(details?.input_tokens)&&Number.isFinite(details?.output_tokens)){metrics.input_tokens+=details.input_tokens;metrics.output_tokens+=details.output_tokens}else metrics.provider_usage_unknown=true;throw err}};
@@ -42,7 +45,7 @@ export async function runConversation(options:ConversationOptions,providerCall=c
   const broad=/\b(how often|how many|ever|never|always|change[ds]?|over time|all|every|frequency|pattern)\b|幾多次|有冇試過|一直|變化|有冇變|從來|每次|所有|模式/i.test(question);
   if(!relevant||broad){originalSearch=searchConversationOriginals(plan.messages,question);usedOriginalSearch=true;trace.push({stage:'original_message_search',trigger:broad?'broad_or_change_question':'no_relevant_saved_note',searched_messages:originalSearch.searched_messages,matching_messages:originalSearch.matching_messages,selected_messages:originalSearch.messages.length,method:'lexical'});if(originalSearch.messages.length){evidence=originalSearch.messages;memories=[];usingOriginalEvidence=true;}}
  }
- const answerWithEvidence=async()=>{
+ const answerWithEvidence=async():Promise<any>=>{
  const {packet,refs}=aliasEvidence(evidence);const reverse=new Map(evidence.map((m,i)=>[m.id,'m'+(i+1)]));
  const memoryPacket=memories.map(e=>({...e,quote_source_id:e.quote_source_id?reverse.get(e.quote_source_id)||'':undefined,source_ids:e.source_ids.filter(id=>reverse.has(id)).map(id=>reverse.get(id)),counter_source_ids:e.counter_source_ids.filter(id=>reverse.has(id)).map(id=>reverse.get(id)),unavailable_reference_count:[...e.source_ids,...e.counter_source_ids].filter(id=>!reverse.has(id)).length}));
  const coverage={mode:plan.full?'full_context':usingOriginalEvidence?'original_lexical_search':'cached_exchanges_and_selected_originals',original_search:originalSearch?{method:'lexical',searched_messages:originalSearch.searched_messages,matching_messages:originalSearch.matching_messages,selected_messages:originalSearch.messages.length}:undefined,messages_in_scope:messages.length,all_messages_read:readingComplete,originals_for_answer:evidence.length,selected_memories:memories.length,extraction_omissions:metrics.reading?.extraction_omissions||0};metrics.coverage=coverage;
@@ -51,6 +54,10 @@ export async function runConversation(options:ConversationOptions,providerCall=c
  const omitted:any[]=[];const section=(key:string,max:number)=>{const v=response[key];if(!Array.isArray(v)||v.length>max){omitted.push({id:'section_'+key,reason:`Invalid ${key} section; omitted before review.`});return [];}return v;};
  const textField=(key:string,max:number)=>{const v=response[key];if(typeof v!=='string'||v.length>max){omitted.push({id:'section_'+key,reason:`Invalid ${key} field; omitted before review.`});return '';}return v;};
  const draft={overview:textField('overview',1200),episodes:section('episodes',16),findings:section('findings',6),patterns:section('patterns',4),next_question:textField('next_question',2000)};
+ if(!draft.overview.trim()&&!draft.episodes.length&&!draft.findings.length&&!draft.patterns.length&&/[?？]$/.test(draft.next_question.trim())){
+  metrics.outcome='needs_clarification';metrics.elapsed_seconds=(Date.now()-start)/1000;trace.push({stage:'input_clarification',model_called:true});
+  return {response_language:responseLanguage(question),status:'needs clarification',findings:[],episodes:[],patterns:[],candidates:[],next_question:draft.next_question,trace,metrics};
+ }
  // Provider-generated limits are intentionally not displayed; scope comes from server facts.
  if(omitted.length)trace.push({stage:'answer_schema_omissions',fields:omitted.map(x=>x.id)});
  const items:any[]=[];const add=(id:string,type:string,value:any,sourceIds:string[],counterIds:string[]=[])=>{for(const ref of [...sourceIds,...counterIds])if(!refs.has(ref))throw Error('Item source is outside the supplied originals.');items.push({id,type,value,source_ids:sourceIds,counter_source_ids:counterIds})};

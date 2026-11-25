@@ -1,4 +1,4 @@
-export type Provider='hku'|'poe'|'poe-luna'|'poe-sonnet'|'openrouter-nemotron';
+export type Provider='hku'|'poe'|'poe-luna'|'poe-sonnet'|'poe-gemini'|'openrouter-nemotron';
 export const DEFAULT_PROVIDER:Provider='poe-sonnet';
 export function profileRequestTimeout(provider:Provider){return provider==='hku'?90_000:180_000;}
 export function profileLeaseTimeout(provider:Provider){return profileRequestTimeout(provider)+30_000;}
@@ -9,4 +9,4 @@ export function modelTimeoutMessage(provider:Provider|undefined,stage:string,tim
 }
 export function isTimeoutFailure(error:unknown){return error instanceof Error&&(error.name==='TimeoutError'||/timed?\s*out|timeout/i.test(error.message));}
 
-export function isPoeProvider(provider:string|undefined){return provider==='poe'||provider==='poe-luna'||provider==='poe-sonnet';}
+export function isPoeProvider(provider:string|undefined){return provider==='poe'||provider==='poe-luna'||provider==='poe-sonnet'||provider==='poe-gemini';}

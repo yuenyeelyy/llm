@@ -51,3 +51,5 @@ test('Ask route supplies only messages within the selected date range',async()=>
 });
 
 test("Network question reaches independently reviewed people engine",async()=>{records.calls=[];const r=await call({kind:"network"});assert.equal(r.status,200);assert.equal(records.calls.length,1);assert.equal(records.calls[0].test_engine,"people");});
+
+test('Standalone farewells bypass both fixed and adaptive analysis',async()=>{for(const variant of ['A','C']){const before=records.calls.length;const res=await call({variant,question:'bye'});assert.equal(res.status,200);const turn=await res.json();const answer=JSON.parse(turn.answer);assert.equal(answer.metrics.model_calls,0);assert.equal(answer.analysis_notice,'Goodbye! Talk to you next time.');assert.equal(records.calls.length,before)}});
