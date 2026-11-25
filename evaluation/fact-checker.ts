@@ -54,6 +54,7 @@ export interface EvaluationResult {
   retrieval_method?: 'single_draft' | 'review_revise' | 'with_acquisition';
   findings_generated?: number;
   verification_stages_completed?: number;
+  raw_answer?: unknown;
 }
 
 /**
@@ -355,7 +356,8 @@ export async function evaluateQuestion(
   variant: 'A' | 'B' | 'C' | 'B-wide',
   kind: 'analysis' | 'chat' | 'draft' | 'network',
   judgeMethod: 'llm' | 'keyword' = 'llm',
-  provider: string = 'poe'
+  provider: string = 'poe',
+  independent: boolean = false
 ): Promise<EvaluationResult> {
   try {
     const {result, latency} = await callLocalAsk({
@@ -363,7 +365,7 @@ export async function evaluateQuestion(
       profileIds: [profileId],
       variant,
       kind,
-      independent: false, // 保持 false 以測試完整檢索邏輯
+      independent,
       provider
     });
 
@@ -511,7 +513,8 @@ export async function evaluateQuestion(
       total_source_characters: totalSourceCharacters,
       retrieval_method: retrievalMethod,
       findings_generated: findingsGenerated,
-      verification_stages_completed: verificationStagesCompleted
+      verification_stages_completed: verificationStagesCompleted,
+      raw_answer: result.answer
     };
 
   } catch (error: any) {

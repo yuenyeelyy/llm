@@ -1,0 +1,22 @@
+{
+  "fact": {
+    "X": "B",
+    "Y": "C"
+  },
+  "distributed": {
+    "X": "C",
+    "Y": "B"
+  },
+  "ambiguity": {
+    "X": "B",
+    "Y": "C"
+  },
+  "network": {
+    "X": "C",
+    "Y": "B"
+  },
+  "underdetermined": {
+    "X": "B",
+    "Y": "C"
+  }
+}

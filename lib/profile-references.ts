@@ -10,7 +10,7 @@ export function stageOutputLimit(stage:string,operation?:string){
  if(operation==='people')return stage==='conversation_check'?8000:6000;
  if(operation==='conversation')return stage==='conversation_check'?8000:stage==='conversation_answer'?12000:8000;
  if(operation==='profile'){if(stage==='summary_observe')return 4000;if(stage==='summary_check')return 1200;if(stage==='summary_merge'||stage==='summary')return 5000;return 3000;}
- return stage.startsWith('summary')?2200:operation==='network'?1800:1000;
+ return stage.startsWith('summary')?2200:operation==='network'?6000:4000;
 }
 export function providerOutputLimit(model:string,stage:string,operation?:string){
  const base=stageOutputLimit(stage,operation);

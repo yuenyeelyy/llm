@@ -1,0 +1,1374 @@
+[
+  {
+    "id": "network-photo",
+    "question": "Who among these people could I ask to join a nature photography walk? Give evidence for suitable options and qualify availability.",
+    "people": [
+      "Owen",
+      "Kelvin",
+      "Leslie",
+      "Yuki"
+    ],
+    "X": {
+      "status": "partial",
+      "findings": [
+        {
+          "kind": "evidence",
+          "text": "Owen directly said he loves nature and landscape photography, especially wetlands and migratory birds.",
+          "category": "interest",
+          "support": "directly stated",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-dating-5@27@2859:3024",
+              "quote": "Glad you liked it! I genuinely love nature and landscape photography so much, especially quiet wetlands where you can watch the light shift and spot migratory birds.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 2859,
+              "source_end": 3024
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "Owen has independently gone on an early morning birdwatching and photography walk, suggesting he actively does this kind of outing.",
+          "category": "interest",
+          "support": "directly stated",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-dating-5@78@8896:9086",
+              "quote": "Hey! Oh, tomorrow I'm actually going to an early morning birdwatching and photography walk in Long Valley with a couple of colleagues from the NGO, so I'll probably be asleep by 9:30pm haha.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 8896,
+              "source_end": 9086
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "You and Owen already did a photo walk together, and you later referenced another Sunday photo walk.",
+          "category": "current context",
+          "support": "directly stated",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-dating-5@136@15279:15364",
+              "quote": "Hey Owen, thanks for yesterday's photo walk! The reflection shots turned out amazing!",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 15279,
+              "source_end": 15364
+            },
+            {
+              "id": "test-dating-5@172@18384:18450",
+              "quote": "Same here, just catching up on files. Ready for Sunday photo walk?",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 18384,
+              "source_end": 18450
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "Yuki has some camera-related relevance because you suggested a practice run on camera settings.",
+          "category": "interest",
+          "support": "directly stated",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-partnership-4@147@16094:16158",
+              "quote": "Good thinking! Want to do a practice run on the camera settings?",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 16094,
+              "source_end": 16158
+            }
+          ]
+        },
+        {
+          "kind": "inference",
+          "text": "Yuki may be less available for a spontaneous walk because family scheduling and rest time are active considerations in your partnership.",
+          "category": "relationship context",
+          "support": "tentative",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-partnership-4@85@9760:9925",
+              "quote": "Aww no!! I know how much you were looking forward to M+! Let's definitely move your solo M+ morning to Saturday 12 December instead, and I'll give you an extra hour!",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 9760,
+              "source_end": 9925
+            },
+            {
+              "id": "test-partnership-4@92@10492:10574",
+              "quote": "morning! thx for letting me sleep til 9am today, felt like a whole spa vacation 😂",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 10492,
+              "source_end": 10574
+            },
+            {
+              "id": "test-partnership-4@72@8093:8243",
+              "quote": "u are officially husband of the year! and I promise you get the whole afternoon from 2pm to 5pm to watch the Premier League match in complete silence!",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 8093,
+              "source_end": 8243
+            }
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "profile_id": "eval-test-dating-5",
+          "constraints": [
+            {
+              "name": "interest in nature photography",
+              "status": "supported",
+              "source_ids": [
+                "test-dating-5@27@2859:3024",
+                "test-dating-5@78@8896:9086",
+                "test-dating-5@1@29:147"
+              ]
+            },
+            {
+              "name": "willingness to do photography outings with you",
+              "status": "supported",
+              "source_ids": [
+                "test-dating-5@136@15279:15364",
+                "test-dating-5@172@18384:18450",
+                "test-dating-5@105@11907:12136"
+              ]
+            },
+            {
+              "name": "availability is not guaranteed",
+              "status": "supported",
+              "source_ids": [
+                "test-dating-5@78@8896:9086",
+                "test-dating-5@114@13059:13142",
+                "test-dating-5@119@13706:13878"
+              ]
+            }
+          ],
+          "preference_source_ids": [
+            "test-dating-5@27@2859:3024",
+            "test-dating-5@78@8896:9086",
+            "test-dating-5@136@15279:15364"
+          ],
+          "match_kind": "repeated observation",
+          "fit_reason": "Owen is the strongest fit: he explicitly loves nature and landscape photography, has already gone on birdwatching/photography walks, and you two have already done a photo walk together. Availability should be qualified because he has had schedule conflicts around events and may need weekend coordination.",
+          "eligible": true,
+          "provisional": false,
+          "preference_matches": 3,
+          "fit_sources": [
+            {
+              "id": "test-dating-5@27@2859:3024",
+              "quote": "Glad you liked it! I genuinely love nature and landscape photography so much, especially quiet wetlands where you can watch the light shift and spot migratory birds.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 2859,
+              "source_end": 3024
+            },
+            {
+              "id": "test-dating-5@78@8896:9086",
+              "quote": "Hey! Oh, tomorrow I'm actually going to an early morning birdwatching and photography walk in Long Valley with a couple of colleagues from the NGO, so I'll probably be asleep by 9:30pm haha.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 8896,
+              "source_end": 9086
+            },
+            {
+              "id": "test-dating-5@136@15279:15364",
+              "quote": "Hey Owen, thanks for yesterday's photo walk! The reflection shots turned out amazing!",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 15279,
+              "source_end": 15364
+            }
+          ]
+        },
+        {
+          "profile_id": "eval-test-partnership-4",
+          "constraints": [
+            {
+              "name": "interest in photography/camera use",
+              "status": "supported",
+              "source_ids": [
+                "test-partnership-4@147@16094:16158",
+                "test-partnership-4@240@24800:24864"
+              ]
+            },
+            {
+              "name": "interest in nature photography specifically",
+              "status": "unknown",
+              "source_ids": []
+            },
+            {
+              "name": "availability may be limited by parenting/family scheduling",
+              "status": "supported",
+              "source_ids": [
+                "test-partnership-4@85@9760:9925",
+                "test-partnership-4@92@10492:10574",
+                "test-partnership-4@72@8093:8243"
+              ]
+            }
+          ],
+          "preference_source_ids": [
+            "test-partnership-4@147@16094:16158",
+            "test-partnership-4@85@9760:9925"
+          ],
+          "match_kind": "single observation",
+          "fit_reason": "Yuki seems plausibly suitable if the walk is more about practicing camera settings than specifically nature photography. The evidence points to some camera-related activity, but not a clear stated love of nature photography. As a married parent, availability likely depends on family logistics.",
+          "eligible": true,
+          "provisional": true,
+          "preference_matches": 2,
+          "fit_sources": [
+            {
+              "id": "test-partnership-4@147@16094:16158",
+              "quote": "Good thinking! Want to do a practice run on the camera settings?",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 16094,
+              "source_end": 16158
+            },
+            {
+              "id": "test-partnership-4@85@9760:9925",
+              "quote": "Aww no!! I know how much you were looking forward to M+! Let's definitely move your solo M+ morning to Saturday 12 December instead, and I'll give you an extra hour!",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 9760,
+              "source_end": 9925
+            }
+          ]
+        }
+      ],
+      "next_question": "Do you want me to rank all four people explicitly, including who is probably not a good ask right now?"
+    },
+    "Y": {
+      "status": "partial",
+      "findings": [
+        {
+          "kind": "evidence",
+          "text": "Owen is the clearest match: he said on 24 Oct that he 'genuinely love[s] nature and landscape photography,' especially 'quiet wetlands' and spotting 'migratory birds.'",
+          "category": "interest",
+          "support": "directly stated",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-dating-5@27@2859:3024",
+              "quote": "Glad you liked it! I genuinely love nature and landscape photography so much, especially quiet wetlands where you can watch the light shift and spot migratory birds.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 2859,
+              "source_end": 3024
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "He also said on 6 Nov that he was going on 'an early morning birdwatching and photography walk in Long Valley' with colleagues from the NGO, which closely matches a nature photography walk.",
+          "category": "interest",
+          "support": "directly stated",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-dating-5@78@8896:9086",
+              "quote": "Hey! Oh, tomorrow I'm actually going to an early morning birdwatching and photography walk in Long Valley with a couple of colleagues from the NGO, so I'll probably be asleep by 9:30pm haha.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 8896,
+              "source_end": 9086
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "Owen has already done photography outings with you: on 23 Nov you thanked him for 'yesterday's photo walk,' and there is also mention of a 'Sunday photo walk.'",
+          "category": "current context",
+          "support": "directly stated",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-dating-5@136@15279:15364",
+              "quote": "Hey Owen, thanks for yesterday's photo walk! The reflection shots turned out amazing!",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 15279,
+              "source_end": 15364
+            },
+            {
+              "id": "test-dating-5@172@18384:18450",
+              "quote": "Same here, just catching up on files. Ready for Sunday photo walk?",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 18384,
+              "source_end": 18450
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "He repeatedly shares related events and exhibits with you, including a PMQ nature photography talk on Wed 2 Dec and a Hong Kong Heritage Museum nature photo showcase in Shatin running until January.",
+          "category": "interest",
+          "support": "directly stated",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-dating-5@55@6510:6641",
+              "quote": "Deal! Also I saw there's a free nature photography talk at PMQ on Wednesday 2 December evening — want to put that on our radar too?",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 6510,
+              "source_end": 6641
+            },
+            {
+              "id": "test-dating-5@114@13059:13142",
+              "quote": "Hey, quick heads up about that PMQ nature photography talk on Wednesday 2 December.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 13059,
+              "source_end": 13142
+            },
+            {
+              "id": "test-dating-5@81@9483:9639",
+              "quote": "Sounds good! Also forgot to mention — Hong Kong Heritage Museum has a free nature photo showcase running til January, worth a look if you're ever in Shatin.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 9483,
+              "source_end": 9639
+            }
+          ]
+        },
+        {
+          "kind": "inference",
+          "text": "Owen is the best person to ask first because the evidence shows both strong subject-matter interest and an established pattern of doing photo activities with you.",
+          "category": "fact",
+          "support": "tentative",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-dating-5@27@2859:3024",
+              "quote": "Glad you liked it! I genuinely love nature and landscape photography so much, especially quiet wetlands where you can watch the light shift and spot migratory birds.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 2859,
+              "source_end": 3024
+            },
+            {
+              "id": "test-dating-5@136@15279:15364",
+              "quote": "Hey Owen, thanks for yesterday's photo walk! The reflection shots turned out amazing!",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 15279,
+              "source_end": 15364
+            },
+            {
+              "id": "test-dating-5@172@18384:18450",
+              "quote": "Same here, just catching up on files. Ready for Sunday photo walk?",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 18384,
+              "source_end": 18450
+            }
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "profile_id": "eval-test-dating-5",
+          "constraints": [
+            {
+              "name": "interest in nature photography",
+              "status": "supported",
+              "source_ids": [
+                "test-dating-5@27@2859:3024",
+                "test-dating-5@78@8896:9086",
+                "test-dating-5@81@9483:9639",
+                "test-dating-5@114@13059:13142"
+              ]
+            },
+            {
+              "name": "has already joined you for photography activities",
+              "status": "supported",
+              "source_ids": [
+                "test-dating-5@136@15279:15364",
+                "test-dating-5@172@18384:18450",
+                "test-dating-5@105@11907:12136"
+              ]
+            },
+            {
+              "name": "availability should be confirmed rather than assumed",
+              "status": "supported",
+              "source_ids": [
+                "test-dating-5@78@8896:9086",
+                "test-dating-5@119@13706:13878",
+                "test-dating-5@114@13059:13142"
+              ]
+            }
+          ],
+          "preference_source_ids": [
+            "test-dating-5@27@2859:3024",
+            "test-dating-5@78@8896:9086",
+            "test-dating-5@136@15279:15364",
+            "test-dating-5@172@18384:18450"
+          ],
+          "match_kind": "repeated observation",
+          "fit_reason": "Best fit. Owen explicitly loves nature and landscape photography, already goes on birdwatching/photo walks, and has done photo walks with you before. He looks very suitable, though timing is not guaranteed because he has had schedule conflicts and specific commitments.",
+          "eligible": true,
+          "provisional": false,
+          "preference_matches": 4,
+          "fit_sources": [
+            {
+              "id": "test-dating-5@27@2859:3024",
+              "quote": "Glad you liked it! I genuinely love nature and landscape photography so much, especially quiet wetlands where you can watch the light shift and spot migratory birds.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 2859,
+              "source_end": 3024
+            },
+            {
+              "id": "test-dating-5@78@8896:9086",
+              "quote": "Hey! Oh, tomorrow I'm actually going to an early morning birdwatching and photography walk in Long Valley with a couple of colleagues from the NGO, so I'll probably be asleep by 9:30pm haha.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 8896,
+              "source_end": 9086
+            },
+            {
+              "id": "test-dating-5@172@18384:18450",
+              "quote": "Same here, just catching up on files. Ready for Sunday photo walk?",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 18384,
+              "source_end": 18450
+            },
+            {
+              "id": "test-dating-5@136@15279:15364",
+              "quote": "Hey Owen, thanks for yesterday's photo walk! The reflection shots turned out amazing!",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 15279,
+              "source_end": 15364
+            }
+          ]
+        },
+        {
+          "profile_id": "eval-test-partnership-4",
+          "constraints": [
+            {
+              "name": "interest in photography / camera practice",
+              "status": "supported",
+              "source_ids": [
+                "test-partnership-4@147@16094:16158",
+                "test-partnership-4@240@24800:24864"
+              ]
+            },
+            {
+              "name": "nature-specific interest",
+              "status": "unknown",
+              "source_ids": []
+            },
+            {
+              "name": "availability may be constrained by parenting / family scheduling",
+              "status": "supported",
+              "source_ids": [
+                "test-partnership-4@85@9760:9925",
+                "test-partnership-4@92@10492:10574",
+                "test-partnership-4@72@8093:8243"
+              ]
+            }
+          ],
+          "preference_source_ids": [
+            "test-partnership-4@147@16094:16158",
+            "test-partnership-4@85@9760:9925"
+          ],
+          "match_kind": "single observation",
+          "fit_reason": "Possible but weaker fit. Yuki appears open to photography-related activity through camera-settings practice, but there is no direct evidence of interest in nature photography specifically. Availability also likely depends on family logistics.",
+          "eligible": true,
+          "provisional": true,
+          "preference_matches": 2,
+          "fit_sources": [
+            {
+              "id": "test-partnership-4@147@16094:16158",
+              "quote": "Good thinking! Want to do a practice run on the camera settings?",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 16094,
+              "source_end": 16158
+            },
+            {
+              "id": "test-partnership-4@85@9760:9925",
+              "quote": "Aww no!! I know how much you were looking forward to M+! Let's definitely move your solo M+ morning to Saturday 12 December instead, and I'll give you an extra hour!",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 9760,
+              "source_end": 9925
+            }
+          ]
+        },
+        {
+          "profile_id": "eval-test-work-3",
+          "constraints": [
+            {
+              "name": "interest in nature photography",
+              "status": "unknown",
+              "source_ids": []
+            },
+            {
+              "name": "open to joining activities generally",
+              "status": "supported",
+              "source_ids": [
+                "test-work-3@177@15039:15129"
+              ]
+            },
+            {
+              "name": "availability uncertain due to personal commitments",
+              "status": "supported",
+              "source_ids": [
+                "test-work-3@104@8581:8699",
+                "test-work-3@133@11041:11123"
+              ]
+            }
+          ],
+          "preference_source_ids": [
+            "test-work-3@177@15039:15129"
+          ],
+          "match_kind": "general",
+          "fit_reason": "Weak option. Leslie seems sociable and willing to join group activities, but nothing here ties her to photography or nature walks, and she has had outside commitments that affected plans.",
+          "eligible": true,
+          "provisional": true,
+          "preference_matches": 1,
+          "fit_sources": [
+            {
+              "id": "test-work-3@177@15039:15129",
+              "quote": "haha yeah she was so impressed! she asked if she could join our swimming sessions sometime",
+              "profile_id": "eval-test-work-3",
+              "source_id": "test-work-3",
+              "source_version": 1,
+              "source_start": 15039,
+              "source_end": 15129
+            }
+          ]
+        },
+        {
+          "profile_id": "eval-test-friendship-3",
+          "constraints": [
+            {
+              "name": "interest in nature photography",
+              "status": "unknown",
+              "source_ids": []
+            },
+            {
+              "name": "current rapport for inviting to leisure activity",
+              "status": "contradicted",
+              "source_ids": [
+                "test-friendship-3@94@11056:11186",
+                "test-friendship-3@95@11215:11428"
+              ]
+            },
+            {
+              "name": "Current availability",
+              "status": "unknown",
+              "source_ids": []
+            }
+          ],
+          "preference_source_ids": [],
+          "match_kind": "general",
+          "fit_reason": "No personal fit is established in the reviewed evidence; ask whether they are interested.",
+          "eligible": false,
+          "provisional": true,
+          "preference_matches": 0,
+          "fit_sources": []
+        }
+      ],
+      "next_question": "Do you want me to draft a message to Owen that invites him on a nature photography walk while acknowledging his availability may depend on timing?"
+    }
+  },
+  {
+    "id": "network-cinema",
+    "question": "Who among these people could I invite to an arthouse film screening? Explain evidence and do not assume anyone is available.",
+    "people": [
+      "Owen",
+      "Kelvin",
+      "Leslie",
+      "Yuki"
+    ],
+    "X": {
+      "status": "partial",
+      "findings": [
+        {
+          "kind": "evidence",
+          "text": "Kelvin explicitly said he 'genuinely love[s] European arthouse films, A24 releases, and restored 90s Hong Kong cinema' and said nothing beats watching them on a proper screen.",
+          "category": "interest",
+          "support": "directly stated",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-friendship-3@12@1386:1552",
+              "quote": "Practically my second home. I genuinely love European arthouse films, A24 releases, and restored 90s Hong Kong cinema. Nothing beats watching them on a proper screen.",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 1386,
+              "source_end": 1552
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "You and Kelvin already have a history of going to screenings together, including references to 'uni film society days,' a Polish cinema screening, and an arthouse screening you attended together.",
+          "category": "relationship context",
+          "support": "directly stated",
+          "lifecycle": "historical",
+          "citations": [
+            {
+              "id": "test-friendship-3@13@1581:1668",
+              "quote": "We should catch a screening together soon, feels like ages since uni film society days.",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 1581,
+              "source_end": 1668
+            },
+            {
+              "id": "test-friendship-3@68@7633:7683",
+              "quote": "The Polish cinema screening on Tuesday 1 December?",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 7633,
+              "source_end": 7683
+            },
+            {
+              "id": "test-friendship-3@95@11215:11428",
+              "quote": "Caring about your craft doesn't give you the right to insult your friends. I literally came to an arthouse screening with you, read your essay, and gave you an honest reaction, and you immediately talk down to me.",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 11215,
+              "source_end": 11428
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "Kelvin is deeply film-engaged beyond casual viewing: editing an indie documentary, pitching an essay on Wong Kar-wai, and studying visual storytelling in contemporary cinema.",
+          "category": "interest",
+          "support": "directly stated",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-friendship-3@4@343:496",
+              "quote": "Editing a short indie documentary for a local director friend, and I just pitched a 2,000-word essay on Wong Kar-wai's framing to an online film journal.",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 343,
+              "source_end": 496
+            },
+            {
+              "id": "test-friendship-3@181@19591:19702",
+              "quote": "Analyzing visual storytelling in contemporary cinema. Way more personal and creative than the documentary edit!",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 19591,
+              "source_end": 19702
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "There is also evidence of tension with Kelvin around film taste; he insulted your reaction to a film, and you later said you value the friendship despite heated disagreement after a screening.",
+          "category": "relationship context",
+          "support": "directly stated",
+          "lifecycle": "historical",
+          "citations": [
+            {
+              "id": "test-friendship-3@88@9949:10130",
+              "quote": "The potato scene was literally establishing the monotony of grief and domestic labour. If you missed that, it's because mainstream Hollywood garbage has completely fried your brain.",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 9949,
+              "source_end": 10130
+            },
+            {
+              "id": "test-friendship-3@95@11215:11428",
+              "quote": "Caring about your craft doesn't give you the right to insult your friends. I literally came to an arthouse screening with you, read your essay, and gave you an honest reaction, and you immediately talk down to me.",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 11215,
+              "source_end": 11428
+            },
+            {
+              "id": "test-friendship-3@138@15457:15612",
+              "quote": "Hey, by the way, I know things got pretty heated after the film screening. I genuinely value your friendship even though we have different taste in cinema.",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 15457,
+              "source_end": 15612
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "Yuki has evidence of interest in art-related events, such as a gallery outing and enthusiasm for a showcase, but no direct evidence about arthouse film interest.",
+          "category": "interest",
+          "support": "directly stated",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-partnership-4@176@18513:18589",
+              "quote": "One more day til you get your gallery time! Any exhibition catches your eye?",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 18513,
+              "source_end": 18589
+            },
+            {
+              "id": "test-partnership-4@152@16505:16566",
+              "quote": "cannot wait honestly. this Showcase is going to be so special",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 16505,
+              "source_end": 16566
+            }
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "profile_id": "eval-test-friendship-3",
+          "constraints": [
+            {
+              "name": "likes arthouse / cinema screenings",
+              "status": "supported",
+              "source_ids": [
+                "test-friendship-3@12@1386:1552",
+                "test-friendship-3@4@343:496",
+                "test-friendship-3@181@19591:19702",
+                "test-friendship-3@68@7633:7683",
+                "test-friendship-3@13@1581:1668"
+              ]
+            },
+            {
+              "name": "availability for a new screening",
+              "status": "unknown",
+              "source_ids": []
+            },
+            {
+              "name": "possible interpersonal friction around film taste",
+              "status": "supported",
+              "source_ids": [
+                "test-friendship-3@88@9949:10130",
+                "test-friendship-3@95@11215:11428",
+                "test-friendship-3@138@15457:15612"
+              ]
+            }
+          ],
+          "preference_source_ids": [
+            "test-friendship-3@12@1386:1552",
+            "test-friendship-3@4@343:496",
+            "test-friendship-3@181@19591:19702",
+            "test-friendship-3@68@7633:7683",
+            "test-friendship-3@13@1581:1668",
+            "test-friendship-3@191@20548:20615"
+          ],
+          "match_kind": "explicit preference",
+          "fit_reason": "Kelvin is the strongest match: he directly said he loves European arthouse films, A24 releases, and restored Hong Kong cinema, and there is prior shared context of attending screenings together. However, there is also evidence of a conflict after a prior screening, so he seems invite-worthy based on taste, but the social dynamic may need care.",
+          "eligible": true,
+          "provisional": true,
+          "preference_matches": 6,
+          "fit_sources": [
+            {
+              "id": "test-friendship-3@13@1581:1668",
+              "quote": "We should catch a screening together soon, feels like ages since uni film society days.",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 1581,
+              "source_end": 1668
+            },
+            {
+              "id": "test-friendship-3@12@1386:1552",
+              "quote": "Practically my second home. I genuinely love European arthouse films, A24 releases, and restored 90s Hong Kong cinema. Nothing beats watching them on a proper screen.",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 1386,
+              "source_end": 1552
+            },
+            {
+              "id": "test-friendship-3@181@19591:19702",
+              "quote": "Analyzing visual storytelling in contemporary cinema. Way more personal and creative than the documentary edit!",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 19591,
+              "source_end": 19702
+            },
+            {
+              "id": "test-friendship-3@4@343:496",
+              "quote": "Editing a short indie documentary for a local director friend, and I just pitched a 2,000-word essay on Wong Kar-wai's framing to an online film journal.",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 343,
+              "source_end": 496
+            },
+            {
+              "id": "test-friendship-3@191@20548:20615",
+              "quote": "Same! Actually have some film recommendations I want to run by you.",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 20548,
+              "source_end": 20615
+            },
+            {
+              "id": "test-friendship-3@68@7633:7683",
+              "quote": "The Polish cinema screening on Tuesday 1 December?",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 7633,
+              "source_end": 7683
+            }
+          ]
+        },
+        {
+          "profile_id": "eval-test-partnership-4",
+          "constraints": [
+            {
+              "name": "likes visual arts / exhibitions",
+              "status": "supported",
+              "source_ids": [
+                "test-partnership-4@176@18513:18589",
+                "test-partnership-4@152@16505:16566",
+                "test-partnership-4@245@25211:25272"
+              ]
+            },
+            {
+              "name": "specific interest in arthouse film screenings",
+              "status": "unknown",
+              "source_ids": []
+            },
+            {
+              "name": "availability",
+              "status": "unknown",
+              "source_ids": []
+            },
+            {
+              "name": "family obligations may affect scheduling",
+              "status": "supported",
+              "source_ids": [
+                "test-partnership-4@83@9251:9446",
+                "test-partnership-4@72@8093:8243"
+              ]
+            }
+          ],
+          "preference_source_ids": [
+            "test-partnership-4@176@18513:18589",
+            "test-partnership-4@152@16505:16566"
+          ],
+          "match_kind": "shared context",
+          "fit_reason": "Yuki has some evidence of interest in cultural/art events, but nothing directly tying them to arthouse cinema. They could be a maybe if you mean broadly arts-oriented company, but the evidence is weaker, and availability should not be assumed.",
+          "eligible": true,
+          "provisional": true,
+          "preference_matches": 2,
+          "fit_sources": [
+            {
+              "id": "test-partnership-4@176@18513:18589",
+              "quote": "One more day til you get your gallery time! Any exhibition catches your eye?",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 18513,
+              "source_end": 18589
+            },
+            {
+              "id": "test-partnership-4@152@16505:16566",
+              "quote": "cannot wait honestly. this Showcase is going to be so special",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 16505,
+              "source_end": 16566
+            }
+          ]
+        },
+        {
+          "profile_id": "eval-test-dating-5",
+          "constraints": [
+            {
+              "name": "specific interest in arthouse films",
+              "status": "unknown",
+              "source_ids": []
+            },
+            {
+              "name": "friendship context suitable for invite",
+              "status": "supported",
+              "source_ids": [
+                "test-dating-5@164@17703:17847",
+                "test-dating-5@187@19611:19671"
+              ]
+            },
+            {
+              "name": "shared interest in photography / visual culture",
+              "status": "supported",
+              "source_ids": [
+                "test-dating-5@164@17703:17847",
+                "test-dating-5@43@4728:4864"
+              ]
+            },
+            {
+              "name": "availability",
+              "status": "unknown",
+              "source_ids": []
+            }
+          ],
+          "preference_source_ids": [
+            "test-dating-5@164@17703:17847",
+            "test-dating-5@43@4728:4864"
+          ],
+          "match_kind": "single observation",
+          "fit_reason": "Owen seems like a plausible social invite because of a warm friendship and shared photography context, which may overlap with visual/art interests, but there is no direct evidence that he enjoys arthouse films specifically.",
+          "eligible": true,
+          "provisional": true,
+          "preference_matches": 2,
+          "fit_sources": [
+            {
+              "id": "test-dating-5@164@17703:17847",
+              "quote": "Final Sunday thought — I'm really grateful for this friendship. You've made Hong Kong feel like home with all these photo walks and camera tips.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 17703,
+              "source_end": 17847
+            },
+            {
+              "id": "test-dating-5@43@4728:4864",
+              "quote": "Hey Owen, random question — do you know any reliable shops in Sim City for secondhand Fujifilm lenses? I'm tempted to grab a 35mm prime.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 4728,
+              "source_end": 4864
+            }
+          ]
+        }
+      ],
+      "next_question": "Do you want me to rank them strictly by evidence strength, or help draft an invite message for the strongest option?"
+    },
+    "Y": {
+      "status": "partial",
+      "findings": [
+        {
+          "kind": "evidence",
+          "text": "Kelvin explicitly said: 'I genuinely love European arthouse films, A24 releases, and restored 90s Hong Kong cinema. Nothing beats watching them on a proper screen.'",
+          "category": "interest",
+          "support": "directly stated",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-friendship-3@12@1386:1552",
+              "quote": "Practically my second home. I genuinely love European arthouse films, A24 releases, and restored 90s Hong Kong cinema. Nothing beats watching them on a proper screen.",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 1386,
+              "source_end": 1552
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "Kelvin also discussed editing an indie documentary, pitching an essay on Wong Kar-wai, and analyzing visual storytelling in contemporary cinema, which strongly supports deep film interest.",
+          "category": "interest",
+          "support": "directly stated",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-friendship-3@4@343:496",
+              "quote": "Editing a short indie documentary for a local director friend, and I just pitched a 2,000-word essay on Wong Kar-wai's framing to an online film journal.",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 343,
+              "source_end": 496
+            },
+            {
+              "id": "test-friendship-3@181@19591:19702",
+              "quote": "Analyzing visual storytelling in contemporary cinema. Way more personal and creative than the documentary edit!",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 19591,
+              "source_end": 19702
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "There is direct history of film-going with Kelvin: you suggested catching a screening together, referenced a Polish cinema screening, and later said you had gone to an arthouse screening with him.",
+          "category": "relationship context",
+          "support": "directly stated",
+          "lifecycle": "historical",
+          "citations": [
+            {
+              "id": "test-friendship-3@13@1581:1668",
+              "quote": "We should catch a screening together soon, feels like ages since uni film society days.",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 1581,
+              "source_end": 1668
+            },
+            {
+              "id": "test-friendship-3@68@7633:7683",
+              "quote": "The Polish cinema screening on Tuesday 1 December?",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 7633,
+              "source_end": 7683
+            },
+            {
+              "id": "test-friendship-3@95@11215:11428",
+              "quote": "Caring about your craft doesn't give you the right to insult your friends. I literally came to an arthouse screening with you, read your essay, and gave you an honest reaction, and you immediately talk down to me.",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 11215,
+              "source_end": 11428
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "There is also evidence of conflict around film taste with Kelvin, including insulting comments from him and your message that things got heated after the screening.",
+          "category": "relationship context",
+          "support": "directly stated",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-friendship-3@88@9949:10130",
+              "quote": "The potato scene was literally establishing the monotony of grief and domestic labour. If you missed that, it's because mainstream Hollywood garbage has completely fried your brain.",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 9949,
+              "source_end": 10130
+            },
+            {
+              "id": "test-friendship-3@89@10159:10240",
+              "quote": "Wow, okay. So anyone who disagrees with your taste is \"brainwashed by Hollywood\"?",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 10159,
+              "source_end": 10240
+            },
+            {
+              "id": "test-friendship-3@95@11215:11428",
+              "quote": "Caring about your craft doesn't give you the right to insult your friends. I literally came to an arthouse screening with you, read your essay, and gave you an honest reaction, and you immediately talk down to me.",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 11215,
+              "source_end": 11428
+            },
+            {
+              "id": "test-friendship-3@138@15457:15612",
+              "quote": "Hey, by the way, I know things got pretty heated after the film screening. I genuinely value your friendship even though we have different taste in cinema.",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 15457,
+              "source_end": 15612
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "Yuki appears interested in arts/cultural events such as exhibitions and a Showcase, but none of the evidence explicitly mentions film or arthouse cinema.",
+          "category": "interest",
+          "support": "directly stated",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-partnership-4@176@18513:18589",
+              "quote": "One more day til you get your gallery time! Any exhibition catches your eye?",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 18513,
+              "source_end": 18589
+            },
+            {
+              "id": "test-partnership-4@152@16505:16566",
+              "quote": "cannot wait honestly. this Showcase is going to be so special",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 16505,
+              "source_end": 16566
+            }
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "profile_id": "eval-test-dating-5",
+          "constraints": [
+            {
+              "name": "likes arthouse / film screenings",
+              "status": "unknown",
+              "source_ids": []
+            },
+            {
+              "name": "shared hobby / companionship",
+              "status": "supported",
+              "source_ids": [
+                "test-dating-5@164@17703:17847",
+                "test-dating-5@43@4728:4864",
+                "test-dating-5@187@19611:19671"
+              ]
+            },
+            {
+              "name": "availability",
+              "status": "unknown",
+              "source_ids": []
+            }
+          ],
+          "preference_source_ids": [
+            "test-dating-5@164@17703:17847",
+            "test-dating-5@43@4728:4864",
+            "test-dating-5@187@19611:19671"
+          ],
+          "match_kind": "shared context",
+          "fit_reason": "Owen seems like a warm friend with shared photography-related interests, but there is no evidence in the record that he likes arthouse films or screenings specifically. He is possible only in a general social sense, not because of demonstrated film taste.",
+          "eligible": true,
+          "provisional": true,
+          "preference_matches": 3,
+          "fit_sources": [
+            {
+              "id": "test-dating-5@164@17703:17847",
+              "quote": "Final Sunday thought — I'm really grateful for this friendship. You've made Hong Kong feel like home with all these photo walks and camera tips.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 17703,
+              "source_end": 17847
+            },
+            {
+              "id": "test-dating-5@187@19611:19671",
+              "quote": "I cannot wait honestly! This friendship means so much to me!",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 19611,
+              "source_end": 19671
+            },
+            {
+              "id": "test-dating-5@43@4728:4864",
+              "quote": "Hey Owen, random question — do you know any reliable shops in Sim City for secondhand Fujifilm lenses? I'm tempted to grab a 35mm prime.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 4728,
+              "source_end": 4864
+            }
+          ]
+        },
+        {
+          "profile_id": "eval-test-partnership-4",
+          "constraints": [
+            {
+              "name": "likes arthouse / film screenings",
+              "status": "unknown",
+              "source_ids": []
+            },
+            {
+              "name": "interest in visual arts/culture",
+              "status": "supported",
+              "source_ids": [
+                "test-partnership-4@176@18513:18589",
+                "test-partnership-4@152@16505:16566",
+                "test-partnership-4@245@25211:25272"
+              ]
+            },
+            {
+              "name": "availability",
+              "status": "unknown",
+              "source_ids": []
+            },
+            {
+              "name": "family obligations may limit scheduling",
+              "status": "supported",
+              "source_ids": [
+                "test-partnership-4@83@9251:9446"
+              ]
+            }
+          ],
+          "preference_source_ids": [
+            "test-partnership-4@176@18513:18589",
+            "test-partnership-4@152@16505:16566",
+            "test-partnership-4@245@25211:25272"
+          ],
+          "match_kind": "single observation",
+          "fit_reason": "Yuki shows evidence of interest in arts/cultural events, including exhibitions and a 'Showcase,' but nothing here explicitly ties her to arthouse film. She could be considered only as a tentative possibility, with availability not established and some family scheduling constraints in evidence.",
+          "eligible": true,
+          "provisional": true,
+          "preference_matches": 3,
+          "fit_sources": [
+            {
+              "id": "test-partnership-4@176@18513:18589",
+              "quote": "One more day til you get your gallery time! Any exhibition catches your eye?",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 18513,
+              "source_end": 18589
+            },
+            {
+              "id": "test-partnership-4@152@16505:16566",
+              "quote": "cannot wait honestly. this Showcase is going to be so special",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 16505,
+              "source_end": 16566
+            },
+            {
+              "id": "test-partnership-4@245@25211:25272",
+              "quote": "cannot wait honestly. this Showcase is going to be so special",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 25211,
+              "source_end": 25272
+            }
+          ]
+        },
+        {
+          "profile_id": "eval-test-friendship-3",
+          "constraints": [
+            {
+              "name": "likes arthouse / film screenings",
+              "status": "supported",
+              "source_ids": [
+                "test-friendship-3@12@1386:1552",
+                "test-friendship-3@4@343:496",
+                "test-friendship-3@13@1581:1668",
+                "test-friendship-3@68@7633:7683"
+              ]
+            },
+            {
+              "name": "availability",
+              "status": "unknown",
+              "source_ids": []
+            },
+            {
+              "name": "social comfort / low-friction invite",
+              "status": "contradicted",
+              "source_ids": [
+                "test-friendship-3@88@9949:10130",
+                "test-friendship-3@89@10159:10240",
+                "test-friendship-3@95@11215:11428",
+                "test-friendship-3@138@15457:15612"
+              ]
+            }
+          ],
+          "preference_source_ids": [
+            "test-friendship-3@12@1386:1552",
+            "test-friendship-3@4@343:496",
+            "test-friendship-3@13@1581:1668",
+            "test-friendship-3@68@7633:7683"
+          ],
+          "match_kind": "explicit preference",
+          "fit_reason": "Kelvin is the strongest taste match for an arthouse screening: he explicitly says he loves European arthouse films, A24, and restored Hong Kong cinema, and there is prior history of attending screenings together. However, there is also direct evidence of a serious conflict after one screening, so he is a fit on interest but not necessarily the easiest or safest invite socially.",
+          "eligible": false,
+          "provisional": true,
+          "preference_matches": 4,
+          "fit_sources": [
+            {
+              "id": "test-friendship-3@13@1581:1668",
+              "quote": "We should catch a screening together soon, feels like ages since uni film society days.",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 1581,
+              "source_end": 1668
+            },
+            {
+              "id": "test-friendship-3@12@1386:1552",
+              "quote": "Practically my second home. I genuinely love European arthouse films, A24 releases, and restored 90s Hong Kong cinema. Nothing beats watching them on a proper screen.",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 1386,
+              "source_end": 1552
+            },
+            {
+              "id": "test-friendship-3@4@343:496",
+              "quote": "Editing a short indie documentary for a local director friend, and I just pitched a 2,000-word essay on Wong Kar-wai's framing to an online film journal.",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 343,
+              "source_end": 496
+            },
+            {
+              "id": "test-friendship-3@68@7633:7683",
+              "quote": "The Polish cinema screening on Tuesday 1 December?",
+              "profile_id": "eval-test-friendship-3",
+              "source_id": "test-friendship-3",
+              "source_version": 1,
+              "source_start": 7633,
+              "source_end": 7683
+            }
+          ]
+        }
+      ],
+      "next_question": "Do you want me to rank them by best film-taste match versus lowest social risk for the invitation?"
+    }
+  }
+]

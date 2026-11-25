@@ -1,0 +1,4568 @@
+{
+  "metadata": {
+    "timestamp": "2026-11-25T14:54:35.946Z",
+    "provider": "poe",
+    "independent": true,
+    "case_file_sha256": "c6d20d9405ea75a8a3592d69382a7105f3525f97f73ba2c2cf829d1f0ff86419",
+    "histories": [
+      {
+        "id": "test-dating-5",
+        "name": "Owen",
+        "file": "test-dating-5.txt",
+        "sha256": "eaca2c894bd415431cfcde05f2417c163f16c1ebfcb9a0c574dddc2cb1d0dfbd"
+      },
+      {
+        "id": "test-work-3",
+        "name": "Leslie",
+        "file": "test-work-3.txt",
+        "sha256": "c9d6b6ac3b3c68db7009e983526514f951f35763421cff117eb367402433b5d3"
+      },
+      {
+        "id": "test-partnership-4",
+        "name": "Yuki",
+        "file": "test-partnership-4.txt",
+        "sha256": "ceac15c2beeec40dc42dae4212b34f304e34a18730613cab18ff75376c2584e4"
+      },
+      {
+        "id": "test-friendship-3",
+        "name": "Kelvin",
+        "file": "test-friendship-3.txt",
+        "sha256": "dfdc5c5b9629155843d1b1083e48057fbbaf53db289d9fd05d3e5c6d4b0ee587"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "id": "owen-update",
+      "kind": "chat",
+      "people": [
+        "Owen"
+      ],
+      "question": "Is Owen still going to the PMQ photography talk on 2 December, and what changed?",
+      "evidence": [
+        "test-dating-5.txt:55-56,114-119,152-153"
+      ],
+      "expected": "He cancelled because of a mandatory coastal-cleanup briefing, 7–9:30pm; the earlier agreement is superseded."
+    },
+    {
+      "id": "leslie-update",
+      "kind": "chat",
+      "people": [
+        "Leslie"
+      ],
+      "question": "What happened to our 25 November swimming plan, and what was the replacement?",
+      "evidence": [
+        "test-work-3.txt:70-73,101-108,180-181"
+      ],
+      "expected": "Leslie cancelled for her girlfriend's daughter's Parents' Day; they moved it to 2 December, 7pm at Victoria Park."
+    },
+    {
+      "id": "yuki-update",
+      "kind": "chat",
+      "people": [
+        "Yuki"
+      ],
+      "question": "What happened to Yuki's 5 December M+ visit and what did we arrange instead?",
+      "evidence": [
+        "test-partnership-4.txt:81-87,119-121"
+      ],
+      "expected": "She cancelled for Mia's mandatory 5 December event and arranged a replacement for 12 December."
+    },
+    {
+      "id": "owen-fact",
+      "kind": "chat",
+      "people": [
+        "Owen"
+      ],
+      "question": "What technique did Owen suggest for handling bright skies in landscape photographs?",
+      "evidence": [
+        "test-dating-5.txt:33-37"
+      ],
+      "expected": "Expose for highlights using -0.7 EV, then lift shadows about +45 in Lightroom."
+    },
+    {
+      "id": "owen-unknown",
+      "kind": "chat",
+      "people": [
+        "Owen"
+      ],
+      "question": "What hidden psychological fear made Owen choose friendship over romance?",
+      "evidence": [
+        "test-dating-5.txt:105-111"
+      ],
+      "expected": "The messages establish mutual preference for friendship, not a hidden psychological fear; do not invent a motive."
+    },
+    {
+      "id": "network-photo",
+      "kind": "network",
+      "people": [
+        "Owen",
+        "Kelvin",
+        "Leslie",
+        "Yuki"
+      ],
+      "question": "Who among these people could I ask to join a nature photography walk? Give evidence for suitable options and qualify availability.",
+      "evidence": [
+        "test-dating-5.txt:9-17,25-27,134-139"
+      ],
+      "expected": "Owen explicitly enjoys nature photography and has invited the user on photo walks; availability for a new outing is unknown. Do not attribute his preferences to others."
+    },
+    {
+      "id": "network-cinema",
+      "kind": "network",
+      "people": [
+        "Owen",
+        "Kelvin",
+        "Leslie",
+        "Yuki"
+      ],
+      "question": "Who among these people could I invite to an arthouse film screening? Explain evidence and do not assume anyone is available.",
+      "evidence": [
+        "test-friendship-3.txt:4-13,33-40"
+      ],
+      "expected": "Kelvin explicitly enjoys arthouse films and cinema; availability for a new screening is unknown. Avoid cross-person evidence."
+    }
+  ],
+  "results": [
+    {
+      "case_id": "owen-update",
+      "variant": "B",
+      "http_status": 200,
+      "elapsed_ms": 11210,
+      "answer": {
+        "candidates": [],
+        "status": "answered",
+        "findings": [
+          {
+            "kind": "evidence",
+            "text": "Owen originally agreed to the PMQ nature photography talk on Wednesday 2 December.",
+            "category": "current context",
+            "support": "directly stated",
+            "lifecycle": "historical",
+            "citations": [
+              {
+                "id": "test-dating-5@56@6671:6825",
+                "quote": "Oh I saw that event on Facebook! The speaker shoots Hong Kong's outer islands from kayaks. Yes, let's definitely put Wednesday 2 December in the calendar!",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 6671,
+                "source_end": 6825
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "By 16 November, he was no longer planning to go and suggested checking for a recording or visiting the Shatin nature photo exhibition another weekend in December instead.",
+            "category": "current context",
+            "support": "directly stated",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-dating-5@119@13706:13878",
+                "quote": "Thanks for understanding! I'll check if PMQ uploads the recording afterwards, or we can go check out the Shatin nature photo exhibition another weekend in December instead.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 13706,
+                "source_end": 13878
+              }
+            ]
+          },
+          {
+            "kind": "inference",
+            "text": "So no, Owen is not still going to the PMQ talk on 2 December.",
+            "category": "fact",
+            "support": "tentative",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-dating-5@56@6671:6825",
+                "quote": "Oh I saw that event on Facebook! The speaker shoots Hong Kong's outer islands from kayaks. Yes, let's definitely put Wednesday 2 December in the calendar!",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 6671,
+                "source_end": 6825
+              },
+              {
+                "id": "test-dating-5@119@13706:13878",
+                "quote": "Thanks for understanding! I'll check if PMQ uploads the recording afterwards, or we can go check out the Shatin nature photo exhibition another weekend in December instead.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 13706,
+                "source_end": 13878
+              }
+            ]
+          },
+          {
+            "kind": "inference",
+            "text": "What changed is that a volunteer briefing came up, which conflicted with the event.",
+            "category": "current context",
+            "support": "tentative",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-dating-5@118@13624:13676",
+                "quote": "Aww no worries at all! Duty calls for the coastline!",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 13624,
+                "source_end": 13676
+              },
+              {
+                "id": "test-dating-5@120@13907:13959",
+                "quote": "Sounds great, good luck with the volunteer briefing!",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 13907,
+                "source_end": 13959
+              }
+            ]
+          }
+        ],
+        "next_question": "",
+        "trace": [
+          {
+            "stage": "retrieval",
+            "kind": "chat",
+            "available_messages": 201,
+            "initial_messages": 14,
+            "scope": [
+              {
+                "id": "eval-test-dating-5",
+                "name": "Owen",
+                "relationship": "dating-transition-friends",
+                "context": "Evaluation profile for test-dating-5",
+                "version": 1,
+                "attributes": []
+              }
+            ]
+          },
+          {
+            "stage": "draft",
+            "attempt": 1,
+            "evidence_ids": [
+              "test-dating-5@114@13059:13142",
+              "test-dating-5@119@13706:13878",
+              "test-dating-5@105@11907:12136",
+              "test-dating-5@55@6510:6641",
+              "test-dating-5@60@7015:7092",
+              "test-dating-5@113@13021:13029",
+              "test-dating-5@115@13171:13189",
+              "test-dating-5@118@13624:13676",
+              "test-dating-5@120@13907:13959",
+              "test-dating-5@104@11848:11878",
+              "test-dating-5@106@12166:12255",
+              "test-dating-5@54@6364:6481",
+              "test-dating-5@56@6671:6825",
+              "test-dating-5@59@6978:6986"
+            ]
+          },
+          {
+            "stage": "review",
+            "attempt": 2,
+            "evidence_ids": [
+              "test-dating-5@114@13059:13142",
+              "test-dating-5@119@13706:13878",
+              "test-dating-5@105@11907:12136",
+              "test-dating-5@55@6510:6641",
+              "test-dating-5@60@7015:7092",
+              "test-dating-5@113@13021:13029",
+              "test-dating-5@115@13171:13189",
+              "test-dating-5@118@13624:13676",
+              "test-dating-5@120@13907:13959",
+              "test-dating-5@104@11848:11878",
+              "test-dating-5@106@12166:12255",
+              "test-dating-5@54@6364:6481",
+              "test-dating-5@56@6671:6825",
+              "test-dating-5@59@6978:6986"
+            ]
+          },
+          {
+            "stage": "review_decision",
+            "complete": true,
+            "approved": true,
+            "gaps": [],
+            "actions": []
+          },
+          {
+            "stage": "verdict",
+            "approved": true,
+            "reason": "Complete answered draft passed support review without further acquisition."
+          },
+          {
+            "stage": "presentation",
+            "result": "Concise findings with separately inspectable original citations."
+          },
+          {
+            "stage": "validation",
+            "result": "Citation IDs and exact quotations valid within authorised scope",
+            "semantic_check": true
+          }
+        ],
+        "metrics": {
+          "model_calls": 2,
+          "tool_calls": 0,
+          "input_tokens": 3151,
+          "output_tokens": 536,
+          "unique_messages": 14,
+          "source_characters": 1220,
+          "model": "GPT-5.4",
+          "provider": "poe",
+          "people_exposed": 1,
+          "source_text_tokens": 262,
+          "relationships_exposed": 1,
+          "elapsed_seconds": 10.989,
+          "retrieval": {
+            "revision": "multilingual-rrf-v3",
+            "cache_hit": false,
+            "date_scope": {
+              "from": null,
+              "to": null
+            }
+          }
+        },
+        "retry_request": {
+          "profileIds": [
+            "eval-test-dating-5"
+          ],
+          "question": "Is Owen still going to the PMQ photography talk on 2 December, and what changed?",
+          "kind": "chat",
+          "variant": "B",
+          "provider": "poe",
+          "from": "",
+          "to": "",
+          "sourceIds": []
+        }
+      }
+    },
+    {
+      "case_id": "owen-update",
+      "variant": "C",
+      "http_status": 200,
+      "elapsed_ms": 11168,
+      "answer": {
+        "candidates": [],
+        "status": "answered",
+        "findings": [
+          {
+            "kind": "evidence",
+            "text": "Owen originally agreed to the PMQ nature photography talk on Wednesday 2 December.",
+            "category": "current context",
+            "support": "directly stated",
+            "lifecycle": "historical",
+            "citations": [
+              {
+                "id": "test-dating-5@56@6671:6825",
+                "quote": "Oh I saw that event on Facebook! The speaker shoots Hong Kong's outer islands from kayaks. Yes, let's definitely put Wednesday 2 December in the calendar!",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 6671,
+                "source_end": 6825
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "Later, Owen said he would check whether PMQ uploads the recording, or suggested visiting the Shatin nature photo exhibition another weekend instead.",
+            "category": "current context",
+            "support": "directly stated",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-dating-5@119@13706:13878",
+                "quote": "Thanks for understanding! I'll check if PMQ uploads the recording afterwards, or we can go check out the Shatin nature photo exhibition another weekend in December instead.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 13706,
+                "source_end": 13878
+              }
+            ]
+          },
+          {
+            "kind": "inference",
+            "text": "That means he is no longer planning to attend the 2 December talk in person.",
+            "category": "fact",
+            "support": "tentative",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-dating-5@119@13706:13878",
+                "quote": "Thanks for understanding! I'll check if PMQ uploads the recording afterwards, or we can go check out the Shatin nature photo exhibition another weekend in December instead.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 13706,
+                "source_end": 13878
+              }
+            ]
+          },
+          {
+            "kind": "inference",
+            "text": "Your replies reference 'Duty calls for the coastline' and wish him luck with the 'volunteer briefing,' indicating the reason for the change was a volunteer-related scheduling conflict.",
+            "category": "current context",
+            "support": "tentative",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-dating-5@118@13624:13676",
+                "quote": "Aww no worries at all! Duty calls for the coastline!",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 13624,
+                "source_end": 13676
+              },
+              {
+                "id": "test-dating-5@120@13907:13959",
+                "quote": "Sounds great, good luck with the volunteer briefing!",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 13907,
+                "source_end": 13959
+              }
+            ]
+          }
+        ],
+        "next_question": "",
+        "trace": [
+          {
+            "stage": "retrieval",
+            "kind": "chat",
+            "available_messages": 201,
+            "initial_messages": 14,
+            "scope": [
+              {
+                "id": "eval-test-dating-5",
+                "name": "Owen",
+                "relationship": "dating-transition-friends",
+                "context": "Evaluation profile for test-dating-5",
+                "version": 1,
+                "attributes": []
+              }
+            ]
+          },
+          {
+            "stage": "draft",
+            "attempt": 1,
+            "evidence_ids": [
+              "test-dating-5@114@13059:13142",
+              "test-dating-5@119@13706:13878",
+              "test-dating-5@105@11907:12136",
+              "test-dating-5@55@6510:6641",
+              "test-dating-5@60@7015:7092",
+              "test-dating-5@113@13021:13029",
+              "test-dating-5@115@13171:13189",
+              "test-dating-5@118@13624:13676",
+              "test-dating-5@120@13907:13959",
+              "test-dating-5@104@11848:11878",
+              "test-dating-5@106@12166:12255",
+              "test-dating-5@54@6364:6481",
+              "test-dating-5@56@6671:6825",
+              "test-dating-5@59@6978:6986"
+            ]
+          },
+          {
+            "stage": "review",
+            "attempt": 2,
+            "evidence_ids": [
+              "test-dating-5@114@13059:13142",
+              "test-dating-5@119@13706:13878",
+              "test-dating-5@105@11907:12136",
+              "test-dating-5@55@6510:6641",
+              "test-dating-5@60@7015:7092",
+              "test-dating-5@113@13021:13029",
+              "test-dating-5@115@13171:13189",
+              "test-dating-5@118@13624:13676",
+              "test-dating-5@120@13907:13959",
+              "test-dating-5@104@11848:11878",
+              "test-dating-5@106@12166:12255",
+              "test-dating-5@54@6364:6481",
+              "test-dating-5@56@6671:6825",
+              "test-dating-5@59@6978:6986"
+            ]
+          },
+          {
+            "stage": "review_decision",
+            "complete": true,
+            "approved": true,
+            "gaps": [],
+            "actions": []
+          },
+          {
+            "stage": "verdict",
+            "approved": true,
+            "reason": "Complete answered draft passed support review without further acquisition."
+          },
+          {
+            "stage": "presentation",
+            "result": "Concise findings with separately inspectable original citations."
+          },
+          {
+            "stage": "validation",
+            "result": "Citation IDs and exact quotations valid within authorised scope",
+            "semantic_check": true
+          }
+        ],
+        "metrics": {
+          "model_calls": 2,
+          "tool_calls": 0,
+          "input_tokens": 3146,
+          "output_tokens": 595,
+          "unique_messages": 14,
+          "source_characters": 1220,
+          "model": "GPT-5.4",
+          "provider": "poe",
+          "people_exposed": 1,
+          "source_text_tokens": 262,
+          "relationships_exposed": 1,
+          "elapsed_seconds": 11.103,
+          "retrieval": {
+            "revision": "multilingual-rrf-v3",
+            "cache_hit": false,
+            "date_scope": {
+              "from": null,
+              "to": null
+            }
+          }
+        },
+        "retry_request": {
+          "profileIds": [
+            "eval-test-dating-5"
+          ],
+          "question": "Is Owen still going to the PMQ photography talk on 2 December, and what changed?",
+          "kind": "chat",
+          "variant": "C",
+          "provider": "poe",
+          "from": "",
+          "to": "",
+          "sourceIds": []
+        }
+      }
+    },
+    {
+      "case_id": "leslie-update",
+      "variant": "C",
+      "http_status": 200,
+      "elapsed_ms": 10916,
+      "answer": {
+        "candidates": [],
+        "status": "answered",
+        "findings": [
+          {
+            "kind": "evidence",
+            "text": "You and Leslie had planned swimming + noodles for Wednesday 25 Nov.",
+            "category": "current context",
+            "support": "directly stated",
+            "lifecycle": "historical",
+            "citations": [
+              {
+                "id": "test-work-3@70@5830:5913",
+                "quote": "hey planning my month out — are we still good for swimming + noodles on Wed 25 Nov?",
+                "profile_id": "eval-test-work-3",
+                "source_id": "test-work-3",
+                "source_version": 1,
+                "source_start": 5830,
+                "source_end": 5913
+              },
+              {
+                "id": "test-work-3@71@5945:6025",
+                "quote": "should be totally fine! I'm usually free Wed evenings anyway so let's lock it in",
+                "profile_id": "eval-test-work-3",
+                "source_id": "test-work-3",
+                "source_version": 1,
+                "source_start": 5945,
+                "source_end": 6025
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "The 25 Nov swim was canceled because Leslie had to go with her girlfriend to the daughter's school Parents' Day / meet the teachers.",
+            "category": "current context",
+            "support": "directly stated",
+            "lifecycle": "historical",
+            "citations": [
+              {
+                "id": "test-work-3@103@8455:8549",
+                "quote": "my girlfriend's daughter's school just scheduled Parents' Day on Wednesday 25 November evening",
+                "profile_id": "eval-test-work-3",
+                "source_id": "test-work-3",
+                "source_version": 1,
+                "source_start": 8455,
+                "source_end": 8549
+              },
+              {
+                "id": "test-work-3@104@8581:8699",
+                "quote": "she asked me to go with her to meet the teachers, so I have to cancel our Wed 25 Nov swimming session :( really sorry!",
+                "profile_id": "eval-test-work-3",
+                "source_id": "test-work-3",
+                "source_version": 1,
+                "source_start": 8581,
+                "source_end": 8699
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "The replacement was a rescheduled swim on Wednesday 2 Dec at 7pm at Victoria Park.",
+            "category": "current context",
+            "support": "directly stated",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-work-3@180@15325:15421",
+                "quote": "hey just confirming Wed 2 Dec swimming at Victoria Park? I think we shifted from the 25th right?",
+                "profile_id": "eval-test-work-3",
+                "source_id": "test-work-3",
+                "source_version": 1,
+                "source_start": 15325,
+                "source_end": 15421
+              },
+              {
+                "id": "test-work-3@181@15450:15511",
+                "quote": "Yes! Wednesday 2 December is locked in. 7pm at Victoria Park!",
+                "profile_id": "eval-test-work-3",
+                "source_id": "test-work-3",
+                "source_version": 1,
+                "source_start": 15450,
+                "source_end": 15511
+              }
+            ]
+          }
+        ],
+        "next_question": "",
+        "trace": [
+          {
+            "stage": "retrieval",
+            "kind": "chat",
+            "available_messages": 200,
+            "initial_messages": 14,
+            "scope": [
+              {
+                "id": "eval-test-work-3",
+                "name": "Leslie",
+                "relationship": "work-colleague",
+                "context": "Evaluation profile for test-work-3",
+                "version": 1,
+                "attributes": []
+              }
+            ]
+          },
+          {
+            "stage": "draft",
+            "attempt": 1,
+            "evidence_ids": [
+              "test-work-3@180@15325:15421",
+              "test-work-3@70@5830:5913",
+              "test-work-3@104@8581:8699",
+              "test-work-3@177@15039:15129",
+              "test-work-3@41@3597:3688",
+              "test-work-3@179@15239:15293",
+              "test-work-3@181@15450:15511",
+              "test-work-3@69@5795:5801",
+              "test-work-3@71@5945:6025",
+              "test-work-3@103@8455:8549",
+              "test-work-3@105@8728:8805",
+              "test-work-3@176@14936:15007",
+              "test-work-3@178@15158:15207",
+              "test-work-3@40@3423:3568"
+            ]
+          },
+          {
+            "stage": "review",
+            "attempt": 2,
+            "evidence_ids": [
+              "test-work-3@180@15325:15421",
+              "test-work-3@70@5830:5913",
+              "test-work-3@104@8581:8699",
+              "test-work-3@177@15039:15129",
+              "test-work-3@41@3597:3688",
+              "test-work-3@179@15239:15293",
+              "test-work-3@181@15450:15511",
+              "test-work-3@69@5795:5801",
+              "test-work-3@71@5945:6025",
+              "test-work-3@103@8455:8549",
+              "test-work-3@105@8728:8805",
+              "test-work-3@176@14936:15007",
+              "test-work-3@178@15158:15207",
+              "test-work-3@40@3423:3568"
+            ]
+          },
+          {
+            "stage": "review_decision",
+            "complete": true,
+            "approved": true,
+            "gaps": [],
+            "actions": []
+          },
+          {
+            "stage": "verdict",
+            "approved": true,
+            "reason": "Complete answered draft passed support review without further acquisition."
+          },
+          {
+            "stage": "presentation",
+            "result": "Concise findings with separately inspectable original citations."
+          },
+          {
+            "stage": "validation",
+            "result": "Citation IDs and exact quotations valid within authorised scope",
+            "semantic_check": true
+          }
+        ],
+        "metrics": {
+          "model_calls": 2,
+          "tool_calls": 0,
+          "input_tokens": 2965,
+          "output_tokens": 568,
+          "unique_messages": 14,
+          "source_characters": 1115,
+          "model": "GPT-5.4",
+          "provider": "poe",
+          "people_exposed": 1,
+          "source_text_tokens": 249,
+          "relationships_exposed": 1,
+          "elapsed_seconds": 10.832,
+          "retrieval": {
+            "revision": "multilingual-rrf-v3",
+            "cache_hit": false,
+            "date_scope": {
+              "from": null,
+              "to": null
+            }
+          }
+        },
+        "retry_request": {
+          "profileIds": [
+            "eval-test-work-3"
+          ],
+          "question": "What happened to our 25 November swimming plan, and what was the replacement?",
+          "kind": "chat",
+          "variant": "C",
+          "provider": "poe",
+          "from": "",
+          "to": "",
+          "sourceIds": []
+        }
+      }
+    },
+    {
+      "case_id": "leslie-update",
+      "variant": "B",
+      "http_status": 200,
+      "elapsed_ms": 7607,
+      "answer": {
+        "candidates": [],
+        "status": "answered",
+        "findings": [
+          {
+            "kind": "evidence",
+            "text": "The Wed 25 Nov swimming session was cancelled because Leslie needed to go to her girlfriend’s daughter’s school Parents’ Day / meet the teachers.",
+            "category": "current context",
+            "support": "directly stated",
+            "lifecycle": "historical",
+            "citations": [
+              {
+                "id": "test-work-3@103@8455:8549",
+                "quote": "my girlfriend's daughter's school just scheduled Parents' Day on Wednesday 25 November evening",
+                "profile_id": "eval-test-work-3",
+                "source_id": "test-work-3",
+                "source_version": 1,
+                "source_start": 8455,
+                "source_end": 8549
+              },
+              {
+                "id": "test-work-3@104@8581:8699",
+                "quote": "she asked me to go with her to meet the teachers, so I have to cancel our Wed 25 Nov swimming session :( really sorry!",
+                "profile_id": "eval-test-work-3",
+                "source_id": "test-work-3",
+                "source_version": 1,
+                "source_start": 8581,
+                "source_end": 8699
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "The replacement plan was to shift swimming to Wednesday 2 December.",
+            "category": "current context",
+            "support": "directly stated",
+            "lifecycle": "historical",
+            "citations": [
+              {
+                "id": "test-work-3@180@15325:15421",
+                "quote": "hey just confirming Wed 2 Dec swimming at Victoria Park? I think we shifted from the 25th right?",
+                "profile_id": "eval-test-work-3",
+                "source_id": "test-work-3",
+                "source_version": 1,
+                "source_start": 15325,
+                "source_end": 15421
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "The rescheduled session was confirmed for 7pm at Victoria Park.",
+            "category": "current context",
+            "support": "directly stated",
+            "lifecycle": "historical",
+            "citations": [
+              {
+                "id": "test-work-3@181@15450:15511",
+                "quote": "Yes! Wednesday 2 December is locked in. 7pm at Victoria Park!",
+                "profile_id": "eval-test-work-3",
+                "source_id": "test-work-3",
+                "source_version": 1,
+                "source_start": 15450,
+                "source_end": 15511
+              }
+            ]
+          }
+        ],
+        "next_question": "",
+        "trace": [
+          {
+            "stage": "retrieval",
+            "kind": "chat",
+            "available_messages": 200,
+            "initial_messages": 14,
+            "scope": [
+              {
+                "id": "eval-test-work-3",
+                "name": "Leslie",
+                "relationship": "work-colleague",
+                "context": "Evaluation profile for test-work-3",
+                "version": 1,
+                "attributes": []
+              }
+            ]
+          },
+          {
+            "stage": "draft",
+            "attempt": 1,
+            "evidence_ids": [
+              "test-work-3@180@15325:15421",
+              "test-work-3@70@5830:5913",
+              "test-work-3@104@8581:8699",
+              "test-work-3@177@15039:15129",
+              "test-work-3@41@3597:3688",
+              "test-work-3@179@15239:15293",
+              "test-work-3@181@15450:15511",
+              "test-work-3@69@5795:5801",
+              "test-work-3@71@5945:6025",
+              "test-work-3@103@8455:8549",
+              "test-work-3@105@8728:8805",
+              "test-work-3@176@14936:15007",
+              "test-work-3@178@15158:15207",
+              "test-work-3@40@3423:3568"
+            ]
+          },
+          {
+            "stage": "review",
+            "attempt": 2,
+            "evidence_ids": [
+              "test-work-3@180@15325:15421",
+              "test-work-3@70@5830:5913",
+              "test-work-3@104@8581:8699",
+              "test-work-3@177@15039:15129",
+              "test-work-3@41@3597:3688",
+              "test-work-3@179@15239:15293",
+              "test-work-3@181@15450:15511",
+              "test-work-3@69@5795:5801",
+              "test-work-3@71@5945:6025",
+              "test-work-3@103@8455:8549",
+              "test-work-3@105@8728:8805",
+              "test-work-3@176@14936:15007",
+              "test-work-3@178@15158:15207",
+              "test-work-3@40@3423:3568"
+            ]
+          },
+          {
+            "stage": "review_decision",
+            "complete": true,
+            "approved": true,
+            "gaps": [],
+            "actions": []
+          },
+          {
+            "stage": "verdict",
+            "approved": true,
+            "reason": "Complete answered draft passed support review without further acquisition."
+          },
+          {
+            "stage": "presentation",
+            "result": "Concise findings with separately inspectable original citations."
+          },
+          {
+            "stage": "validation",
+            "result": "Citation IDs and exact quotations valid within authorised scope",
+            "semantic_check": true
+          }
+        ],
+        "metrics": {
+          "model_calls": 2,
+          "tool_calls": 0,
+          "input_tokens": 2931,
+          "output_tokens": 440,
+          "unique_messages": 14,
+          "source_characters": 1115,
+          "model": "GPT-5.4",
+          "provider": "poe",
+          "people_exposed": 1,
+          "source_text_tokens": 249,
+          "relationships_exposed": 1,
+          "elapsed_seconds": 7.52,
+          "retrieval": {
+            "revision": "multilingual-rrf-v3",
+            "cache_hit": false,
+            "date_scope": {
+              "from": null,
+              "to": null
+            }
+          }
+        },
+        "retry_request": {
+          "profileIds": [
+            "eval-test-work-3"
+          ],
+          "question": "What happened to our 25 November swimming plan, and what was the replacement?",
+          "kind": "chat",
+          "variant": "B",
+          "provider": "poe",
+          "from": "",
+          "to": "",
+          "sourceIds": []
+        }
+      }
+    },
+    {
+      "case_id": "yuki-update",
+      "variant": "B",
+      "http_status": 200,
+      "elapsed_ms": 9621,
+      "answer": {
+        "candidates": [],
+        "status": "answered",
+        "findings": [
+          {
+            "kind": "evidence",
+            "text": "Yuki had to cancel her Saturday 5 December solo M+ design exhibition visit.",
+            "category": "current context",
+            "support": "directly stated",
+            "lifecycle": "historical",
+            "citations": [
+              {
+                "id": "test-partnership-4@84@9476:9731",
+                "quote": "AND my mom is in Osaka that week so we have zero backup babysitters. I hate cancelling on a Saturday morning since I'm normally free Saturday mornings for my solo museum breaks, so I have to cancel my Saturday 5 December M+ design exhibition completely 😭",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 9476,
+                "source_end": 9731
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "The cancellation happened because Mia's playgroup scheduled a mandatory Winter Showcase and Parent-Child Art Workshop on Saturday 5 December from 9:30am to 12:30pm, and both parents were expected to attend.",
+            "category": "current context",
+            "support": "directly stated",
+            "lifecycle": "historical",
+            "citations": [
+              {
+                "id": "test-partnership-4@83@9251:9446",
+                "quote": "Mia's playgroup just sent out the notice — their mandatory Winter Showcase and Parent-Child Art Workshop is on Saturday 5 December from 9:30am to 12:30pm, and both parents are supposed to attend!",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 9251,
+                "source_end": 9446
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "There were no backup babysitters available because Yuki's mom was in Osaka that week.",
+            "category": "current context",
+            "support": "directly stated",
+            "lifecycle": "historical",
+            "citations": [
+              {
+                "id": "test-partnership-4@84@9476:9731",
+                "quote": "AND my mom is in Osaka that week so we have zero backup babysitters. I hate cancelling on a Saturday morning since I'm normally free Saturday mornings for my solo museum breaks, so I have to cancel my Saturday 5 December M+ design exhibition completely 😭",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 9476,
+                "source_end": 9731
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "You arranged to move Yuki's solo M+ morning to Saturday 12 December as makeup time, and offered her an extra hour.",
+            "category": "current context",
+            "support": "directly stated",
+            "lifecycle": "historical",
+            "citations": [
+              {
+                "id": "test-partnership-4@85@9760:9925",
+                "quote": "Aww no!! I know how much you were looking forward to M+! Let's definitely move your solo M+ morning to Saturday 12 December instead, and I'll give you an extra hour!",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 9760,
+                "source_end": 9925
+              },
+              {
+                "id": "test-partnership-4@121@13727:13848",
+                "quote": "yeah, disappointing but Mia's performance comes first. We locked in Saturday 12 December for my makeup museum time right?",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 13727,
+                "source_end": 13848
+              }
+            ]
+          }
+        ],
+        "next_question": "",
+        "trace": [
+          {
+            "stage": "retrieval",
+            "kind": "chat",
+            "available_messages": 249,
+            "initial_messages": 12,
+            "scope": [
+              {
+                "id": "eval-test-partnership-4",
+                "name": "Yuki",
+                "relationship": "partnership-married-parent",
+                "context": "Evaluation profile for test-partnership-4",
+                "version": 1,
+                "attributes": []
+              }
+            ]
+          },
+          {
+            "stage": "draft",
+            "attempt": 1,
+            "evidence_ids": [
+              "test-partnership-4@82@9186:9221",
+              "test-partnership-4@25@2393:2528",
+              "test-partnership-4@120@13612:13697",
+              "test-partnership-4@213@22304:22389",
+              "test-partnership-4@84@9476:9731",
+              "test-partnership-4@81@9096:9157",
+              "test-partnership-4@83@9251:9446",
+              "test-partnership-4@24@2354:2364",
+              "test-partnership-4@26@2558:2737",
+              "test-partnership-4@212@22164:22275",
+              "test-partnership-4@121@13727:13848",
+              "test-partnership-4@85@9760:9925"
+            ]
+          },
+          {
+            "stage": "review",
+            "attempt": 2,
+            "evidence_ids": [
+              "test-partnership-4@82@9186:9221",
+              "test-partnership-4@25@2393:2528",
+              "test-partnership-4@120@13612:13697",
+              "test-partnership-4@213@22304:22389",
+              "test-partnership-4@84@9476:9731",
+              "test-partnership-4@81@9096:9157",
+              "test-partnership-4@83@9251:9446",
+              "test-partnership-4@24@2354:2364",
+              "test-partnership-4@26@2558:2737",
+              "test-partnership-4@212@22164:22275",
+              "test-partnership-4@121@13727:13848",
+              "test-partnership-4@85@9760:9925"
+            ]
+          },
+          {
+            "stage": "review_decision",
+            "complete": true,
+            "approved": true,
+            "gaps": [],
+            "actions": []
+          },
+          {
+            "stage": "verdict",
+            "approved": true,
+            "reason": "Complete answered draft passed support review without further acquisition."
+          },
+          {
+            "stage": "presentation",
+            "result": "Concise findings with separately inspectable original citations."
+          },
+          {
+            "stage": "validation",
+            "result": "Citation IDs and exact quotations valid within authorised scope",
+            "semantic_check": true
+          }
+        ],
+        "metrics": {
+          "model_calls": 2,
+          "tool_calls": 0,
+          "input_tokens": 3022,
+          "output_tokens": 636,
+          "unique_messages": 12,
+          "source_characters": 1437,
+          "model": "GPT-5.4",
+          "provider": "poe",
+          "people_exposed": 1,
+          "source_text_tokens": 312,
+          "relationships_exposed": 1,
+          "elapsed_seconds": 9.522,
+          "retrieval": {
+            "revision": "multilingual-rrf-v3",
+            "cache_hit": false,
+            "date_scope": {
+              "from": null,
+              "to": null
+            }
+          }
+        },
+        "retry_request": {
+          "profileIds": [
+            "eval-test-partnership-4"
+          ],
+          "question": "What happened to Yuki's 5 December M+ visit and what did we arrange instead?",
+          "kind": "chat",
+          "variant": "B",
+          "provider": "poe",
+          "from": "",
+          "to": "",
+          "sourceIds": []
+        }
+      }
+    },
+    {
+      "case_id": "yuki-update",
+      "variant": "C",
+      "http_status": 200,
+      "elapsed_ms": 10624,
+      "answer": {
+        "candidates": [],
+        "status": "answered",
+        "findings": [
+          {
+            "kind": "evidence",
+            "text": "Yuki had to cancel her Saturday 5 December solo M+ design exhibition visit.",
+            "category": "current context",
+            "support": "directly stated",
+            "lifecycle": "historical",
+            "citations": [
+              {
+                "id": "test-partnership-4@84@9476:9731",
+                "quote": "AND my mom is in Osaka that week so we have zero backup babysitters. I hate cancelling on a Saturday morning since I'm normally free Saturday mornings for my solo museum breaks, so I have to cancel my Saturday 5 December M+ design exhibition completely 😭",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 9476,
+                "source_end": 9731
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "The cancellation happened because Mia's playgroup scheduled a mandatory Winter Showcase and Parent-Child Art Workshop on Saturday 5 December from 9:30am to 12:30pm, and both parents were expected to attend.",
+            "category": "current context",
+            "support": "directly stated",
+            "lifecycle": "historical",
+            "citations": [
+              {
+                "id": "test-partnership-4@83@9251:9446",
+                "quote": "Mia's playgroup just sent out the notice — their mandatory Winter Showcase and Parent-Child Art Workshop is on Saturday 5 December from 9:30am to 12:30pm, and both parents are supposed to attend!",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 9251,
+                "source_end": 9446
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "There were also no backup babysitters that week because Yuki's mom was in Osaka.",
+            "category": "current context",
+            "support": "directly stated",
+            "lifecycle": "historical",
+            "citations": [
+              {
+                "id": "test-partnership-4@84@9476:9731",
+                "quote": "AND my mom is in Osaka that week so we have zero backup babysitters. I hate cancelling on a Saturday morning since I'm normally free Saturday mornings for my solo museum breaks, so I have to cancel my Saturday 5 December M+ design exhibition completely 😭",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 9476,
+                "source_end": 9731
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "You arranged to move Yuki's solo museum time to Saturday 12 December as makeup time.",
+            "category": "current context",
+            "support": "directly stated",
+            "lifecycle": "historical",
+            "citations": [
+              {
+                "id": "test-partnership-4@85@9760:9925",
+                "quote": "Aww no!! I know how much you were looking forward to M+! Let's definitely move your solo M+ morning to Saturday 12 December instead, and I'll give you an extra hour!",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 9760,
+                "source_end": 9925
+              },
+              {
+                "id": "test-partnership-4@121@13727:13848",
+                "quote": "yeah, disappointing but Mia's performance comes first. We locked in Saturday 12 December for my makeup museum time right?",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 13727,
+                "source_end": 13848
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "You also offered Yuki an extra hour for that rescheduled museum morning.",
+            "category": "current context",
+            "support": "directly stated",
+            "lifecycle": "historical",
+            "citations": [
+              {
+                "id": "test-partnership-4@85@9760:9925",
+                "quote": "Aww no!! I know how much you were looking forward to M+! Let's definitely move your solo M+ morning to Saturday 12 December instead, and I'll give you an extra hour!",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 9760,
+                "source_end": 9925
+              }
+            ]
+          }
+        ],
+        "next_question": "",
+        "trace": [
+          {
+            "stage": "retrieval",
+            "kind": "chat",
+            "available_messages": 249,
+            "initial_messages": 12,
+            "scope": [
+              {
+                "id": "eval-test-partnership-4",
+                "name": "Yuki",
+                "relationship": "partnership-married-parent",
+                "context": "Evaluation profile for test-partnership-4",
+                "version": 1,
+                "attributes": []
+              }
+            ]
+          },
+          {
+            "stage": "draft",
+            "attempt": 1,
+            "evidence_ids": [
+              "test-partnership-4@82@9186:9221",
+              "test-partnership-4@25@2393:2528",
+              "test-partnership-4@120@13612:13697",
+              "test-partnership-4@213@22304:22389",
+              "test-partnership-4@84@9476:9731",
+              "test-partnership-4@81@9096:9157",
+              "test-partnership-4@83@9251:9446",
+              "test-partnership-4@24@2354:2364",
+              "test-partnership-4@26@2558:2737",
+              "test-partnership-4@212@22164:22275",
+              "test-partnership-4@121@13727:13848",
+              "test-partnership-4@85@9760:9925"
+            ]
+          },
+          {
+            "stage": "review",
+            "attempt": 2,
+            "evidence_ids": [
+              "test-partnership-4@82@9186:9221",
+              "test-partnership-4@25@2393:2528",
+              "test-partnership-4@120@13612:13697",
+              "test-partnership-4@213@22304:22389",
+              "test-partnership-4@84@9476:9731",
+              "test-partnership-4@81@9096:9157",
+              "test-partnership-4@83@9251:9446",
+              "test-partnership-4@24@2354:2364",
+              "test-partnership-4@26@2558:2737",
+              "test-partnership-4@212@22164:22275",
+              "test-partnership-4@121@13727:13848",
+              "test-partnership-4@85@9760:9925"
+            ]
+          },
+          {
+            "stage": "review_decision",
+            "complete": true,
+            "approved": true,
+            "gaps": [],
+            "actions": []
+          },
+          {
+            "stage": "verdict",
+            "approved": true,
+            "reason": "Complete answered draft passed support review without further acquisition."
+          },
+          {
+            "stage": "presentation",
+            "result": "Concise findings with separately inspectable original citations."
+          },
+          {
+            "stage": "validation",
+            "result": "Citation IDs and exact quotations valid within authorised scope",
+            "semantic_check": true
+          }
+        ],
+        "metrics": {
+          "model_calls": 2,
+          "tool_calls": 0,
+          "input_tokens": 3075,
+          "output_tokens": 696,
+          "unique_messages": 12,
+          "source_characters": 1437,
+          "model": "GPT-5.4",
+          "provider": "poe",
+          "people_exposed": 1,
+          "source_text_tokens": 312,
+          "relationships_exposed": 1,
+          "elapsed_seconds": 10.523,
+          "retrieval": {
+            "revision": "multilingual-rrf-v3",
+            "cache_hit": false,
+            "date_scope": {
+              "from": null,
+              "to": null
+            }
+          }
+        },
+        "retry_request": {
+          "profileIds": [
+            "eval-test-partnership-4"
+          ],
+          "question": "What happened to Yuki's 5 December M+ visit and what did we arrange instead?",
+          "kind": "chat",
+          "variant": "C",
+          "provider": "poe",
+          "from": "",
+          "to": "",
+          "sourceIds": []
+        }
+      }
+    },
+    {
+      "case_id": "owen-fact",
+      "variant": "C",
+      "http_status": 200,
+      "elapsed_ms": 18701,
+      "answer": {
+        "candidates": [],
+        "status": "answered",
+        "findings": [
+          {
+            "kind": "evidence",
+            "text": "When asked how he kept the sky from blowing out while keeping shadows clean, Owen said he exposed for the highlights by dropping exposure compensation to -0.7 EV, then lifted the shadows in Lightroom by about +45.",
+            "category": "fact",
+            "support": "directly stated",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-dating-5@34@3661:3784",
+                "quote": "Oh wow, these look like National Geographic!! How did you keep the sky from blowing out while keeping the shadows so clean?",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 3661,
+                "source_end": 3784
+              },
+              {
+                "id": "test-dating-5@35@3814:3976",
+                "quote": "Exposed for the highlights by dropping exposure compensation to -0.7 EV, then lifted the shadows in Lightroom by about +45. Works really well on Fujifilm sensors.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 3814,
+                "source_end": 3976
+              }
+            ]
+          },
+          {
+            "kind": "suggestion",
+            "text": "A concise answer is: Owen suggested exposing for the highlights with -0.7 EV exposure compensation, then recovering the darker areas in post by lifting shadows in Lightroom.",
+            "category": "fact",
+            "support": "tentative",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-dating-5@35@3814:3976",
+                "quote": "Exposed for the highlights by dropping exposure compensation to -0.7 EV, then lifted the shadows in Lightroom by about +45. Works really well on Fujifilm sensors.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 3814,
+                "source_end": 3976
+              }
+            ]
+          }
+        ],
+        "next_question": "",
+        "trace": [
+          {
+            "stage": "retrieval",
+            "kind": "chat",
+            "available_messages": 201,
+            "initial_messages": 13,
+            "scope": [
+              {
+                "id": "eval-test-dating-5",
+                "name": "Owen",
+                "relationship": "dating-transition-friends",
+                "context": "Evaluation profile for test-dating-5",
+                "version": 1,
+                "attributes": []
+              }
+            ]
+          },
+          {
+            "stage": "draft",
+            "attempt": 1,
+            "evidence_ids": [
+              "test-dating-5@26@2715:2829",
+              "test-dating-5@136@15279:15364",
+              "test-dating-5@27@2859:3024",
+              "test-dating-5@160@17311:17398",
+              "test-dating-5@105@11907:12136",
+              "test-dating-5@25@2565:2686",
+              "test-dating-5@135@15221:15250",
+              "test-dating-5@137@15394:15452",
+              "test-dating-5@28@3053:3119",
+              "test-dating-5@159@17245:17282",
+              "test-dating-5@161@17428:17502",
+              "test-dating-5@104@11848:11878",
+              "test-dating-5@106@12166:12255"
+            ]
+          },
+          {
+            "stage": "review",
+            "attempt": 2,
+            "evidence_ids": [
+              "test-dating-5@26@2715:2829",
+              "test-dating-5@136@15279:15364",
+              "test-dating-5@27@2859:3024",
+              "test-dating-5@160@17311:17398",
+              "test-dating-5@105@11907:12136",
+              "test-dating-5@25@2565:2686",
+              "test-dating-5@135@15221:15250",
+              "test-dating-5@137@15394:15452",
+              "test-dating-5@28@3053:3119",
+              "test-dating-5@159@17245:17282",
+              "test-dating-5@161@17428:17502",
+              "test-dating-5@104@11848:11878",
+              "test-dating-5@106@12166:12255"
+            ]
+          },
+          {
+            "stage": "review_decision",
+            "complete": true,
+            "approved": false,
+            "gaps": [
+              "The provided evidence does not mention any specific technique Owen suggested for handling bright skies in landscape photographs.",
+              "Need additional messages or context where Owen gave photography advice."
+            ],
+            "actions": [
+              {
+                "tool": "search_messages",
+                "query": "Owen bright skies landscape photographs technique filter exposure graduated ND HDR sky"
+              }
+            ]
+          },
+          {
+            "stage": "acquisition",
+            "tool": "search_messages",
+            "query": "Owen bright skies landscape photographs technique filter exposure graduated ND HDR sky",
+            "returned": [
+              "test-dating-5@103@11762:11818",
+              "test-dating-5@123@14175:14277",
+              "test-dating-5@27@2859:3024",
+              "test-dating-5@26@2715:2829",
+              "test-dating-5@34@3661:3784",
+              "test-dating-5@102@11693:11733",
+              "test-dating-5@104@11848:11878",
+              "test-dating-5@122@14032:14145",
+              "test-dating-5@124@14306:14346",
+              "test-dating-5@28@3053:3119",
+              "test-dating-5@25@2565:2686",
+              "test-dating-5@33@3523:3632",
+              "test-dating-5@35@3814:3976"
+            ]
+          },
+          {
+            "stage": "revise",
+            "attempt": 3,
+            "evidence_ids": [
+              "test-dating-5@26@2715:2829",
+              "test-dating-5@136@15279:15364",
+              "test-dating-5@27@2859:3024",
+              "test-dating-5@160@17311:17398",
+              "test-dating-5@25@2565:2686",
+              "test-dating-5@137@15394:15452",
+              "test-dating-5@161@17428:17502",
+              "test-dating-5@103@11762:11818",
+              "test-dating-5@123@14175:14277",
+              "test-dating-5@34@3661:3784",
+              "test-dating-5@102@11693:11733",
+              "test-dating-5@104@11848:11878",
+              "test-dating-5@122@14032:14145",
+              "test-dating-5@124@14306:14346",
+              "test-dating-5@28@3053:3119",
+              "test-dating-5@33@3523:3632",
+              "test-dating-5@35@3814:3976",
+              "test-dating-5@105@11907:12136",
+              "test-dating-5@135@15221:15250",
+              "test-dating-5@159@17245:17282",
+              "test-dating-5@106@12166:12255"
+            ]
+          },
+          {
+            "stage": "final_check",
+            "attempt": 4,
+            "evidence_ids": [
+              "test-dating-5@26@2715:2829",
+              "test-dating-5@136@15279:15364",
+              "test-dating-5@27@2859:3024",
+              "test-dating-5@160@17311:17398",
+              "test-dating-5@25@2565:2686",
+              "test-dating-5@137@15394:15452",
+              "test-dating-5@161@17428:17502",
+              "test-dating-5@103@11762:11818",
+              "test-dating-5@123@14175:14277",
+              "test-dating-5@34@3661:3784",
+              "test-dating-5@102@11693:11733",
+              "test-dating-5@104@11848:11878",
+              "test-dating-5@122@14032:14145",
+              "test-dating-5@124@14306:14346",
+              "test-dating-5@28@3053:3119",
+              "test-dating-5@33@3523:3632",
+              "test-dating-5@35@3814:3976",
+              "test-dating-5@105@11907:12136",
+              "test-dating-5@135@15221:15250",
+              "test-dating-5@159@17245:17282",
+              "test-dating-5@106@12166:12255"
+            ]
+          },
+          {
+            "stage": "verdict",
+            "approved": true,
+            "reason": "Answer is directly supported by the cited evidence and concisely states Owen's suggested technique."
+          },
+          {
+            "stage": "presentation",
+            "result": "Concise findings with separately inspectable original citations."
+          },
+          {
+            "stage": "validation",
+            "result": "Citation IDs and exact quotations valid within authorised scope",
+            "semantic_check": true
+          }
+        ],
+        "metrics": {
+          "model_calls": 4,
+          "tool_calls": 1,
+          "input_tokens": 7482,
+          "output_tokens": 839,
+          "unique_messages": 21,
+          "source_characters": 1929,
+          "model": "GPT-5.4",
+          "provider": "poe",
+          "people_exposed": 1,
+          "source_text_tokens": 423,
+          "relationships_exposed": 1,
+          "elapsed_seconds": 18.621,
+          "retrieval": {
+            "revision": "multilingual-rrf-v3",
+            "cache_hit": false,
+            "date_scope": {
+              "from": null,
+              "to": null
+            }
+          }
+        },
+        "retry_request": {
+          "profileIds": [
+            "eval-test-dating-5"
+          ],
+          "question": "What technique did Owen suggest for handling bright skies in landscape photographs?",
+          "kind": "chat",
+          "variant": "C",
+          "provider": "poe",
+          "from": "",
+          "to": "",
+          "sourceIds": []
+        }
+      }
+    },
+    {
+      "case_id": "owen-fact",
+      "variant": "B",
+      "http_status": 200,
+      "elapsed_ms": 18183,
+      "answer": {
+        "candidates": [],
+        "status": "insufficient evidence",
+        "findings": [
+          {
+            "kind": "evidence",
+            "text": "Owen said he loves nature and landscape photography, especially quiet wetlands and watching the light shift.",
+            "category": "interest",
+            "support": "directly stated",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-dating-5@27@2859:3024",
+                "quote": "Glad you liked it! I genuinely love nature and landscape photography so much, especially quiet wetlands where you can watch the light shift and spot migratory birds.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 2859,
+                "source_end": 3024
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "The provided messages mention photo walks, sunset shooting, reflections, composition, and weather conditions, but none mention a specific technique for handling bright skies.",
+            "category": "uncertainty",
+            "support": "directly stated",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-dating-5@25@2565:2686",
+                "quote": "Made it back to Tai Po! Thanks for coming out to shoot sunset at Nam Sang Wai today, the light over the reeds was unreal.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 2565,
+                "source_end": 2686
+              },
+              {
+                "id": "test-dating-5@136@15279:15364",
+                "quote": "Hey Owen, thanks for yesterday's photo walk! The reflection shots turned out amazing!",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 15279,
+                "source_end": 15364
+              },
+              {
+                "id": "test-dating-5@137@15394:15452",
+                "quote": "Same! You really nailed that composition by the boathouse.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 15394,
+                "source_end": 15452
+              },
+              {
+                "id": "test-dating-5@161@17428:17502",
+                "quote": "Me too! Expecting clear skies and 22 degrees, perfect conditions honestly.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 17428,
+                "source_end": 17502
+              }
+            ]
+          },
+          {
+            "kind": "clarification",
+            "text": "I can’t determine the technique from the evidence provided. If there’s another message where Owen discussed exposure, graduated ND filters, bracketing/HDR, or editing the sky, that would likely contain the answer.",
+            "category": "uncertainty",
+            "support": "insufficient",
+            "lifecycle": "current",
+            "citations": []
+          }
+        ],
+        "next_question": "Do you have any additional messages where Owen talks about exposure settings, graduated ND filters, HDR/bracketing, or editing for sky detail?",
+        "trace": [
+          {
+            "stage": "retrieval",
+            "kind": "chat",
+            "available_messages": 201,
+            "initial_messages": 13,
+            "scope": [
+              {
+                "id": "eval-test-dating-5",
+                "name": "Owen",
+                "relationship": "dating-transition-friends",
+                "context": "Evaluation profile for test-dating-5",
+                "version": 1,
+                "attributes": []
+              }
+            ]
+          },
+          {
+            "stage": "draft",
+            "attempt": 1,
+            "evidence_ids": [
+              "test-dating-5@26@2715:2829",
+              "test-dating-5@136@15279:15364",
+              "test-dating-5@27@2859:3024",
+              "test-dating-5@160@17311:17398",
+              "test-dating-5@105@11907:12136",
+              "test-dating-5@25@2565:2686",
+              "test-dating-5@135@15221:15250",
+              "test-dating-5@137@15394:15452",
+              "test-dating-5@28@3053:3119",
+              "test-dating-5@159@17245:17282",
+              "test-dating-5@161@17428:17502",
+              "test-dating-5@104@11848:11878",
+              "test-dating-5@106@12166:12255"
+            ]
+          },
+          {
+            "stage": "review",
+            "attempt": 2,
+            "evidence_ids": [
+              "test-dating-5@26@2715:2829",
+              "test-dating-5@136@15279:15364",
+              "test-dating-5@27@2859:3024",
+              "test-dating-5@160@17311:17398",
+              "test-dating-5@105@11907:12136",
+              "test-dating-5@25@2565:2686",
+              "test-dating-5@135@15221:15250",
+              "test-dating-5@137@15394:15452",
+              "test-dating-5@28@3053:3119",
+              "test-dating-5@159@17245:17282",
+              "test-dating-5@161@17428:17502",
+              "test-dating-5@104@11848:11878",
+              "test-dating-5@106@12166:12255"
+            ]
+          },
+          {
+            "stage": "review_decision",
+            "complete": true,
+            "approved": false,
+            "gaps": [
+              "No provided message mentions a specific technique Owen suggested for handling bright skies in landscape photographs.",
+              "Need additional evidence where Owen discusses exposure, filters, bracketing/HDR, or editing skies."
+            ],
+            "actions": []
+          },
+          {
+            "stage": "revise",
+            "attempt": 3,
+            "evidence_ids": [
+              "test-dating-5@26@2715:2829",
+              "test-dating-5@136@15279:15364",
+              "test-dating-5@27@2859:3024",
+              "test-dating-5@160@17311:17398",
+              "test-dating-5@105@11907:12136",
+              "test-dating-5@25@2565:2686",
+              "test-dating-5@135@15221:15250",
+              "test-dating-5@137@15394:15452",
+              "test-dating-5@28@3053:3119",
+              "test-dating-5@159@17245:17282",
+              "test-dating-5@161@17428:17502",
+              "test-dating-5@104@11848:11878",
+              "test-dating-5@106@12166:12255"
+            ]
+          },
+          {
+            "stage": "final_check",
+            "attempt": 4,
+            "evidence_ids": [
+              "test-dating-5@26@2715:2829",
+              "test-dating-5@136@15279:15364",
+              "test-dating-5@27@2859:3024",
+              "test-dating-5@160@17311:17398",
+              "test-dating-5@105@11907:12136",
+              "test-dating-5@25@2565:2686",
+              "test-dating-5@135@15221:15250",
+              "test-dating-5@137@15394:15452",
+              "test-dating-5@28@3053:3119",
+              "test-dating-5@159@17245:17282",
+              "test-dating-5@161@17428:17502",
+              "test-dating-5@104@11848:11878",
+              "test-dating-5@106@12166:12255"
+            ]
+          },
+          {
+            "stage": "verdict",
+            "approved": true,
+            "reason": "The evidence provided does not mention any specific technique Owen suggested for handling bright skies, so the correct response is to say there is insufficient evidence and optionally ask for more messages."
+          },
+          {
+            "stage": "presentation",
+            "result": "Concise findings with separately inspectable original citations."
+          },
+          {
+            "stage": "validation",
+            "result": "Citation IDs and exact quotations valid within authorised scope",
+            "semantic_check": true
+          }
+        ],
+        "metrics": {
+          "model_calls": 4,
+          "tool_calls": 0,
+          "input_tokens": 6252,
+          "output_tokens": 864,
+          "unique_messages": 13,
+          "source_characters": 1184,
+          "model": "GPT-5.4",
+          "provider": "poe",
+          "people_exposed": 1,
+          "source_text_tokens": 251,
+          "relationships_exposed": 1,
+          "elapsed_seconds": 18.107,
+          "retrieval": {
+            "revision": "multilingual-rrf-v3",
+            "cache_hit": false,
+            "date_scope": {
+              "from": null,
+              "to": null
+            }
+          }
+        },
+        "retry_request": {
+          "profileIds": [
+            "eval-test-dating-5"
+          ],
+          "question": "What technique did Owen suggest for handling bright skies in landscape photographs?",
+          "kind": "chat",
+          "variant": "B",
+          "provider": "poe",
+          "from": "",
+          "to": "",
+          "sourceIds": []
+        }
+      }
+    },
+    {
+      "case_id": "owen-unknown",
+      "variant": "B",
+      "http_status": 200,
+      "elapsed_ms": 20781,
+      "answer": {
+        "candidates": [],
+        "status": "answered",
+        "findings": [
+          {
+            "kind": "evidence",
+            "text": "Owen explicitly said he was 'really glad' you said it because he was feeling 'the exact same thing.'",
+            "category": "fact",
+            "support": "directly stated",
+            "lifecycle": "historical",
+            "citations": [
+              {
+                "id": "test-dating-5@106@12166:12255",
+                "quote": "Haha honestly, I am really glad you said that because I was feeling the exact same thing!",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 12166,
+                "source_end": 12255
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "He described the connection as 'totally like a great friendship vibe rather than dating.'",
+            "category": "relationship context",
+            "support": "directly stated",
+            "lifecycle": "historical",
+            "citations": [
+              {
+                "id": "test-dating-5@107@12285:12461",
+                "quote": "You're super easy to talk to and I genuinely enjoy sharing exhibition tips and shooting sunsets with you, it just feels totally like a great friendship vibe rather than dating.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 12285,
+                "source_end": 12461
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "He later reaffirmed that 'This friendship means so much to me.'",
+            "category": "relationship context",
+            "support": "directly stated",
+            "lifecycle": "historical",
+            "citations": [
+              {
+                "id": "test-dating-5@187@19611:19671",
+                "quote": "I cannot wait honestly! This friendship means so much to me!",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 19611,
+                "source_end": 19671
+              }
+            ]
+          },
+          {
+            "kind": "inference",
+            "text": "The evidence supports a mutual platonic preference rather than a hidden fear-based motive.",
+            "category": "uncertainty",
+            "support": "tentative",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-dating-5@106@12166:12255",
+                "quote": "Haha honestly, I am really glad you said that because I was feeling the exact same thing!",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 12166,
+                "source_end": 12255
+              },
+              {
+                "id": "test-dating-5@107@12285:12461",
+                "quote": "You're super easy to talk to and I genuinely enjoy sharing exhibition tips and shooting sunsets with you, it just feels totally like a great friendship vibe rather than dating.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 12285,
+                "source_end": 12461
+              },
+              {
+                "id": "test-dating-5@187@19611:19671",
+                "quote": "I cannot wait honestly! This friendship means so much to me!",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 19611,
+                "source_end": 19671
+              }
+            ]
+          },
+          {
+            "kind": "clarification",
+            "text": "There is no direct evidence here of fear of intimacy, commitment, vulnerability, or rejection.",
+            "category": "uncertainty",
+            "support": "insufficient",
+            "lifecycle": "current",
+            "citations": []
+          }
+        ],
+        "next_question": "Do you want me to rewrite this as a concise, user-facing answer about why Owen likely preferred friendship?",
+        "trace": [
+          {
+            "stage": "retrieval",
+            "kind": "chat",
+            "available_messages": 201,
+            "initial_messages": 14,
+            "scope": [
+              {
+                "id": "eval-test-dating-5",
+                "name": "Owen",
+                "relationship": "dating-transition-friends",
+                "context": "Evaluation profile for test-dating-5",
+                "version": 1,
+                "attributes": []
+              }
+            ]
+          },
+          {
+            "stage": "draft",
+            "attempt": 1,
+            "evidence_ids": [
+              "test-dating-5@187@19611:19671",
+              "test-dating-5@164@17703:17847",
+              "test-dating-5@12@1328:1349",
+              "test-dating-5@105@11907:12136",
+              "test-dating-5@107@12285:12461",
+              "test-dating-5@186@19544:19581",
+              "test-dating-5@188@19700:19736",
+              "test-dating-5@163@17598:17674",
+              "test-dating-5@165@17877:17985",
+              "test-dating-5@11@1207:1299",
+              "test-dating-5@13@1379:1483",
+              "test-dating-5@104@11848:11878",
+              "test-dating-5@106@12166:12255",
+              "test-dating-5@108@12490:12601"
+            ]
+          },
+          {
+            "stage": "review",
+            "attempt": 2,
+            "evidence_ids": [
+              "test-dating-5@187@19611:19671",
+              "test-dating-5@164@17703:17847",
+              "test-dating-5@12@1328:1349",
+              "test-dating-5@105@11907:12136",
+              "test-dating-5@107@12285:12461",
+              "test-dating-5@186@19544:19581",
+              "test-dating-5@188@19700:19736",
+              "test-dating-5@163@17598:17674",
+              "test-dating-5@165@17877:17985",
+              "test-dating-5@11@1207:1299",
+              "test-dating-5@13@1379:1483",
+              "test-dating-5@104@11848:11878",
+              "test-dating-5@106@12166:12255",
+              "test-dating-5@108@12490:12601"
+            ]
+          },
+          {
+            "stage": "review_decision",
+            "complete": true,
+            "approved": true,
+            "gaps": [
+              "No direct evidence of a hidden psychological fear.",
+              "No statements from Owen about fear of intimacy, rejection, vulnerability, or commitment."
+            ],
+            "actions": []
+          },
+          {
+            "stage": "revise",
+            "attempt": 3,
+            "evidence_ids": [
+              "test-dating-5@187@19611:19671",
+              "test-dating-5@164@17703:17847",
+              "test-dating-5@12@1328:1349",
+              "test-dating-5@105@11907:12136",
+              "test-dating-5@107@12285:12461",
+              "test-dating-5@186@19544:19581",
+              "test-dating-5@188@19700:19736",
+              "test-dating-5@163@17598:17674",
+              "test-dating-5@165@17877:17985",
+              "test-dating-5@11@1207:1299",
+              "test-dating-5@13@1379:1483",
+              "test-dating-5@104@11848:11878",
+              "test-dating-5@106@12166:12255",
+              "test-dating-5@108@12490:12601"
+            ]
+          },
+          {
+            "stage": "final_check",
+            "attempt": 4,
+            "evidence_ids": [
+              "test-dating-5@187@19611:19671",
+              "test-dating-5@164@17703:17847",
+              "test-dating-5@12@1328:1349",
+              "test-dating-5@105@11907:12136",
+              "test-dating-5@107@12285:12461",
+              "test-dating-5@186@19544:19581",
+              "test-dating-5@188@19700:19736",
+              "test-dating-5@163@17598:17674",
+              "test-dating-5@165@17877:17985",
+              "test-dating-5@11@1207:1299",
+              "test-dating-5@13@1379:1483",
+              "test-dating-5@104@11848:11878",
+              "test-dating-5@106@12166:12255",
+              "test-dating-5@108@12490:12601"
+            ]
+          },
+          {
+            "stage": "verdict",
+            "approved": true,
+            "reason": "The evidence does not support attributing a hidden psychological fear to Owen. It supports a mutual platonic preference, so the answer should avoid mind-reading and state the uncertainty clearly."
+          },
+          {
+            "stage": "presentation",
+            "result": "Concise findings with separately inspectable original citations."
+          },
+          {
+            "stage": "validation",
+            "result": "Citation IDs and exact quotations valid within authorised scope",
+            "semantic_check": true
+          }
+        ],
+        "metrics": {
+          "model_calls": 4,
+          "tool_calls": 0,
+          "input_tokens": 6867,
+          "output_tokens": 1056,
+          "unique_messages": 14,
+          "source_characters": 1313,
+          "model": "GPT-5.4",
+          "provider": "poe",
+          "people_exposed": 1,
+          "source_text_tokens": 284,
+          "relationships_exposed": 1,
+          "elapsed_seconds": 20.698,
+          "retrieval": {
+            "revision": "multilingual-rrf-v3",
+            "cache_hit": false,
+            "date_scope": {
+              "from": null,
+              "to": null
+            }
+          }
+        },
+        "retry_request": {
+          "profileIds": [
+            "eval-test-dating-5"
+          ],
+          "question": "What hidden psychological fear made Owen choose friendship over romance?",
+          "kind": "chat",
+          "variant": "B",
+          "provider": "poe",
+          "from": "",
+          "to": "",
+          "sourceIds": []
+        }
+      }
+    },
+    {
+      "case_id": "owen-unknown",
+      "variant": "C",
+      "http_status": 200,
+      "elapsed_ms": 26908,
+      "answer": {
+        "candidates": [],
+        "status": "answered",
+        "findings": [
+          {
+            "kind": "evidence",
+            "text": "Owen said he was 'really glad' you said it because he was 'feeling the exact same thing.'",
+            "category": "fact",
+            "support": "directly stated",
+            "lifecycle": "historical",
+            "citations": [
+              {
+                "id": "test-dating-5@106@12166:12255",
+                "quote": "Haha honestly, I am really glad you said that because I was feeling the exact same thing!",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 12166,
+                "source_end": 12255
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "He described the dynamic as 'totally like a great friendship vibe rather than dating.'",
+            "category": "fact",
+            "support": "directly stated",
+            "lifecycle": "historical",
+            "citations": [
+              {
+                "id": "test-dating-5@107@12285:12461",
+                "quote": "You're super easy to talk to and I genuinely enjoy sharing exhibition tips and shooting sunsets with you, it just feels totally like a great friendship vibe rather than dating.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 12285,
+                "source_end": 12461
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "He later reaffirmed that the friendship means a lot to him.",
+            "category": "relationship context",
+            "support": "directly stated",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-dating-5@187@19611:19671",
+                "quote": "I cannot wait honestly! This friendship means so much to me!",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 19611,
+                "source_end": 19671
+              },
+              {
+                "id": "test-dating-5@165@17877:17985",
+                "quote": "Hey, same here genuinely. You've made the NGO grind way more fun with someone to nerd out about lenses with!",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 17877,
+                "source_end": 17985
+              }
+            ]
+          },
+          {
+            "kind": "inference",
+            "text": "There is no evidence here of a hidden psychological fear. The supported explanation is that Owen genuinely did not feel romantic chemistry and preferred a friendship dynamic.",
+            "category": "uncertainty",
+            "support": "tentative",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-dating-5@106@12166:12255",
+                "quote": "Haha honestly, I am really glad you said that because I was feeling the exact same thing!",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 12166,
+                "source_end": 12255
+              },
+              {
+                "id": "test-dating-5@107@12285:12461",
+                "quote": "You're super easy to talk to and I genuinely enjoy sharing exhibition tips and shooting sunsets with you, it just feels totally like a great friendship vibe rather than dating.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 12285,
+                "source_end": 12461
+              }
+            ]
+          },
+          {
+            "kind": "suggestion",
+            "text": "A careful summary would be: Owen chose friendship not because of a concealed fear, but because he explicitly experienced the relationship as platonic and felt relieved that this was mutual.",
+            "category": "relationship context",
+            "support": "tentative",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-dating-5@106@12166:12255",
+                "quote": "Haha honestly, I am really glad you said that because I was feeling the exact same thing!",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 12166,
+                "source_end": 12255
+              },
+              {
+                "id": "test-dating-5@107@12285:12461",
+                "quote": "You're super easy to talk to and I genuinely enjoy sharing exhibition tips and shooting sunsets with you, it just feels totally like a great friendship vibe rather than dating.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 12285,
+                "source_end": 12461
+              },
+              {
+                "id": "test-dating-5@187@19611:19671",
+                "quote": "I cannot wait honestly! This friendship means so much to me!",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 19611,
+                "source_end": 19671
+              }
+            ]
+          }
+        ],
+        "next_question": "Do you want a one-line answer only, or a version that separates proven facts from possible but unproven psychological interpretations?",
+        "trace": [
+          {
+            "stage": "retrieval",
+            "kind": "chat",
+            "available_messages": 201,
+            "initial_messages": 14,
+            "scope": [
+              {
+                "id": "eval-test-dating-5",
+                "name": "Owen",
+                "relationship": "dating-transition-friends",
+                "context": "Evaluation profile for test-dating-5",
+                "version": 1,
+                "attributes": []
+              }
+            ]
+          },
+          {
+            "stage": "draft",
+            "attempt": 1,
+            "evidence_ids": [
+              "test-dating-5@187@19611:19671",
+              "test-dating-5@164@17703:17847",
+              "test-dating-5@12@1328:1349",
+              "test-dating-5@105@11907:12136",
+              "test-dating-5@107@12285:12461",
+              "test-dating-5@186@19544:19581",
+              "test-dating-5@188@19700:19736",
+              "test-dating-5@163@17598:17674",
+              "test-dating-5@165@17877:17985",
+              "test-dating-5@11@1207:1299",
+              "test-dating-5@13@1379:1483",
+              "test-dating-5@104@11848:11878",
+              "test-dating-5@106@12166:12255",
+              "test-dating-5@108@12490:12601"
+            ]
+          },
+          {
+            "stage": "review",
+            "attempt": 2,
+            "evidence_ids": [
+              "test-dating-5@187@19611:19671",
+              "test-dating-5@164@17703:17847",
+              "test-dating-5@12@1328:1349",
+              "test-dating-5@105@11907:12136",
+              "test-dating-5@107@12285:12461",
+              "test-dating-5@186@19544:19581",
+              "test-dating-5@188@19700:19736",
+              "test-dating-5@163@17598:17674",
+              "test-dating-5@165@17877:17985",
+              "test-dating-5@11@1207:1299",
+              "test-dating-5@13@1379:1483",
+              "test-dating-5@104@11848:11878",
+              "test-dating-5@106@12166:12255",
+              "test-dating-5@108@12490:12601"
+            ]
+          },
+          {
+            "stage": "review_decision",
+            "complete": true,
+            "approved": true,
+            "gaps": [
+              "There is no direct evidence of a 'hidden psychological fear' in Owen's messages.",
+              "The evidence supports explicit platonic preference and mutual relief, not concealed motives."
+            ],
+            "actions": []
+          },
+          {
+            "stage": "revise",
+            "attempt": 3,
+            "evidence_ids": [
+              "test-dating-5@187@19611:19671",
+              "test-dating-5@164@17703:17847",
+              "test-dating-5@12@1328:1349",
+              "test-dating-5@105@11907:12136",
+              "test-dating-5@107@12285:12461",
+              "test-dating-5@186@19544:19581",
+              "test-dating-5@188@19700:19736",
+              "test-dating-5@163@17598:17674",
+              "test-dating-5@165@17877:17985",
+              "test-dating-5@11@1207:1299",
+              "test-dating-5@13@1379:1483",
+              "test-dating-5@104@11848:11878",
+              "test-dating-5@106@12166:12255",
+              "test-dating-5@108@12490:12601"
+            ]
+          },
+          {
+            "stage": "final_check",
+            "attempt": 4,
+            "evidence_ids": [
+              "test-dating-5@187@19611:19671",
+              "test-dating-5@164@17703:17847",
+              "test-dating-5@12@1328:1349",
+              "test-dating-5@105@11907:12136",
+              "test-dating-5@107@12285:12461",
+              "test-dating-5@186@19544:19581",
+              "test-dating-5@188@19700:19736",
+              "test-dating-5@163@17598:17674",
+              "test-dating-5@165@17877:17985",
+              "test-dating-5@11@1207:1299",
+              "test-dating-5@13@1379:1483",
+              "test-dating-5@104@11848:11878",
+              "test-dating-5@106@12166:12255",
+              "test-dating-5@108@12490:12601"
+            ]
+          },
+          {
+            "stage": "verdict",
+            "approved": true,
+            "reason": "The response should avoid inventing an unsupported hidden psychological fear and instead state that the evidence indicates Owen explicitly felt friendship rather than romantic chemistry."
+          },
+          {
+            "stage": "presentation",
+            "result": "Concise findings with separately inspectable original citations."
+          },
+          {
+            "stage": "validation",
+            "result": "Citation IDs and exact quotations valid within authorised scope",
+            "semantic_check": true
+          }
+        ],
+        "metrics": {
+          "model_calls": 4,
+          "tool_calls": 0,
+          "input_tokens": 7021,
+          "output_tokens": 1411,
+          "unique_messages": 14,
+          "source_characters": 1313,
+          "model": "GPT-5.4",
+          "provider": "poe",
+          "people_exposed": 1,
+          "source_text_tokens": 284,
+          "relationships_exposed": 1,
+          "elapsed_seconds": 26.832,
+          "retrieval": {
+            "revision": "multilingual-rrf-v3",
+            "cache_hit": false,
+            "date_scope": {
+              "from": null,
+              "to": null
+            }
+          }
+        },
+        "retry_request": {
+          "profileIds": [
+            "eval-test-dating-5"
+          ],
+          "question": "What hidden psychological fear made Owen choose friendship over romance?",
+          "kind": "chat",
+          "variant": "C",
+          "provider": "poe",
+          "from": "",
+          "to": "",
+          "sourceIds": []
+        }
+      }
+    },
+    {
+      "case_id": "network-photo",
+      "variant": "C",
+      "http_status": 200,
+      "elapsed_ms": 57637,
+      "answer": {
+        "candidates": [
+          {
+            "profile_id": "eval-test-dating-5",
+            "constraints": [
+              {
+                "name": "interest in nature photography",
+                "status": "supported",
+                "source_ids": [
+                  "test-dating-5@27@2859:3024",
+                  "test-dating-5@78@8896:9086",
+                  "test-dating-5@81@9483:9639",
+                  "test-dating-5@114@13059:13142"
+                ]
+              },
+              {
+                "name": "has already joined you for photography activities",
+                "status": "supported",
+                "source_ids": [
+                  "test-dating-5@136@15279:15364",
+                  "test-dating-5@172@18384:18450",
+                  "test-dating-5@105@11907:12136"
+                ]
+              },
+              {
+                "name": "availability should be confirmed rather than assumed",
+                "status": "supported",
+                "source_ids": [
+                  "test-dating-5@78@8896:9086",
+                  "test-dating-5@119@13706:13878",
+                  "test-dating-5@114@13059:13142"
+                ]
+              }
+            ],
+            "preference_source_ids": [
+              "test-dating-5@27@2859:3024",
+              "test-dating-5@78@8896:9086",
+              "test-dating-5@136@15279:15364",
+              "test-dating-5@172@18384:18450"
+            ],
+            "match_kind": "repeated observation",
+            "fit_reason": "Best fit. Owen explicitly loves nature and landscape photography, already goes on birdwatching/photo walks, and has done photo walks with you before. He looks very suitable, though timing is not guaranteed because he has had schedule conflicts and specific commitments.",
+            "eligible": true,
+            "provisional": false,
+            "preference_matches": 4,
+            "fit_sources": [
+              {
+                "id": "test-dating-5@27@2859:3024",
+                "quote": "Glad you liked it! I genuinely love nature and landscape photography so much, especially quiet wetlands where you can watch the light shift and spot migratory birds.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 2859,
+                "source_end": 3024
+              },
+              {
+                "id": "test-dating-5@78@8896:9086",
+                "quote": "Hey! Oh, tomorrow I'm actually going to an early morning birdwatching and photography walk in Long Valley with a couple of colleagues from the NGO, so I'll probably be asleep by 9:30pm haha.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 8896,
+                "source_end": 9086
+              },
+              {
+                "id": "test-dating-5@172@18384:18450",
+                "quote": "Same here, just catching up on files. Ready for Sunday photo walk?",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 18384,
+                "source_end": 18450
+              },
+              {
+                "id": "test-dating-5@136@15279:15364",
+                "quote": "Hey Owen, thanks for yesterday's photo walk! The reflection shots turned out amazing!",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 15279,
+                "source_end": 15364
+              }
+            ]
+          },
+          {
+            "profile_id": "eval-test-partnership-4",
+            "constraints": [
+              {
+                "name": "interest in photography / camera practice",
+                "status": "supported",
+                "source_ids": [
+                  "test-partnership-4@147@16094:16158",
+                  "test-partnership-4@240@24800:24864"
+                ]
+              },
+              {
+                "name": "nature-specific interest",
+                "status": "unknown",
+                "source_ids": []
+              },
+              {
+                "name": "availability may be constrained by parenting / family scheduling",
+                "status": "supported",
+                "source_ids": [
+                  "test-partnership-4@85@9760:9925",
+                  "test-partnership-4@92@10492:10574",
+                  "test-partnership-4@72@8093:8243"
+                ]
+              }
+            ],
+            "preference_source_ids": [
+              "test-partnership-4@147@16094:16158",
+              "test-partnership-4@85@9760:9925"
+            ],
+            "match_kind": "single observation",
+            "fit_reason": "Possible but weaker fit. Yuki appears open to photography-related activity through camera-settings practice, but there is no direct evidence of interest in nature photography specifically. Availability also likely depends on family logistics.",
+            "eligible": true,
+            "provisional": true,
+            "preference_matches": 2,
+            "fit_sources": [
+              {
+                "id": "test-partnership-4@147@16094:16158",
+                "quote": "Good thinking! Want to do a practice run on the camera settings?",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 16094,
+                "source_end": 16158
+              },
+              {
+                "id": "test-partnership-4@85@9760:9925",
+                "quote": "Aww no!! I know how much you were looking forward to M+! Let's definitely move your solo M+ morning to Saturday 12 December instead, and I'll give you an extra hour!",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 9760,
+                "source_end": 9925
+              }
+            ]
+          },
+          {
+            "profile_id": "eval-test-work-3",
+            "constraints": [
+              {
+                "name": "interest in nature photography",
+                "status": "unknown",
+                "source_ids": []
+              },
+              {
+                "name": "open to joining activities generally",
+                "status": "supported",
+                "source_ids": [
+                  "test-work-3@177@15039:15129"
+                ]
+              },
+              {
+                "name": "availability uncertain due to personal commitments",
+                "status": "supported",
+                "source_ids": [
+                  "test-work-3@104@8581:8699",
+                  "test-work-3@133@11041:11123"
+                ]
+              }
+            ],
+            "preference_source_ids": [
+              "test-work-3@177@15039:15129"
+            ],
+            "match_kind": "general",
+            "fit_reason": "Weak option. Leslie seems sociable and willing to join group activities, but nothing here ties her to photography or nature walks, and she has had outside commitments that affected plans.",
+            "eligible": true,
+            "provisional": true,
+            "preference_matches": 1,
+            "fit_sources": [
+              {
+                "id": "test-work-3@177@15039:15129",
+                "quote": "haha yeah she was so impressed! she asked if she could join our swimming sessions sometime",
+                "profile_id": "eval-test-work-3",
+                "source_id": "test-work-3",
+                "source_version": 1,
+                "source_start": 15039,
+                "source_end": 15129
+              }
+            ]
+          },
+          {
+            "profile_id": "eval-test-friendship-3",
+            "constraints": [
+              {
+                "name": "interest in nature photography",
+                "status": "unknown",
+                "source_ids": []
+              },
+              {
+                "name": "current rapport for inviting to leisure activity",
+                "status": "contradicted",
+                "source_ids": [
+                  "test-friendship-3@94@11056:11186",
+                  "test-friendship-3@95@11215:11428"
+                ]
+              },
+              {
+                "name": "Current availability",
+                "status": "unknown",
+                "source_ids": []
+              }
+            ],
+            "preference_source_ids": [],
+            "match_kind": "general",
+            "fit_reason": "No personal fit is established in the reviewed evidence; ask whether they are interested.",
+            "eligible": false,
+            "provisional": true,
+            "preference_matches": 0,
+            "fit_sources": []
+          }
+        ],
+        "status": "partial",
+        "findings": [
+          {
+            "kind": "evidence",
+            "text": "Owen is the clearest match: he said on 24 Oct that he 'genuinely love[s] nature and landscape photography,' especially 'quiet wetlands' and spotting 'migratory birds.'",
+            "category": "interest",
+            "support": "directly stated",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-dating-5@27@2859:3024",
+                "quote": "Glad you liked it! I genuinely love nature and landscape photography so much, especially quiet wetlands where you can watch the light shift and spot migratory birds.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 2859,
+                "source_end": 3024
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "He also said on 6 Nov that he was going on 'an early morning birdwatching and photography walk in Long Valley' with colleagues from the NGO, which closely matches a nature photography walk.",
+            "category": "interest",
+            "support": "directly stated",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-dating-5@78@8896:9086",
+                "quote": "Hey! Oh, tomorrow I'm actually going to an early morning birdwatching and photography walk in Long Valley with a couple of colleagues from the NGO, so I'll probably be asleep by 9:30pm haha.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 8896,
+                "source_end": 9086
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "Owen has already done photography outings with you: on 23 Nov you thanked him for 'yesterday's photo walk,' and there is also mention of a 'Sunday photo walk.'",
+            "category": "current context",
+            "support": "directly stated",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-dating-5@136@15279:15364",
+                "quote": "Hey Owen, thanks for yesterday's photo walk! The reflection shots turned out amazing!",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 15279,
+                "source_end": 15364
+              },
+              {
+                "id": "test-dating-5@172@18384:18450",
+                "quote": "Same here, just catching up on files. Ready for Sunday photo walk?",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 18384,
+                "source_end": 18450
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "He repeatedly shares related events and exhibits with you, including a PMQ nature photography talk on Wed 2 Dec and a Hong Kong Heritage Museum nature photo showcase in Shatin running until January.",
+            "category": "interest",
+            "support": "directly stated",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-dating-5@55@6510:6641",
+                "quote": "Deal! Also I saw there's a free nature photography talk at PMQ on Wednesday 2 December evening — want to put that on our radar too?",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 6510,
+                "source_end": 6641
+              },
+              {
+                "id": "test-dating-5@114@13059:13142",
+                "quote": "Hey, quick heads up about that PMQ nature photography talk on Wednesday 2 December.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 13059,
+                "source_end": 13142
+              },
+              {
+                "id": "test-dating-5@81@9483:9639",
+                "quote": "Sounds good! Also forgot to mention — Hong Kong Heritage Museum has a free nature photo showcase running til January, worth a look if you're ever in Shatin.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 9483,
+                "source_end": 9639
+              }
+            ]
+          },
+          {
+            "kind": "inference",
+            "text": "Owen is the best person to ask first because the evidence shows both strong subject-matter interest and an established pattern of doing photo activities with you.",
+            "category": "fact",
+            "support": "tentative",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-dating-5@27@2859:3024",
+                "quote": "Glad you liked it! I genuinely love nature and landscape photography so much, especially quiet wetlands where you can watch the light shift and spot migratory birds.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 2859,
+                "source_end": 3024
+              },
+              {
+                "id": "test-dating-5@136@15279:15364",
+                "quote": "Hey Owen, thanks for yesterday's photo walk! The reflection shots turned out amazing!",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 15279,
+                "source_end": 15364
+              },
+              {
+                "id": "test-dating-5@172@18384:18450",
+                "quote": "Same here, just catching up on files. Ready for Sunday photo walk?",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 18384,
+                "source_end": 18450
+              }
+            ]
+          }
+        ],
+        "next_question": "Do you want me to draft a message to Owen that invites him on a nature photography walk while acknowledging his availability may depend on timing?",
+        "trace": [
+          {
+            "stage": "retrieval",
+            "kind": "network",
+            "available_messages": 851,
+            "initial_messages": 27,
+            "scope": [
+              {
+                "id": "eval-test-dating-5",
+                "name": "Owen",
+                "relationship": "dating-transition-friends",
+                "context": "See user-provided profile evidence.",
+                "version": 1,
+                "attributes": []
+              },
+              {
+                "id": "eval-test-friendship-3",
+                "name": "Kelvin",
+                "relationship": "friendship-university-friend",
+                "context": "See user-provided profile evidence.",
+                "version": 1,
+                "attributes": []
+              },
+              {
+                "id": "eval-test-partnership-4",
+                "name": "Yuki",
+                "relationship": "partnership-married-parent",
+                "context": "See user-provided profile evidence.",
+                "version": 1,
+                "attributes": []
+              },
+              {
+                "id": "eval-test-work-3",
+                "name": "Leslie",
+                "relationship": "work-colleague",
+                "context": "See user-provided profile evidence.",
+                "version": 1,
+                "attributes": []
+              }
+            ]
+          },
+          {
+            "stage": "draft",
+            "attempt": 1,
+            "evidence_ids": [
+              "profile:eval-test-dating-5:v1",
+              "profile:eval-test-friendship-3:v1",
+              "profile:eval-test-partnership-4:v1",
+              "profile:eval-test-work-3:v1",
+              "test-dating-5@55@6510:6641",
+              "test-friendship-3@94@11056:11186",
+              "test-partnership-4@147@16094:16158",
+              "test-work-3@177@15039:15129",
+              "test-dating-5@114@13059:13142",
+              "test-friendship-3@136@15301:15343",
+              "test-partnership-4@240@24800:24864",
+              "test-work-3@133@11041:11123",
+              "test-dating-5@27@2859:3024",
+              "test-friendship-3@95@11215:11428",
+              "test-partnership-4@85@9760:9925",
+              "test-work-3@104@8581:8699",
+              "test-dating-5@78@8896:9086",
+              "test-friendship-3@87@9774:9917",
+              "test-partnership-4@92@10492:10574",
+              "test-dating-5@105@11907:12136",
+              "test-partnership-4@72@8093:8243",
+              "test-dating-5@81@9483:9639",
+              "test-dating-5@119@13706:13878",
+              "test-dating-5@172@18384:18450",
+              "test-dating-5@45@5080:5183",
+              "test-dating-5@1@29:147",
+              "test-dating-5@136@15279:15364"
+            ]
+          },
+          {
+            "stage": "unsupported_observations_omitted",
+            "count": 1,
+            "reason": "Personal observations had no original citations; their prose was discarded."
+          },
+          {
+            "stage": "review",
+            "attempt": 2,
+            "evidence_ids": [
+              "profile:eval-test-dating-5:v1",
+              "profile:eval-test-friendship-3:v1",
+              "profile:eval-test-partnership-4:v1",
+              "profile:eval-test-work-3:v1",
+              "test-dating-5@55@6510:6641",
+              "test-friendship-3@94@11056:11186",
+              "test-partnership-4@147@16094:16158",
+              "test-work-3@177@15039:15129",
+              "test-dating-5@114@13059:13142",
+              "test-friendship-3@136@15301:15343",
+              "test-partnership-4@240@24800:24864",
+              "test-work-3@133@11041:11123",
+              "test-dating-5@27@2859:3024",
+              "test-friendship-3@95@11215:11428",
+              "test-partnership-4@85@9760:9925",
+              "test-work-3@104@8581:8699",
+              "test-dating-5@78@8896:9086",
+              "test-friendship-3@87@9774:9917",
+              "test-partnership-4@92@10492:10574",
+              "test-dating-5@105@11907:12136",
+              "test-partnership-4@72@8093:8243",
+              "test-dating-5@81@9483:9639",
+              "test-dating-5@119@13706:13878",
+              "test-dating-5@172@18384:18450",
+              "test-dating-5@45@5080:5183",
+              "test-dating-5@1@29:147",
+              "test-dating-5@136@15279:15364"
+            ]
+          },
+          {
+            "stage": "review_decision",
+            "complete": true,
+            "approved": true,
+            "gaps": [],
+            "actions": []
+          },
+          {
+            "stage": "revise",
+            "attempt": 3,
+            "evidence_ids": [
+              "profile:eval-test-dating-5:v1",
+              "profile:eval-test-friendship-3:v1",
+              "profile:eval-test-partnership-4:v1",
+              "profile:eval-test-work-3:v1",
+              "test-dating-5@55@6510:6641",
+              "test-friendship-3@94@11056:11186",
+              "test-partnership-4@147@16094:16158",
+              "test-work-3@177@15039:15129",
+              "test-dating-5@114@13059:13142",
+              "test-friendship-3@136@15301:15343",
+              "test-partnership-4@240@24800:24864",
+              "test-work-3@133@11041:11123",
+              "test-dating-5@27@2859:3024",
+              "test-friendship-3@95@11215:11428",
+              "test-partnership-4@85@9760:9925",
+              "test-work-3@104@8581:8699",
+              "test-dating-5@78@8896:9086",
+              "test-friendship-3@87@9774:9917",
+              "test-partnership-4@92@10492:10574",
+              "test-dating-5@105@11907:12136",
+              "test-partnership-4@72@8093:8243",
+              "test-dating-5@81@9483:9639",
+              "test-dating-5@119@13706:13878",
+              "test-dating-5@172@18384:18450",
+              "test-dating-5@45@5080:5183",
+              "test-dating-5@1@29:147",
+              "test-dating-5@136@15279:15364"
+            ]
+          },
+          {
+            "stage": "final_check",
+            "attempt": 4,
+            "evidence_ids": [
+              "profile:eval-test-dating-5:v1",
+              "profile:eval-test-friendship-3:v1",
+              "profile:eval-test-partnership-4:v1",
+              "profile:eval-test-work-3:v1",
+              "test-dating-5@55@6510:6641",
+              "test-friendship-3@94@11056:11186",
+              "test-partnership-4@147@16094:16158",
+              "test-work-3@177@15039:15129",
+              "test-dating-5@114@13059:13142",
+              "test-friendship-3@136@15301:15343",
+              "test-partnership-4@240@24800:24864",
+              "test-work-3@133@11041:11123",
+              "test-dating-5@27@2859:3024",
+              "test-friendship-3@95@11215:11428",
+              "test-partnership-4@85@9760:9925",
+              "test-work-3@104@8581:8699",
+              "test-dating-5@78@8896:9086",
+              "test-friendship-3@87@9774:9917",
+              "test-partnership-4@92@10492:10574",
+              "test-dating-5@105@11907:12136",
+              "test-partnership-4@72@8093:8243",
+              "test-dating-5@81@9483:9639",
+              "test-dating-5@119@13706:13878",
+              "test-dating-5@172@18384:18450",
+              "test-dating-5@45@5080:5183",
+              "test-dating-5@1@29:147",
+              "test-dating-5@136@15279:15364"
+            ]
+          },
+          {
+            "stage": "verdict",
+            "approved": true,
+            "reason": "Response should stick to evidence-based suitability and availability, avoiding unsupported assumptions."
+          },
+          {
+            "stage": "presentation_limit",
+            "omitted_findings": 9
+          },
+          {
+            "stage": "presentation",
+            "result": "Concise findings with separately inspectable original citations."
+          },
+          {
+            "stage": "validation",
+            "result": "Citation IDs and exact quotations valid within authorised scope",
+            "semantic_check": true
+          }
+        ],
+        "metrics": {
+          "model_calls": 4,
+          "tool_calls": 0,
+          "input_tokens": 16241,
+          "output_tokens": 3820,
+          "unique_messages": 23,
+          "source_characters": 3433,
+          "model": "GPT-5.4",
+          "provider": "poe",
+          "omitted_personal_observations": 1,
+          "people_exposed": 4,
+          "source_text_tokens": 736,
+          "relationships_exposed": 4,
+          "elapsed_seconds": 57.255,
+          "retrieval": {
+            "revision": "network-profile-and-available-search-v1",
+            "cache_hit": false,
+            "date_scope": {
+              "from": null,
+              "to": null
+            },
+            "scope": {
+              "selected_people": 4,
+              "semantically_indexed_people": 4,
+              "mode": "Profile context, checked summary sources and limited relevant excerpts; semantic search only for ready indexes."
+            }
+          }
+        },
+        "retry_request": {
+          "profileIds": [
+            "eval-test-dating-5",
+            "eval-test-friendship-3",
+            "eval-test-partnership-4",
+            "eval-test-work-3"
+          ],
+          "question": "Who among these people could I ask to join a nature photography walk? Give evidence for suitable options and qualify availability.",
+          "kind": "network",
+          "variant": "C",
+          "provider": "poe",
+          "from": "",
+          "to": "",
+          "sourceIds": []
+        }
+      }
+    },
+    {
+      "case_id": "network-photo",
+      "variant": "B",
+      "http_status": 200,
+      "elapsed_ms": 16862,
+      "answer": {
+        "candidates": [
+          {
+            "profile_id": "eval-test-dating-5",
+            "constraints": [
+              {
+                "name": "interest in nature photography",
+                "status": "supported",
+                "source_ids": [
+                  "test-dating-5@27@2859:3024",
+                  "test-dating-5@78@8896:9086",
+                  "test-dating-5@1@29:147"
+                ]
+              },
+              {
+                "name": "willingness to do photography outings with you",
+                "status": "supported",
+                "source_ids": [
+                  "test-dating-5@136@15279:15364",
+                  "test-dating-5@172@18384:18450",
+                  "test-dating-5@105@11907:12136"
+                ]
+              },
+              {
+                "name": "availability is not guaranteed",
+                "status": "supported",
+                "source_ids": [
+                  "test-dating-5@78@8896:9086",
+                  "test-dating-5@114@13059:13142",
+                  "test-dating-5@119@13706:13878"
+                ]
+              }
+            ],
+            "preference_source_ids": [
+              "test-dating-5@27@2859:3024",
+              "test-dating-5@78@8896:9086",
+              "test-dating-5@136@15279:15364"
+            ],
+            "match_kind": "repeated observation",
+            "fit_reason": "Owen is the strongest fit: he explicitly loves nature and landscape photography, has already gone on birdwatching/photography walks, and you two have already done a photo walk together. Availability should be qualified because he has had schedule conflicts around events and may need weekend coordination.",
+            "eligible": true,
+            "provisional": false,
+            "preference_matches": 3,
+            "fit_sources": [
+              {
+                "id": "test-dating-5@27@2859:3024",
+                "quote": "Glad you liked it! I genuinely love nature and landscape photography so much, especially quiet wetlands where you can watch the light shift and spot migratory birds.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 2859,
+                "source_end": 3024
+              },
+              {
+                "id": "test-dating-5@78@8896:9086",
+                "quote": "Hey! Oh, tomorrow I'm actually going to an early morning birdwatching and photography walk in Long Valley with a couple of colleagues from the NGO, so I'll probably be asleep by 9:30pm haha.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 8896,
+                "source_end": 9086
+              },
+              {
+                "id": "test-dating-5@136@15279:15364",
+                "quote": "Hey Owen, thanks for yesterday's photo walk! The reflection shots turned out amazing!",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 15279,
+                "source_end": 15364
+              }
+            ]
+          },
+          {
+            "profile_id": "eval-test-partnership-4",
+            "constraints": [
+              {
+                "name": "interest in photography/camera use",
+                "status": "supported",
+                "source_ids": [
+                  "test-partnership-4@147@16094:16158",
+                  "test-partnership-4@240@24800:24864"
+                ]
+              },
+              {
+                "name": "interest in nature photography specifically",
+                "status": "unknown",
+                "source_ids": []
+              },
+              {
+                "name": "availability may be limited by parenting/family scheduling",
+                "status": "supported",
+                "source_ids": [
+                  "test-partnership-4@85@9760:9925",
+                  "test-partnership-4@92@10492:10574",
+                  "test-partnership-4@72@8093:8243"
+                ]
+              }
+            ],
+            "preference_source_ids": [
+              "test-partnership-4@147@16094:16158",
+              "test-partnership-4@85@9760:9925"
+            ],
+            "match_kind": "single observation",
+            "fit_reason": "Yuki seems plausibly suitable if the walk is more about practicing camera settings than specifically nature photography. The evidence points to some camera-related activity, but not a clear stated love of nature photography. As a married parent, availability likely depends on family logistics.",
+            "eligible": true,
+            "provisional": true,
+            "preference_matches": 2,
+            "fit_sources": [
+              {
+                "id": "test-partnership-4@147@16094:16158",
+                "quote": "Good thinking! Want to do a practice run on the camera settings?",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 16094,
+                "source_end": 16158
+              },
+              {
+                "id": "test-partnership-4@85@9760:9925",
+                "quote": "Aww no!! I know how much you were looking forward to M+! Let's definitely move your solo M+ morning to Saturday 12 December instead, and I'll give you an extra hour!",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 9760,
+                "source_end": 9925
+              }
+            ]
+          }
+        ],
+        "status": "partial",
+        "findings": [
+          {
+            "kind": "evidence",
+            "text": "Owen directly said he loves nature and landscape photography, especially wetlands and migratory birds.",
+            "category": "interest",
+            "support": "directly stated",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-dating-5@27@2859:3024",
+                "quote": "Glad you liked it! I genuinely love nature and landscape photography so much, especially quiet wetlands where you can watch the light shift and spot migratory birds.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 2859,
+                "source_end": 3024
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "Owen has independently gone on an early morning birdwatching and photography walk, suggesting he actively does this kind of outing.",
+            "category": "interest",
+            "support": "directly stated",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-dating-5@78@8896:9086",
+                "quote": "Hey! Oh, tomorrow I'm actually going to an early morning birdwatching and photography walk in Long Valley with a couple of colleagues from the NGO, so I'll probably be asleep by 9:30pm haha.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 8896,
+                "source_end": 9086
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "You and Owen already did a photo walk together, and you later referenced another Sunday photo walk.",
+            "category": "current context",
+            "support": "directly stated",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-dating-5@136@15279:15364",
+                "quote": "Hey Owen, thanks for yesterday's photo walk! The reflection shots turned out amazing!",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 15279,
+                "source_end": 15364
+              },
+              {
+                "id": "test-dating-5@172@18384:18450",
+                "quote": "Same here, just catching up on files. Ready for Sunday photo walk?",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 18384,
+                "source_end": 18450
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "Yuki has some camera-related relevance because you suggested a practice run on camera settings.",
+            "category": "interest",
+            "support": "directly stated",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-partnership-4@147@16094:16158",
+                "quote": "Good thinking! Want to do a practice run on the camera settings?",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 16094,
+                "source_end": 16158
+              }
+            ]
+          },
+          {
+            "kind": "inference",
+            "text": "Yuki may be less available for a spontaneous walk because family scheduling and rest time are active considerations in your partnership.",
+            "category": "relationship context",
+            "support": "tentative",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-partnership-4@85@9760:9925",
+                "quote": "Aww no!! I know how much you were looking forward to M+! Let's definitely move your solo M+ morning to Saturday 12 December instead, and I'll give you an extra hour!",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 9760,
+                "source_end": 9925
+              },
+              {
+                "id": "test-partnership-4@92@10492:10574",
+                "quote": "morning! thx for letting me sleep til 9am today, felt like a whole spa vacation 😂",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 10492,
+                "source_end": 10574
+              },
+              {
+                "id": "test-partnership-4@72@8093:8243",
+                "quote": "u are officially husband of the year! and I promise you get the whole afternoon from 2pm to 5pm to watch the Premier League match in complete silence!",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 8093,
+                "source_end": 8243
+              }
+            ]
+          }
+        ],
+        "next_question": "Do you want me to rank all four people explicitly, including who is probably not a good ask right now?",
+        "trace": [
+          {
+            "stage": "retrieval",
+            "kind": "network",
+            "available_messages": 851,
+            "initial_messages": 27,
+            "scope": [
+              {
+                "id": "eval-test-dating-5",
+                "name": "Owen",
+                "relationship": "dating-transition-friends",
+                "context": "See user-provided profile evidence.",
+                "version": 1,
+                "attributes": []
+              },
+              {
+                "id": "eval-test-friendship-3",
+                "name": "Kelvin",
+                "relationship": "friendship-university-friend",
+                "context": "See user-provided profile evidence.",
+                "version": 1,
+                "attributes": []
+              },
+              {
+                "id": "eval-test-partnership-4",
+                "name": "Yuki",
+                "relationship": "partnership-married-parent",
+                "context": "See user-provided profile evidence.",
+                "version": 1,
+                "attributes": []
+              },
+              {
+                "id": "eval-test-work-3",
+                "name": "Leslie",
+                "relationship": "work-colleague",
+                "context": "See user-provided profile evidence.",
+                "version": 1,
+                "attributes": []
+              }
+            ]
+          },
+          {
+            "stage": "draft",
+            "attempt": 1,
+            "evidence_ids": [
+              "profile:eval-test-dating-5:v1",
+              "profile:eval-test-friendship-3:v1",
+              "profile:eval-test-partnership-4:v1",
+              "profile:eval-test-work-3:v1",
+              "test-dating-5@55@6510:6641",
+              "test-friendship-3@94@11056:11186",
+              "test-partnership-4@147@16094:16158",
+              "test-work-3@177@15039:15129",
+              "test-dating-5@114@13059:13142",
+              "test-friendship-3@136@15301:15343",
+              "test-partnership-4@240@24800:24864",
+              "test-work-3@133@11041:11123",
+              "test-dating-5@27@2859:3024",
+              "test-friendship-3@95@11215:11428",
+              "test-partnership-4@85@9760:9925",
+              "test-work-3@104@8581:8699",
+              "test-dating-5@78@8896:9086",
+              "test-friendship-3@87@9774:9917",
+              "test-partnership-4@92@10492:10574",
+              "test-dating-5@105@11907:12136",
+              "test-partnership-4@72@8093:8243",
+              "test-dating-5@81@9483:9639",
+              "test-dating-5@119@13706:13878",
+              "test-dating-5@172@18384:18450",
+              "test-dating-5@45@5080:5183",
+              "test-dating-5@1@29:147",
+              "test-dating-5@136@15279:15364"
+            ]
+          },
+          {
+            "stage": "review",
+            "attempt": 2,
+            "evidence_ids": [
+              "profile:eval-test-dating-5:v1",
+              "profile:eval-test-friendship-3:v1",
+              "profile:eval-test-partnership-4:v1",
+              "profile:eval-test-work-3:v1",
+              "test-dating-5@55@6510:6641",
+              "test-friendship-3@94@11056:11186",
+              "test-partnership-4@147@16094:16158",
+              "test-work-3@177@15039:15129",
+              "test-dating-5@114@13059:13142",
+              "test-friendship-3@136@15301:15343",
+              "test-partnership-4@240@24800:24864",
+              "test-work-3@133@11041:11123",
+              "test-dating-5@27@2859:3024",
+              "test-friendship-3@95@11215:11428",
+              "test-partnership-4@85@9760:9925",
+              "test-work-3@104@8581:8699",
+              "test-dating-5@78@8896:9086",
+              "test-friendship-3@87@9774:9917",
+              "test-partnership-4@92@10492:10574",
+              "test-dating-5@105@11907:12136",
+              "test-partnership-4@72@8093:8243",
+              "test-dating-5@81@9483:9639",
+              "test-dating-5@119@13706:13878",
+              "test-dating-5@172@18384:18450",
+              "test-dating-5@45@5080:5183",
+              "test-dating-5@1@29:147",
+              "test-dating-5@136@15279:15364"
+            ]
+          },
+          {
+            "stage": "review_decision",
+            "complete": true,
+            "approved": true,
+            "gaps": [],
+            "actions": []
+          },
+          {
+            "stage": "verdict",
+            "approved": true,
+            "reason": "Complete answered draft passed support review without further acquisition."
+          },
+          {
+            "stage": "presentation_limit",
+            "omitted_findings": 1
+          },
+          {
+            "stage": "presentation",
+            "result": "Concise findings with separately inspectable original citations."
+          },
+          {
+            "stage": "validation",
+            "result": "Citation IDs and exact quotations valid within authorised scope",
+            "semantic_check": true
+          }
+        ],
+        "metrics": {
+          "model_calls": 2,
+          "tool_calls": 0,
+          "input_tokens": 6606,
+          "output_tokens": 1101,
+          "unique_messages": 23,
+          "source_characters": 3433,
+          "model": "GPT-5.4",
+          "provider": "poe",
+          "people_exposed": 4,
+          "source_text_tokens": 736,
+          "relationships_exposed": 4,
+          "elapsed_seconds": 16.44,
+          "retrieval": {
+            "revision": "network-profile-and-available-search-v1",
+            "cache_hit": false,
+            "date_scope": {
+              "from": null,
+              "to": null
+            },
+            "scope": {
+              "selected_people": 4,
+              "semantically_indexed_people": 4,
+              "mode": "Profile context, checked summary sources and limited relevant excerpts; semantic search only for ready indexes."
+            }
+          }
+        },
+        "retry_request": {
+          "profileIds": [
+            "eval-test-dating-5",
+            "eval-test-friendship-3",
+            "eval-test-partnership-4",
+            "eval-test-work-3"
+          ],
+          "question": "Who among these people could I ask to join a nature photography walk? Give evidence for suitable options and qualify availability.",
+          "kind": "network",
+          "variant": "B",
+          "provider": "poe",
+          "from": "",
+          "to": "",
+          "sourceIds": []
+        }
+      }
+    },
+    {
+      "case_id": "network-cinema",
+      "variant": "B",
+      "http_status": 200,
+      "elapsed_ms": 26482,
+      "answer": {
+        "candidates": [
+          {
+            "profile_id": "eval-test-dating-5",
+            "constraints": [
+              {
+                "name": "likes arthouse / film screenings",
+                "status": "unknown",
+                "source_ids": []
+              },
+              {
+                "name": "shared hobby / companionship",
+                "status": "supported",
+                "source_ids": [
+                  "test-dating-5@164@17703:17847",
+                  "test-dating-5@43@4728:4864",
+                  "test-dating-5@187@19611:19671"
+                ]
+              },
+              {
+                "name": "availability",
+                "status": "unknown",
+                "source_ids": []
+              }
+            ],
+            "preference_source_ids": [
+              "test-dating-5@164@17703:17847",
+              "test-dating-5@43@4728:4864",
+              "test-dating-5@187@19611:19671"
+            ],
+            "match_kind": "shared context",
+            "fit_reason": "Owen seems like a warm friend with shared photography-related interests, but there is no evidence in the record that he likes arthouse films or screenings specifically. He is possible only in a general social sense, not because of demonstrated film taste.",
+            "eligible": true,
+            "provisional": true,
+            "preference_matches": 3,
+            "fit_sources": [
+              {
+                "id": "test-dating-5@164@17703:17847",
+                "quote": "Final Sunday thought — I'm really grateful for this friendship. You've made Hong Kong feel like home with all these photo walks and camera tips.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 17703,
+                "source_end": 17847
+              },
+              {
+                "id": "test-dating-5@187@19611:19671",
+                "quote": "I cannot wait honestly! This friendship means so much to me!",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 19611,
+                "source_end": 19671
+              },
+              {
+                "id": "test-dating-5@43@4728:4864",
+                "quote": "Hey Owen, random question — do you know any reliable shops in Sim City for secondhand Fujifilm lenses? I'm tempted to grab a 35mm prime.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 4728,
+                "source_end": 4864
+              }
+            ]
+          },
+          {
+            "profile_id": "eval-test-partnership-4",
+            "constraints": [
+              {
+                "name": "likes arthouse / film screenings",
+                "status": "unknown",
+                "source_ids": []
+              },
+              {
+                "name": "interest in visual arts/culture",
+                "status": "supported",
+                "source_ids": [
+                  "test-partnership-4@176@18513:18589",
+                  "test-partnership-4@152@16505:16566",
+                  "test-partnership-4@245@25211:25272"
+                ]
+              },
+              {
+                "name": "availability",
+                "status": "unknown",
+                "source_ids": []
+              },
+              {
+                "name": "family obligations may limit scheduling",
+                "status": "supported",
+                "source_ids": [
+                  "test-partnership-4@83@9251:9446"
+                ]
+              }
+            ],
+            "preference_source_ids": [
+              "test-partnership-4@176@18513:18589",
+              "test-partnership-4@152@16505:16566",
+              "test-partnership-4@245@25211:25272"
+            ],
+            "match_kind": "single observation",
+            "fit_reason": "Yuki shows evidence of interest in arts/cultural events, including exhibitions and a 'Showcase,' but nothing here explicitly ties her to arthouse film. She could be considered only as a tentative possibility, with availability not established and some family scheduling constraints in evidence.",
+            "eligible": true,
+            "provisional": true,
+            "preference_matches": 3,
+            "fit_sources": [
+              {
+                "id": "test-partnership-4@176@18513:18589",
+                "quote": "One more day til you get your gallery time! Any exhibition catches your eye?",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 18513,
+                "source_end": 18589
+              },
+              {
+                "id": "test-partnership-4@152@16505:16566",
+                "quote": "cannot wait honestly. this Showcase is going to be so special",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 16505,
+                "source_end": 16566
+              },
+              {
+                "id": "test-partnership-4@245@25211:25272",
+                "quote": "cannot wait honestly. this Showcase is going to be so special",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 25211,
+                "source_end": 25272
+              }
+            ]
+          },
+          {
+            "profile_id": "eval-test-friendship-3",
+            "constraints": [
+              {
+                "name": "likes arthouse / film screenings",
+                "status": "supported",
+                "source_ids": [
+                  "test-friendship-3@12@1386:1552",
+                  "test-friendship-3@4@343:496",
+                  "test-friendship-3@13@1581:1668",
+                  "test-friendship-3@68@7633:7683"
+                ]
+              },
+              {
+                "name": "availability",
+                "status": "unknown",
+                "source_ids": []
+              },
+              {
+                "name": "social comfort / low-friction invite",
+                "status": "contradicted",
+                "source_ids": [
+                  "test-friendship-3@88@9949:10130",
+                  "test-friendship-3@89@10159:10240",
+                  "test-friendship-3@95@11215:11428",
+                  "test-friendship-3@138@15457:15612"
+                ]
+              }
+            ],
+            "preference_source_ids": [
+              "test-friendship-3@12@1386:1552",
+              "test-friendship-3@4@343:496",
+              "test-friendship-3@13@1581:1668",
+              "test-friendship-3@68@7633:7683"
+            ],
+            "match_kind": "explicit preference",
+            "fit_reason": "Kelvin is the strongest taste match for an arthouse screening: he explicitly says he loves European arthouse films, A24, and restored Hong Kong cinema, and there is prior history of attending screenings together. However, there is also direct evidence of a serious conflict after one screening, so he is a fit on interest but not necessarily the easiest or safest invite socially.",
+            "eligible": false,
+            "provisional": true,
+            "preference_matches": 4,
+            "fit_sources": [
+              {
+                "id": "test-friendship-3@13@1581:1668",
+                "quote": "We should catch a screening together soon, feels like ages since uni film society days.",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 1581,
+                "source_end": 1668
+              },
+              {
+                "id": "test-friendship-3@12@1386:1552",
+                "quote": "Practically my second home. I genuinely love European arthouse films, A24 releases, and restored 90s Hong Kong cinema. Nothing beats watching them on a proper screen.",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 1386,
+                "source_end": 1552
+              },
+              {
+                "id": "test-friendship-3@4@343:496",
+                "quote": "Editing a short indie documentary for a local director friend, and I just pitched a 2,000-word essay on Wong Kar-wai's framing to an online film journal.",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 343,
+                "source_end": 496
+              },
+              {
+                "id": "test-friendship-3@68@7633:7683",
+                "quote": "The Polish cinema screening on Tuesday 1 December?",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 7633,
+                "source_end": 7683
+              }
+            ]
+          }
+        ],
+        "status": "partial",
+        "findings": [
+          {
+            "kind": "evidence",
+            "text": "Kelvin explicitly said: 'I genuinely love European arthouse films, A24 releases, and restored 90s Hong Kong cinema. Nothing beats watching them on a proper screen.'",
+            "category": "interest",
+            "support": "directly stated",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-friendship-3@12@1386:1552",
+                "quote": "Practically my second home. I genuinely love European arthouse films, A24 releases, and restored 90s Hong Kong cinema. Nothing beats watching them on a proper screen.",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 1386,
+                "source_end": 1552
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "Kelvin also discussed editing an indie documentary, pitching an essay on Wong Kar-wai, and analyzing visual storytelling in contemporary cinema, which strongly supports deep film interest.",
+            "category": "interest",
+            "support": "directly stated",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-friendship-3@4@343:496",
+                "quote": "Editing a short indie documentary for a local director friend, and I just pitched a 2,000-word essay on Wong Kar-wai's framing to an online film journal.",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 343,
+                "source_end": 496
+              },
+              {
+                "id": "test-friendship-3@181@19591:19702",
+                "quote": "Analyzing visual storytelling in contemporary cinema. Way more personal and creative than the documentary edit!",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 19591,
+                "source_end": 19702
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "There is direct history of film-going with Kelvin: you suggested catching a screening together, referenced a Polish cinema screening, and later said you had gone to an arthouse screening with him.",
+            "category": "relationship context",
+            "support": "directly stated",
+            "lifecycle": "historical",
+            "citations": [
+              {
+                "id": "test-friendship-3@13@1581:1668",
+                "quote": "We should catch a screening together soon, feels like ages since uni film society days.",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 1581,
+                "source_end": 1668
+              },
+              {
+                "id": "test-friendship-3@68@7633:7683",
+                "quote": "The Polish cinema screening on Tuesday 1 December?",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 7633,
+                "source_end": 7683
+              },
+              {
+                "id": "test-friendship-3@95@11215:11428",
+                "quote": "Caring about your craft doesn't give you the right to insult your friends. I literally came to an arthouse screening with you, read your essay, and gave you an honest reaction, and you immediately talk down to me.",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 11215,
+                "source_end": 11428
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "There is also evidence of conflict around film taste with Kelvin, including insulting comments from him and your message that things got heated after the screening.",
+            "category": "relationship context",
+            "support": "directly stated",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-friendship-3@88@9949:10130",
+                "quote": "The potato scene was literally establishing the monotony of grief and domestic labour. If you missed that, it's because mainstream Hollywood garbage has completely fried your brain.",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 9949,
+                "source_end": 10130
+              },
+              {
+                "id": "test-friendship-3@89@10159:10240",
+                "quote": "Wow, okay. So anyone who disagrees with your taste is \"brainwashed by Hollywood\"?",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 10159,
+                "source_end": 10240
+              },
+              {
+                "id": "test-friendship-3@95@11215:11428",
+                "quote": "Caring about your craft doesn't give you the right to insult your friends. I literally came to an arthouse screening with you, read your essay, and gave you an honest reaction, and you immediately talk down to me.",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 11215,
+                "source_end": 11428
+              },
+              {
+                "id": "test-friendship-3@138@15457:15612",
+                "quote": "Hey, by the way, I know things got pretty heated after the film screening. I genuinely value your friendship even though we have different taste in cinema.",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 15457,
+                "source_end": 15612
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "Yuki appears interested in arts/cultural events such as exhibitions and a Showcase, but none of the evidence explicitly mentions film or arthouse cinema.",
+            "category": "interest",
+            "support": "directly stated",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-partnership-4@176@18513:18589",
+                "quote": "One more day til you get your gallery time! Any exhibition catches your eye?",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 18513,
+                "source_end": 18589
+              },
+              {
+                "id": "test-partnership-4@152@16505:16566",
+                "quote": "cannot wait honestly. this Showcase is going to be so special",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 16505,
+                "source_end": 16566
+              }
+            ]
+          }
+        ],
+        "next_question": "Do you want me to rank them by best film-taste match versus lowest social risk for the invitation?",
+        "trace": [
+          {
+            "stage": "retrieval",
+            "kind": "network",
+            "available_messages": 851,
+            "initial_messages": 27,
+            "scope": [
+              {
+                "id": "eval-test-dating-5",
+                "name": "Owen",
+                "relationship": "dating-transition-friends",
+                "context": "See user-provided profile evidence.",
+                "version": 1,
+                "attributes": []
+              },
+              {
+                "id": "eval-test-friendship-3",
+                "name": "Kelvin",
+                "relationship": "friendship-university-friend",
+                "context": "See user-provided profile evidence.",
+                "version": 1,
+                "attributes": []
+              },
+              {
+                "id": "eval-test-partnership-4",
+                "name": "Yuki",
+                "relationship": "partnership-married-parent",
+                "context": "See user-provided profile evidence.",
+                "version": 1,
+                "attributes": []
+              },
+              {
+                "id": "eval-test-work-3",
+                "name": "Leslie",
+                "relationship": "work-colleague",
+                "context": "See user-provided profile evidence.",
+                "version": 1,
+                "attributes": []
+              }
+            ]
+          },
+          {
+            "stage": "draft",
+            "attempt": 1,
+            "evidence_ids": [
+              "profile:eval-test-dating-5:v1",
+              "profile:eval-test-friendship-3:v1",
+              "profile:eval-test-partnership-4:v1",
+              "profile:eval-test-work-3:v1",
+              "test-dating-5@164@17703:17847",
+              "test-friendship-3@13@1581:1668",
+              "test-partnership-4@5@399:522",
+              "test-work-3@165@13786:13933",
+              "test-dating-5@187@19611:19671",
+              "test-friendship-3@12@1386:1552",
+              "test-partnership-4@176@18513:18589",
+              "test-work-3@117@9731:9845",
+              "test-dating-5@43@4728:4864",
+              "test-friendship-3@69@7715:7856",
+              "test-partnership-4@72@8093:8243",
+              "test-work-3@169@14223:14307",
+              "test-friendship-3@181@19591:19702",
+              "test-partnership-4@152@16505:16566",
+              "test-friendship-3@4@343:496",
+              "test-partnership-4@245@25211:25272",
+              "test-friendship-3@138@15457:15612",
+              "test-partnership-4@83@9251:9446",
+              "test-friendship-3@95@11215:11428",
+              "test-friendship-3@89@10159:10240",
+              "test-friendship-3@191@20548:20615",
+              "test-friendship-3@68@7633:7683",
+              "test-friendship-3@88@9949:10130"
+            ]
+          },
+          {
+            "stage": "review",
+            "attempt": 2,
+            "evidence_ids": [
+              "profile:eval-test-dating-5:v1",
+              "profile:eval-test-friendship-3:v1",
+              "profile:eval-test-partnership-4:v1",
+              "profile:eval-test-work-3:v1",
+              "test-dating-5@164@17703:17847",
+              "test-friendship-3@13@1581:1668",
+              "test-partnership-4@5@399:522",
+              "test-work-3@165@13786:13933",
+              "test-dating-5@187@19611:19671",
+              "test-friendship-3@12@1386:1552",
+              "test-partnership-4@176@18513:18589",
+              "test-work-3@117@9731:9845",
+              "test-dating-5@43@4728:4864",
+              "test-friendship-3@69@7715:7856",
+              "test-partnership-4@72@8093:8243",
+              "test-work-3@169@14223:14307",
+              "test-friendship-3@181@19591:19702",
+              "test-partnership-4@152@16505:16566",
+              "test-friendship-3@4@343:496",
+              "test-partnership-4@245@25211:25272",
+              "test-friendship-3@138@15457:15612",
+              "test-partnership-4@83@9251:9446",
+              "test-friendship-3@95@11215:11428",
+              "test-friendship-3@89@10159:10240",
+              "test-friendship-3@191@20548:20615",
+              "test-friendship-3@68@7633:7683",
+              "test-friendship-3@88@9949:10130"
+            ]
+          },
+          {
+            "stage": "review_decision",
+            "complete": true,
+            "approved": true,
+            "gaps": [],
+            "actions": []
+          },
+          {
+            "stage": "verdict",
+            "approved": true,
+            "reason": "Complete answered draft passed support review without further acquisition."
+          },
+          {
+            "stage": "presentation_limit",
+            "omitted_findings": 5
+          },
+          {
+            "stage": "presentation",
+            "result": "Concise findings with separately inspectable original citations."
+          },
+          {
+            "stage": "validation",
+            "result": "Citation IDs and exact quotations valid within authorised scope",
+            "semantic_check": true
+          }
+        ],
+        "metrics": {
+          "model_calls": 2,
+          "tool_calls": 0,
+          "input_tokens": 7221,
+          "output_tokens": 1746,
+          "unique_messages": 23,
+          "source_characters": 3348,
+          "model": "GPT-5.4",
+          "provider": "poe",
+          "people_exposed": 4,
+          "source_text_tokens": 699,
+          "relationships_exposed": 4,
+          "elapsed_seconds": 26.083,
+          "retrieval": {
+            "revision": "network-profile-and-available-search-v1",
+            "cache_hit": false,
+            "date_scope": {
+              "from": null,
+              "to": null
+            },
+            "scope": {
+              "selected_people": 4,
+              "semantically_indexed_people": 4,
+              "mode": "Profile context, checked summary sources and limited relevant excerpts; semantic search only for ready indexes."
+            }
+          }
+        },
+        "retry_request": {
+          "profileIds": [
+            "eval-test-dating-5",
+            "eval-test-friendship-3",
+            "eval-test-partnership-4",
+            "eval-test-work-3"
+          ],
+          "question": "Who among these people could I invite to an arthouse film screening? Explain evidence and do not assume anyone is available.",
+          "kind": "network",
+          "variant": "B",
+          "provider": "poe",
+          "from": "",
+          "to": "",
+          "sourceIds": []
+        }
+      }
+    },
+    {
+      "case_id": "network-cinema",
+      "variant": "C",
+      "http_status": 200,
+      "elapsed_ms": 28509,
+      "answer": {
+        "candidates": [
+          {
+            "profile_id": "eval-test-friendship-3",
+            "constraints": [
+              {
+                "name": "likes arthouse / cinema screenings",
+                "status": "supported",
+                "source_ids": [
+                  "test-friendship-3@12@1386:1552",
+                  "test-friendship-3@4@343:496",
+                  "test-friendship-3@181@19591:19702",
+                  "test-friendship-3@68@7633:7683",
+                  "test-friendship-3@13@1581:1668"
+                ]
+              },
+              {
+                "name": "availability for a new screening",
+                "status": "unknown",
+                "source_ids": []
+              },
+              {
+                "name": "possible interpersonal friction around film taste",
+                "status": "supported",
+                "source_ids": [
+                  "test-friendship-3@88@9949:10130",
+                  "test-friendship-3@95@11215:11428",
+                  "test-friendship-3@138@15457:15612"
+                ]
+              }
+            ],
+            "preference_source_ids": [
+              "test-friendship-3@12@1386:1552",
+              "test-friendship-3@4@343:496",
+              "test-friendship-3@181@19591:19702",
+              "test-friendship-3@68@7633:7683",
+              "test-friendship-3@13@1581:1668",
+              "test-friendship-3@191@20548:20615"
+            ],
+            "match_kind": "explicit preference",
+            "fit_reason": "Kelvin is the strongest match: he directly said he loves European arthouse films, A24 releases, and restored Hong Kong cinema, and there is prior shared context of attending screenings together. However, there is also evidence of a conflict after a prior screening, so he seems invite-worthy based on taste, but the social dynamic may need care.",
+            "eligible": true,
+            "provisional": true,
+            "preference_matches": 6,
+            "fit_sources": [
+              {
+                "id": "test-friendship-3@13@1581:1668",
+                "quote": "We should catch a screening together soon, feels like ages since uni film society days.",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 1581,
+                "source_end": 1668
+              },
+              {
+                "id": "test-friendship-3@12@1386:1552",
+                "quote": "Practically my second home. I genuinely love European arthouse films, A24 releases, and restored 90s Hong Kong cinema. Nothing beats watching them on a proper screen.",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 1386,
+                "source_end": 1552
+              },
+              {
+                "id": "test-friendship-3@181@19591:19702",
+                "quote": "Analyzing visual storytelling in contemporary cinema. Way more personal and creative than the documentary edit!",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 19591,
+                "source_end": 19702
+              },
+              {
+                "id": "test-friendship-3@4@343:496",
+                "quote": "Editing a short indie documentary for a local director friend, and I just pitched a 2,000-word essay on Wong Kar-wai's framing to an online film journal.",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 343,
+                "source_end": 496
+              },
+              {
+                "id": "test-friendship-3@191@20548:20615",
+                "quote": "Same! Actually have some film recommendations I want to run by you.",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 20548,
+                "source_end": 20615
+              },
+              {
+                "id": "test-friendship-3@68@7633:7683",
+                "quote": "The Polish cinema screening on Tuesday 1 December?",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 7633,
+                "source_end": 7683
+              }
+            ]
+          },
+          {
+            "profile_id": "eval-test-partnership-4",
+            "constraints": [
+              {
+                "name": "likes visual arts / exhibitions",
+                "status": "supported",
+                "source_ids": [
+                  "test-partnership-4@176@18513:18589",
+                  "test-partnership-4@152@16505:16566",
+                  "test-partnership-4@245@25211:25272"
+                ]
+              },
+              {
+                "name": "specific interest in arthouse film screenings",
+                "status": "unknown",
+                "source_ids": []
+              },
+              {
+                "name": "availability",
+                "status": "unknown",
+                "source_ids": []
+              },
+              {
+                "name": "family obligations may affect scheduling",
+                "status": "supported",
+                "source_ids": [
+                  "test-partnership-4@83@9251:9446",
+                  "test-partnership-4@72@8093:8243"
+                ]
+              }
+            ],
+            "preference_source_ids": [
+              "test-partnership-4@176@18513:18589",
+              "test-partnership-4@152@16505:16566"
+            ],
+            "match_kind": "shared context",
+            "fit_reason": "Yuki has some evidence of interest in cultural/art events, but nothing directly tying them to arthouse cinema. They could be a maybe if you mean broadly arts-oriented company, but the evidence is weaker, and availability should not be assumed.",
+            "eligible": true,
+            "provisional": true,
+            "preference_matches": 2,
+            "fit_sources": [
+              {
+                "id": "test-partnership-4@176@18513:18589",
+                "quote": "One more day til you get your gallery time! Any exhibition catches your eye?",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 18513,
+                "source_end": 18589
+              },
+              {
+                "id": "test-partnership-4@152@16505:16566",
+                "quote": "cannot wait honestly. this Showcase is going to be so special",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 16505,
+                "source_end": 16566
+              }
+            ]
+          },
+          {
+            "profile_id": "eval-test-dating-5",
+            "constraints": [
+              {
+                "name": "specific interest in arthouse films",
+                "status": "unknown",
+                "source_ids": []
+              },
+              {
+                "name": "friendship context suitable for invite",
+                "status": "supported",
+                "source_ids": [
+                  "test-dating-5@164@17703:17847",
+                  "test-dating-5@187@19611:19671"
+                ]
+              },
+              {
+                "name": "shared interest in photography / visual culture",
+                "status": "supported",
+                "source_ids": [
+                  "test-dating-5@164@17703:17847",
+                  "test-dating-5@43@4728:4864"
+                ]
+              },
+              {
+                "name": "availability",
+                "status": "unknown",
+                "source_ids": []
+              }
+            ],
+            "preference_source_ids": [
+              "test-dating-5@164@17703:17847",
+              "test-dating-5@43@4728:4864"
+            ],
+            "match_kind": "single observation",
+            "fit_reason": "Owen seems like a plausible social invite because of a warm friendship and shared photography context, which may overlap with visual/art interests, but there is no direct evidence that he enjoys arthouse films specifically.",
+            "eligible": true,
+            "provisional": true,
+            "preference_matches": 2,
+            "fit_sources": [
+              {
+                "id": "test-dating-5@164@17703:17847",
+                "quote": "Final Sunday thought — I'm really grateful for this friendship. You've made Hong Kong feel like home with all these photo walks and camera tips.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 17703,
+                "source_end": 17847
+              },
+              {
+                "id": "test-dating-5@43@4728:4864",
+                "quote": "Hey Owen, random question — do you know any reliable shops in Sim City for secondhand Fujifilm lenses? I'm tempted to grab a 35mm prime.",
+                "profile_id": "eval-test-dating-5",
+                "source_id": "test-dating-5",
+                "source_version": 1,
+                "source_start": 4728,
+                "source_end": 4864
+              }
+            ]
+          }
+        ],
+        "status": "partial",
+        "findings": [
+          {
+            "kind": "evidence",
+            "text": "Kelvin explicitly said he 'genuinely love[s] European arthouse films, A24 releases, and restored 90s Hong Kong cinema' and said nothing beats watching them on a proper screen.",
+            "category": "interest",
+            "support": "directly stated",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-friendship-3@12@1386:1552",
+                "quote": "Practically my second home. I genuinely love European arthouse films, A24 releases, and restored 90s Hong Kong cinema. Nothing beats watching them on a proper screen.",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 1386,
+                "source_end": 1552
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "You and Kelvin already have a history of going to screenings together, including references to 'uni film society days,' a Polish cinema screening, and an arthouse screening you attended together.",
+            "category": "relationship context",
+            "support": "directly stated",
+            "lifecycle": "historical",
+            "citations": [
+              {
+                "id": "test-friendship-3@13@1581:1668",
+                "quote": "We should catch a screening together soon, feels like ages since uni film society days.",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 1581,
+                "source_end": 1668
+              },
+              {
+                "id": "test-friendship-3@68@7633:7683",
+                "quote": "The Polish cinema screening on Tuesday 1 December?",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 7633,
+                "source_end": 7683
+              },
+              {
+                "id": "test-friendship-3@95@11215:11428",
+                "quote": "Caring about your craft doesn't give you the right to insult your friends. I literally came to an arthouse screening with you, read your essay, and gave you an honest reaction, and you immediately talk down to me.",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 11215,
+                "source_end": 11428
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "Kelvin is deeply film-engaged beyond casual viewing: editing an indie documentary, pitching an essay on Wong Kar-wai, and studying visual storytelling in contemporary cinema.",
+            "category": "interest",
+            "support": "directly stated",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-friendship-3@4@343:496",
+                "quote": "Editing a short indie documentary for a local director friend, and I just pitched a 2,000-word essay on Wong Kar-wai's framing to an online film journal.",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 343,
+                "source_end": 496
+              },
+              {
+                "id": "test-friendship-3@181@19591:19702",
+                "quote": "Analyzing visual storytelling in contemporary cinema. Way more personal and creative than the documentary edit!",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 19591,
+                "source_end": 19702
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "There is also evidence of tension with Kelvin around film taste; he insulted your reaction to a film, and you later said you value the friendship despite heated disagreement after a screening.",
+            "category": "relationship context",
+            "support": "directly stated",
+            "lifecycle": "historical",
+            "citations": [
+              {
+                "id": "test-friendship-3@88@9949:10130",
+                "quote": "The potato scene was literally establishing the monotony of grief and domestic labour. If you missed that, it's because mainstream Hollywood garbage has completely fried your brain.",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 9949,
+                "source_end": 10130
+              },
+              {
+                "id": "test-friendship-3@95@11215:11428",
+                "quote": "Caring about your craft doesn't give you the right to insult your friends. I literally came to an arthouse screening with you, read your essay, and gave you an honest reaction, and you immediately talk down to me.",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 11215,
+                "source_end": 11428
+              },
+              {
+                "id": "test-friendship-3@138@15457:15612",
+                "quote": "Hey, by the way, I know things got pretty heated after the film screening. I genuinely value your friendship even though we have different taste in cinema.",
+                "profile_id": "eval-test-friendship-3",
+                "source_id": "test-friendship-3",
+                "source_version": 1,
+                "source_start": 15457,
+                "source_end": 15612
+              }
+            ]
+          },
+          {
+            "kind": "evidence",
+            "text": "Yuki has evidence of interest in art-related events, such as a gallery outing and enthusiasm for a showcase, but no direct evidence about arthouse film interest.",
+            "category": "interest",
+            "support": "directly stated",
+            "lifecycle": "current",
+            "citations": [
+              {
+                "id": "test-partnership-4@176@18513:18589",
+                "quote": "One more day til you get your gallery time! Any exhibition catches your eye?",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 18513,
+                "source_end": 18589
+              },
+              {
+                "id": "test-partnership-4@152@16505:16566",
+                "quote": "cannot wait honestly. this Showcase is going to be so special",
+                "profile_id": "eval-test-partnership-4",
+                "source_id": "test-partnership-4",
+                "source_version": 1,
+                "source_start": 16505,
+                "source_end": 16566
+              }
+            ]
+          }
+        ],
+        "next_question": "Do you want me to rank them strictly by evidence strength, or help draft an invite message for the strongest option?",
+        "trace": [
+          {
+            "stage": "retrieval",
+            "kind": "network",
+            "available_messages": 851,
+            "initial_messages": 27,
+            "scope": [
+              {
+                "id": "eval-test-dating-5",
+                "name": "Owen",
+                "relationship": "dating-transition-friends",
+                "context": "See user-provided profile evidence.",
+                "version": 1,
+                "attributes": []
+              },
+              {
+                "id": "eval-test-friendship-3",
+                "name": "Kelvin",
+                "relationship": "friendship-university-friend",
+                "context": "See user-provided profile evidence.",
+                "version": 1,
+                "attributes": []
+              },
+              {
+                "id": "eval-test-partnership-4",
+                "name": "Yuki",
+                "relationship": "partnership-married-parent",
+                "context": "See user-provided profile evidence.",
+                "version": 1,
+                "attributes": []
+              },
+              {
+                "id": "eval-test-work-3",
+                "name": "Leslie",
+                "relationship": "work-colleague",
+                "context": "See user-provided profile evidence.",
+                "version": 1,
+                "attributes": []
+              }
+            ]
+          },
+          {
+            "stage": "draft",
+            "attempt": 1,
+            "evidence_ids": [
+              "profile:eval-test-dating-5:v1",
+              "profile:eval-test-friendship-3:v1",
+              "profile:eval-test-partnership-4:v1",
+              "profile:eval-test-work-3:v1",
+              "test-dating-5@164@17703:17847",
+              "test-friendship-3@13@1581:1668",
+              "test-partnership-4@5@399:522",
+              "test-work-3@165@13786:13933",
+              "test-dating-5@187@19611:19671",
+              "test-friendship-3@12@1386:1552",
+              "test-partnership-4@176@18513:18589",
+              "test-work-3@117@9731:9845",
+              "test-dating-5@43@4728:4864",
+              "test-friendship-3@69@7715:7856",
+              "test-partnership-4@72@8093:8243",
+              "test-work-3@169@14223:14307",
+              "test-friendship-3@181@19591:19702",
+              "test-partnership-4@152@16505:16566",
+              "test-friendship-3@4@343:496",
+              "test-partnership-4@245@25211:25272",
+              "test-friendship-3@138@15457:15612",
+              "test-partnership-4@83@9251:9446",
+              "test-friendship-3@95@11215:11428",
+              "test-friendship-3@89@10159:10240",
+              "test-friendship-3@191@20548:20615",
+              "test-friendship-3@68@7633:7683",
+              "test-friendship-3@88@9949:10130"
+            ]
+          },
+          {
+            "stage": "review",
+            "attempt": 2,
+            "evidence_ids": [
+              "profile:eval-test-dating-5:v1",
+              "profile:eval-test-friendship-3:v1",
+              "profile:eval-test-partnership-4:v1",
+              "profile:eval-test-work-3:v1",
+              "test-dating-5@164@17703:17847",
+              "test-friendship-3@13@1581:1668",
+              "test-partnership-4@5@399:522",
+              "test-work-3@165@13786:13933",
+              "test-dating-5@187@19611:19671",
+              "test-friendship-3@12@1386:1552",
+              "test-partnership-4@176@18513:18589",
+              "test-work-3@117@9731:9845",
+              "test-dating-5@43@4728:4864",
+              "test-friendship-3@69@7715:7856",
+              "test-partnership-4@72@8093:8243",
+              "test-work-3@169@14223:14307",
+              "test-friendship-3@181@19591:19702",
+              "test-partnership-4@152@16505:16566",
+              "test-friendship-3@4@343:496",
+              "test-partnership-4@245@25211:25272",
+              "test-friendship-3@138@15457:15612",
+              "test-partnership-4@83@9251:9446",
+              "test-friendship-3@95@11215:11428",
+              "test-friendship-3@89@10159:10240",
+              "test-friendship-3@191@20548:20615",
+              "test-friendship-3@68@7633:7683",
+              "test-friendship-3@88@9949:10130"
+            ]
+          },
+          {
+            "stage": "review_decision",
+            "complete": true,
+            "approved": true,
+            "gaps": [],
+            "actions": []
+          },
+          {
+            "stage": "verdict",
+            "approved": true,
+            "reason": "Complete answered draft passed support review without further acquisition."
+          },
+          {
+            "stage": "presentation_limit",
+            "omitted_findings": 5
+          },
+          {
+            "stage": "presentation",
+            "result": "Concise findings with separately inspectable original citations."
+          },
+          {
+            "stage": "validation",
+            "result": "Citation IDs and exact quotations valid within authorised scope",
+            "semantic_check": true
+          }
+        ],
+        "metrics": {
+          "model_calls": 2,
+          "tool_calls": 0,
+          "input_tokens": 7275,
+          "output_tokens": 1800,
+          "unique_messages": 23,
+          "source_characters": 3348,
+          "model": "GPT-5.4",
+          "provider": "poe",
+          "people_exposed": 4,
+          "source_text_tokens": 699,
+          "relationships_exposed": 4,
+          "elapsed_seconds": 28.035,
+          "retrieval": {
+            "revision": "network-profile-and-available-search-v1",
+            "cache_hit": false,
+            "date_scope": {
+              "from": null,
+              "to": null
+            },
+            "scope": {
+              "selected_people": 4,
+              "semantically_indexed_people": 4,
+              "mode": "Profile context, checked summary sources and limited relevant excerpts; semantic search only for ready indexes."
+            }
+          }
+        },
+        "retry_request": {
+          "profileIds": [
+            "eval-test-dating-5",
+            "eval-test-friendship-3",
+            "eval-test-partnership-4",
+            "eval-test-work-3"
+          ],
+          "question": "Who among these people could I invite to an arthouse film screening? Explain evidence and do not assume anyone is available.",
+          "kind": "network",
+          "variant": "C",
+          "provider": "poe",
+          "from": "",
+          "to": "",
+          "sourceIds": []
+        }
+      }
+    }
+  ]
+}

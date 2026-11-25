@@ -1,0 +1,10 @@
+{
+  "network-photo": {
+    "X": "B",
+    "Y": "C"
+  },
+  "network-cinema": {
+    "X": "C",
+    "Y": "B"
+  }
+}

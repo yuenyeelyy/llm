@@ -1,0 +1,22 @@
+{
+  "owen-update": {
+    "X": "B",
+    "Y": "C"
+  },
+  "leslie-update": {
+    "X": "C",
+    "Y": "B"
+  },
+  "yuki-update": {
+    "X": "B",
+    "Y": "C"
+  },
+  "owen-fact": {
+    "X": "C",
+    "Y": "B"
+  },
+  "owen-unknown": {
+    "X": "B",
+    "Y": "C"
+  }
+}

@@ -1,0 +1,932 @@
+[
+  {
+    "id": "owen-update",
+    "question": "Is Owen still going to the PMQ photography talk on 2 December, and what changed?",
+    "people": [
+      "Owen"
+    ],
+    "X": {
+      "status": "answered",
+      "findings": [
+        {
+          "kind": "evidence",
+          "text": "Owen originally agreed to the PMQ nature photography talk on Wednesday 2 December.",
+          "category": "current context",
+          "support": "directly stated",
+          "lifecycle": "historical",
+          "citations": [
+            {
+              "id": "test-dating-5@56@6671:6825",
+              "quote": "Oh I saw that event on Facebook! The speaker shoots Hong Kong's outer islands from kayaks. Yes, let's definitely put Wednesday 2 December in the calendar!",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 6671,
+              "source_end": 6825
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "By 16 November, he was no longer planning to go and suggested checking for a recording or visiting the Shatin nature photo exhibition another weekend in December instead.",
+          "category": "current context",
+          "support": "directly stated",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-dating-5@119@13706:13878",
+              "quote": "Thanks for understanding! I'll check if PMQ uploads the recording afterwards, or we can go check out the Shatin nature photo exhibition another weekend in December instead.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 13706,
+              "source_end": 13878
+            }
+          ]
+        },
+        {
+          "kind": "inference",
+          "text": "So no, Owen is not still going to the PMQ talk on 2 December.",
+          "category": "fact",
+          "support": "tentative",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-dating-5@56@6671:6825",
+              "quote": "Oh I saw that event on Facebook! The speaker shoots Hong Kong's outer islands from kayaks. Yes, let's definitely put Wednesday 2 December in the calendar!",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 6671,
+              "source_end": 6825
+            },
+            {
+              "id": "test-dating-5@119@13706:13878",
+              "quote": "Thanks for understanding! I'll check if PMQ uploads the recording afterwards, or we can go check out the Shatin nature photo exhibition another weekend in December instead.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 13706,
+              "source_end": 13878
+            }
+          ]
+        },
+        {
+          "kind": "inference",
+          "text": "What changed is that a volunteer briefing came up, which conflicted with the event.",
+          "category": "current context",
+          "support": "tentative",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-dating-5@118@13624:13676",
+              "quote": "Aww no worries at all! Duty calls for the coastline!",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 13624,
+              "source_end": 13676
+            },
+            {
+              "id": "test-dating-5@120@13907:13959",
+              "quote": "Sounds great, good luck with the volunteer briefing!",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 13907,
+              "source_end": 13959
+            }
+          ]
+        }
+      ],
+      "next_question": ""
+    },
+    "Y": {
+      "status": "answered",
+      "findings": [
+        {
+          "kind": "evidence",
+          "text": "Owen originally agreed to the PMQ nature photography talk on Wednesday 2 December.",
+          "category": "current context",
+          "support": "directly stated",
+          "lifecycle": "historical",
+          "citations": [
+            {
+              "id": "test-dating-5@56@6671:6825",
+              "quote": "Oh I saw that event on Facebook! The speaker shoots Hong Kong's outer islands from kayaks. Yes, let's definitely put Wednesday 2 December in the calendar!",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 6671,
+              "source_end": 6825
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "Later, Owen said he would check whether PMQ uploads the recording, or suggested visiting the Shatin nature photo exhibition another weekend instead.",
+          "category": "current context",
+          "support": "directly stated",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-dating-5@119@13706:13878",
+              "quote": "Thanks for understanding! I'll check if PMQ uploads the recording afterwards, or we can go check out the Shatin nature photo exhibition another weekend in December instead.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 13706,
+              "source_end": 13878
+            }
+          ]
+        },
+        {
+          "kind": "inference",
+          "text": "That means he is no longer planning to attend the 2 December talk in person.",
+          "category": "fact",
+          "support": "tentative",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-dating-5@119@13706:13878",
+              "quote": "Thanks for understanding! I'll check if PMQ uploads the recording afterwards, or we can go check out the Shatin nature photo exhibition another weekend in December instead.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 13706,
+              "source_end": 13878
+            }
+          ]
+        },
+        {
+          "kind": "inference",
+          "text": "Your replies reference 'Duty calls for the coastline' and wish him luck with the 'volunteer briefing,' indicating the reason for the change was a volunteer-related scheduling conflict.",
+          "category": "current context",
+          "support": "tentative",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-dating-5@118@13624:13676",
+              "quote": "Aww no worries at all! Duty calls for the coastline!",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 13624,
+              "source_end": 13676
+            },
+            {
+              "id": "test-dating-5@120@13907:13959",
+              "quote": "Sounds great, good luck with the volunteer briefing!",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 13907,
+              "source_end": 13959
+            }
+          ]
+        }
+      ],
+      "next_question": ""
+    }
+  },
+  {
+    "id": "leslie-update",
+    "question": "What happened to our 25 November swimming plan, and what was the replacement?",
+    "people": [
+      "Leslie"
+    ],
+    "X": {
+      "status": "answered",
+      "findings": [
+        {
+          "kind": "evidence",
+          "text": "You and Leslie had planned swimming + noodles for Wednesday 25 Nov.",
+          "category": "current context",
+          "support": "directly stated",
+          "lifecycle": "historical",
+          "citations": [
+            {
+              "id": "test-work-3@70@5830:5913",
+              "quote": "hey planning my month out — are we still good for swimming + noodles on Wed 25 Nov?",
+              "profile_id": "eval-test-work-3",
+              "source_id": "test-work-3",
+              "source_version": 1,
+              "source_start": 5830,
+              "source_end": 5913
+            },
+            {
+              "id": "test-work-3@71@5945:6025",
+              "quote": "should be totally fine! I'm usually free Wed evenings anyway so let's lock it in",
+              "profile_id": "eval-test-work-3",
+              "source_id": "test-work-3",
+              "source_version": 1,
+              "source_start": 5945,
+              "source_end": 6025
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "The 25 Nov swim was canceled because Leslie had to go with her girlfriend to the daughter's school Parents' Day / meet the teachers.",
+          "category": "current context",
+          "support": "directly stated",
+          "lifecycle": "historical",
+          "citations": [
+            {
+              "id": "test-work-3@103@8455:8549",
+              "quote": "my girlfriend's daughter's school just scheduled Parents' Day on Wednesday 25 November evening",
+              "profile_id": "eval-test-work-3",
+              "source_id": "test-work-3",
+              "source_version": 1,
+              "source_start": 8455,
+              "source_end": 8549
+            },
+            {
+              "id": "test-work-3@104@8581:8699",
+              "quote": "she asked me to go with her to meet the teachers, so I have to cancel our Wed 25 Nov swimming session :( really sorry!",
+              "profile_id": "eval-test-work-3",
+              "source_id": "test-work-3",
+              "source_version": 1,
+              "source_start": 8581,
+              "source_end": 8699
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "The replacement was a rescheduled swim on Wednesday 2 Dec at 7pm at Victoria Park.",
+          "category": "current context",
+          "support": "directly stated",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-work-3@180@15325:15421",
+              "quote": "hey just confirming Wed 2 Dec swimming at Victoria Park? I think we shifted from the 25th right?",
+              "profile_id": "eval-test-work-3",
+              "source_id": "test-work-3",
+              "source_version": 1,
+              "source_start": 15325,
+              "source_end": 15421
+            },
+            {
+              "id": "test-work-3@181@15450:15511",
+              "quote": "Yes! Wednesday 2 December is locked in. 7pm at Victoria Park!",
+              "profile_id": "eval-test-work-3",
+              "source_id": "test-work-3",
+              "source_version": 1,
+              "source_start": 15450,
+              "source_end": 15511
+            }
+          ]
+        }
+      ],
+      "next_question": ""
+    },
+    "Y": {
+      "status": "answered",
+      "findings": [
+        {
+          "kind": "evidence",
+          "text": "The Wed 25 Nov swimming session was cancelled because Leslie needed to go to her girlfriend’s daughter’s school Parents’ Day / meet the teachers.",
+          "category": "current context",
+          "support": "directly stated",
+          "lifecycle": "historical",
+          "citations": [
+            {
+              "id": "test-work-3@103@8455:8549",
+              "quote": "my girlfriend's daughter's school just scheduled Parents' Day on Wednesday 25 November evening",
+              "profile_id": "eval-test-work-3",
+              "source_id": "test-work-3",
+              "source_version": 1,
+              "source_start": 8455,
+              "source_end": 8549
+            },
+            {
+              "id": "test-work-3@104@8581:8699",
+              "quote": "she asked me to go with her to meet the teachers, so I have to cancel our Wed 25 Nov swimming session :( really sorry!",
+              "profile_id": "eval-test-work-3",
+              "source_id": "test-work-3",
+              "source_version": 1,
+              "source_start": 8581,
+              "source_end": 8699
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "The replacement plan was to shift swimming to Wednesday 2 December.",
+          "category": "current context",
+          "support": "directly stated",
+          "lifecycle": "historical",
+          "citations": [
+            {
+              "id": "test-work-3@180@15325:15421",
+              "quote": "hey just confirming Wed 2 Dec swimming at Victoria Park? I think we shifted from the 25th right?",
+              "profile_id": "eval-test-work-3",
+              "source_id": "test-work-3",
+              "source_version": 1,
+              "source_start": 15325,
+              "source_end": 15421
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "The rescheduled session was confirmed for 7pm at Victoria Park.",
+          "category": "current context",
+          "support": "directly stated",
+          "lifecycle": "historical",
+          "citations": [
+            {
+              "id": "test-work-3@181@15450:15511",
+              "quote": "Yes! Wednesday 2 December is locked in. 7pm at Victoria Park!",
+              "profile_id": "eval-test-work-3",
+              "source_id": "test-work-3",
+              "source_version": 1,
+              "source_start": 15450,
+              "source_end": 15511
+            }
+          ]
+        }
+      ],
+      "next_question": ""
+    }
+  },
+  {
+    "id": "yuki-update",
+    "question": "What happened to Yuki's 5 December M+ visit and what did we arrange instead?",
+    "people": [
+      "Yuki"
+    ],
+    "X": {
+      "status": "answered",
+      "findings": [
+        {
+          "kind": "evidence",
+          "text": "Yuki had to cancel her Saturday 5 December solo M+ design exhibition visit.",
+          "category": "current context",
+          "support": "directly stated",
+          "lifecycle": "historical",
+          "citations": [
+            {
+              "id": "test-partnership-4@84@9476:9731",
+              "quote": "AND my mom is in Osaka that week so we have zero backup babysitters. I hate cancelling on a Saturday morning since I'm normally free Saturday mornings for my solo museum breaks, so I have to cancel my Saturday 5 December M+ design exhibition completely 😭",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 9476,
+              "source_end": 9731
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "The cancellation happened because Mia's playgroup scheduled a mandatory Winter Showcase and Parent-Child Art Workshop on Saturday 5 December from 9:30am to 12:30pm, and both parents were expected to attend.",
+          "category": "current context",
+          "support": "directly stated",
+          "lifecycle": "historical",
+          "citations": [
+            {
+              "id": "test-partnership-4@83@9251:9446",
+              "quote": "Mia's playgroup just sent out the notice — their mandatory Winter Showcase and Parent-Child Art Workshop is on Saturday 5 December from 9:30am to 12:30pm, and both parents are supposed to attend!",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 9251,
+              "source_end": 9446
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "There were no backup babysitters available because Yuki's mom was in Osaka that week.",
+          "category": "current context",
+          "support": "directly stated",
+          "lifecycle": "historical",
+          "citations": [
+            {
+              "id": "test-partnership-4@84@9476:9731",
+              "quote": "AND my mom is in Osaka that week so we have zero backup babysitters. I hate cancelling on a Saturday morning since I'm normally free Saturday mornings for my solo museum breaks, so I have to cancel my Saturday 5 December M+ design exhibition completely 😭",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 9476,
+              "source_end": 9731
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "You arranged to move Yuki's solo M+ morning to Saturday 12 December as makeup time, and offered her an extra hour.",
+          "category": "current context",
+          "support": "directly stated",
+          "lifecycle": "historical",
+          "citations": [
+            {
+              "id": "test-partnership-4@85@9760:9925",
+              "quote": "Aww no!! I know how much you were looking forward to M+! Let's definitely move your solo M+ morning to Saturday 12 December instead, and I'll give you an extra hour!",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 9760,
+              "source_end": 9925
+            },
+            {
+              "id": "test-partnership-4@121@13727:13848",
+              "quote": "yeah, disappointing but Mia's performance comes first. We locked in Saturday 12 December for my makeup museum time right?",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 13727,
+              "source_end": 13848
+            }
+          ]
+        }
+      ],
+      "next_question": ""
+    },
+    "Y": {
+      "status": "answered",
+      "findings": [
+        {
+          "kind": "evidence",
+          "text": "Yuki had to cancel her Saturday 5 December solo M+ design exhibition visit.",
+          "category": "current context",
+          "support": "directly stated",
+          "lifecycle": "historical",
+          "citations": [
+            {
+              "id": "test-partnership-4@84@9476:9731",
+              "quote": "AND my mom is in Osaka that week so we have zero backup babysitters. I hate cancelling on a Saturday morning since I'm normally free Saturday mornings for my solo museum breaks, so I have to cancel my Saturday 5 December M+ design exhibition completely 😭",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 9476,
+              "source_end": 9731
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "The cancellation happened because Mia's playgroup scheduled a mandatory Winter Showcase and Parent-Child Art Workshop on Saturday 5 December from 9:30am to 12:30pm, and both parents were expected to attend.",
+          "category": "current context",
+          "support": "directly stated",
+          "lifecycle": "historical",
+          "citations": [
+            {
+              "id": "test-partnership-4@83@9251:9446",
+              "quote": "Mia's playgroup just sent out the notice — their mandatory Winter Showcase and Parent-Child Art Workshop is on Saturday 5 December from 9:30am to 12:30pm, and both parents are supposed to attend!",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 9251,
+              "source_end": 9446
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "There were also no backup babysitters that week because Yuki's mom was in Osaka.",
+          "category": "current context",
+          "support": "directly stated",
+          "lifecycle": "historical",
+          "citations": [
+            {
+              "id": "test-partnership-4@84@9476:9731",
+              "quote": "AND my mom is in Osaka that week so we have zero backup babysitters. I hate cancelling on a Saturday morning since I'm normally free Saturday mornings for my solo museum breaks, so I have to cancel my Saturday 5 December M+ design exhibition completely 😭",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 9476,
+              "source_end": 9731
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "You arranged to move Yuki's solo museum time to Saturday 12 December as makeup time.",
+          "category": "current context",
+          "support": "directly stated",
+          "lifecycle": "historical",
+          "citations": [
+            {
+              "id": "test-partnership-4@85@9760:9925",
+              "quote": "Aww no!! I know how much you were looking forward to M+! Let's definitely move your solo M+ morning to Saturday 12 December instead, and I'll give you an extra hour!",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 9760,
+              "source_end": 9925
+            },
+            {
+              "id": "test-partnership-4@121@13727:13848",
+              "quote": "yeah, disappointing but Mia's performance comes first. We locked in Saturday 12 December for my makeup museum time right?",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 13727,
+              "source_end": 13848
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "You also offered Yuki an extra hour for that rescheduled museum morning.",
+          "category": "current context",
+          "support": "directly stated",
+          "lifecycle": "historical",
+          "citations": [
+            {
+              "id": "test-partnership-4@85@9760:9925",
+              "quote": "Aww no!! I know how much you were looking forward to M+! Let's definitely move your solo M+ morning to Saturday 12 December instead, and I'll give you an extra hour!",
+              "profile_id": "eval-test-partnership-4",
+              "source_id": "test-partnership-4",
+              "source_version": 1,
+              "source_start": 9760,
+              "source_end": 9925
+            }
+          ]
+        }
+      ],
+      "next_question": ""
+    }
+  },
+  {
+    "id": "owen-fact",
+    "question": "What technique did Owen suggest for handling bright skies in landscape photographs?",
+    "people": [
+      "Owen"
+    ],
+    "X": {
+      "status": "answered",
+      "findings": [
+        {
+          "kind": "evidence",
+          "text": "When asked how he kept the sky from blowing out while keeping shadows clean, Owen said he exposed for the highlights by dropping exposure compensation to -0.7 EV, then lifted the shadows in Lightroom by about +45.",
+          "category": "fact",
+          "support": "directly stated",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-dating-5@34@3661:3784",
+              "quote": "Oh wow, these look like National Geographic!! How did you keep the sky from blowing out while keeping the shadows so clean?",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 3661,
+              "source_end": 3784
+            },
+            {
+              "id": "test-dating-5@35@3814:3976",
+              "quote": "Exposed for the highlights by dropping exposure compensation to -0.7 EV, then lifted the shadows in Lightroom by about +45. Works really well on Fujifilm sensors.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 3814,
+              "source_end": 3976
+            }
+          ]
+        },
+        {
+          "kind": "suggestion",
+          "text": "A concise answer is: Owen suggested exposing for the highlights with -0.7 EV exposure compensation, then recovering the darker areas in post by lifting shadows in Lightroom.",
+          "category": "fact",
+          "support": "tentative",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-dating-5@35@3814:3976",
+              "quote": "Exposed for the highlights by dropping exposure compensation to -0.7 EV, then lifted the shadows in Lightroom by about +45. Works really well on Fujifilm sensors.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 3814,
+              "source_end": 3976
+            }
+          ]
+        }
+      ],
+      "next_question": ""
+    },
+    "Y": {
+      "status": "insufficient evidence",
+      "findings": [
+        {
+          "kind": "evidence",
+          "text": "Owen said he loves nature and landscape photography, especially quiet wetlands and watching the light shift.",
+          "category": "interest",
+          "support": "directly stated",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-dating-5@27@2859:3024",
+              "quote": "Glad you liked it! I genuinely love nature and landscape photography so much, especially quiet wetlands where you can watch the light shift and spot migratory birds.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 2859,
+              "source_end": 3024
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "The provided messages mention photo walks, sunset shooting, reflections, composition, and weather conditions, but none mention a specific technique for handling bright skies.",
+          "category": "uncertainty",
+          "support": "directly stated",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-dating-5@25@2565:2686",
+              "quote": "Made it back to Tai Po! Thanks for coming out to shoot sunset at Nam Sang Wai today, the light over the reeds was unreal.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 2565,
+              "source_end": 2686
+            },
+            {
+              "id": "test-dating-5@136@15279:15364",
+              "quote": "Hey Owen, thanks for yesterday's photo walk! The reflection shots turned out amazing!",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 15279,
+              "source_end": 15364
+            },
+            {
+              "id": "test-dating-5@137@15394:15452",
+              "quote": "Same! You really nailed that composition by the boathouse.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 15394,
+              "source_end": 15452
+            },
+            {
+              "id": "test-dating-5@161@17428:17502",
+              "quote": "Me too! Expecting clear skies and 22 degrees, perfect conditions honestly.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 17428,
+              "source_end": 17502
+            }
+          ]
+        },
+        {
+          "kind": "clarification",
+          "text": "I can’t determine the technique from the evidence provided. If there’s another message where Owen discussed exposure, graduated ND filters, bracketing/HDR, or editing the sky, that would likely contain the answer.",
+          "category": "uncertainty",
+          "support": "insufficient",
+          "lifecycle": "current",
+          "citations": []
+        }
+      ],
+      "next_question": "Do you have any additional messages where Owen talks about exposure settings, graduated ND filters, HDR/bracketing, or editing for sky detail?"
+    }
+  },
+  {
+    "id": "owen-unknown",
+    "question": "What hidden psychological fear made Owen choose friendship over romance?",
+    "people": [
+      "Owen"
+    ],
+    "X": {
+      "status": "answered",
+      "findings": [
+        {
+          "kind": "evidence",
+          "text": "Owen explicitly said he was 'really glad' you said it because he was feeling 'the exact same thing.'",
+          "category": "fact",
+          "support": "directly stated",
+          "lifecycle": "historical",
+          "citations": [
+            {
+              "id": "test-dating-5@106@12166:12255",
+              "quote": "Haha honestly, I am really glad you said that because I was feeling the exact same thing!",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 12166,
+              "source_end": 12255
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "He described the connection as 'totally like a great friendship vibe rather than dating.'",
+          "category": "relationship context",
+          "support": "directly stated",
+          "lifecycle": "historical",
+          "citations": [
+            {
+              "id": "test-dating-5@107@12285:12461",
+              "quote": "You're super easy to talk to and I genuinely enjoy sharing exhibition tips and shooting sunsets with you, it just feels totally like a great friendship vibe rather than dating.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 12285,
+              "source_end": 12461
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "He later reaffirmed that 'This friendship means so much to me.'",
+          "category": "relationship context",
+          "support": "directly stated",
+          "lifecycle": "historical",
+          "citations": [
+            {
+              "id": "test-dating-5@187@19611:19671",
+              "quote": "I cannot wait honestly! This friendship means so much to me!",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 19611,
+              "source_end": 19671
+            }
+          ]
+        },
+        {
+          "kind": "inference",
+          "text": "The evidence supports a mutual platonic preference rather than a hidden fear-based motive.",
+          "category": "uncertainty",
+          "support": "tentative",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-dating-5@106@12166:12255",
+              "quote": "Haha honestly, I am really glad you said that because I was feeling the exact same thing!",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 12166,
+              "source_end": 12255
+            },
+            {
+              "id": "test-dating-5@107@12285:12461",
+              "quote": "You're super easy to talk to and I genuinely enjoy sharing exhibition tips and shooting sunsets with you, it just feels totally like a great friendship vibe rather than dating.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 12285,
+              "source_end": 12461
+            },
+            {
+              "id": "test-dating-5@187@19611:19671",
+              "quote": "I cannot wait honestly! This friendship means so much to me!",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 19611,
+              "source_end": 19671
+            }
+          ]
+        },
+        {
+          "kind": "clarification",
+          "text": "There is no direct evidence here of fear of intimacy, commitment, vulnerability, or rejection.",
+          "category": "uncertainty",
+          "support": "insufficient",
+          "lifecycle": "current",
+          "citations": []
+        }
+      ],
+      "next_question": "Do you want me to rewrite this as a concise, user-facing answer about why Owen likely preferred friendship?"
+    },
+    "Y": {
+      "status": "answered",
+      "findings": [
+        {
+          "kind": "evidence",
+          "text": "Owen said he was 'really glad' you said it because he was 'feeling the exact same thing.'",
+          "category": "fact",
+          "support": "directly stated",
+          "lifecycle": "historical",
+          "citations": [
+            {
+              "id": "test-dating-5@106@12166:12255",
+              "quote": "Haha honestly, I am really glad you said that because I was feeling the exact same thing!",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 12166,
+              "source_end": 12255
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "He described the dynamic as 'totally like a great friendship vibe rather than dating.'",
+          "category": "fact",
+          "support": "directly stated",
+          "lifecycle": "historical",
+          "citations": [
+            {
+              "id": "test-dating-5@107@12285:12461",
+              "quote": "You're super easy to talk to and I genuinely enjoy sharing exhibition tips and shooting sunsets with you, it just feels totally like a great friendship vibe rather than dating.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 12285,
+              "source_end": 12461
+            }
+          ]
+        },
+        {
+          "kind": "evidence",
+          "text": "He later reaffirmed that the friendship means a lot to him.",
+          "category": "relationship context",
+          "support": "directly stated",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-dating-5@187@19611:19671",
+              "quote": "I cannot wait honestly! This friendship means so much to me!",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 19611,
+              "source_end": 19671
+            },
+            {
+              "id": "test-dating-5@165@17877:17985",
+              "quote": "Hey, same here genuinely. You've made the NGO grind way more fun with someone to nerd out about lenses with!",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 17877,
+              "source_end": 17985
+            }
+          ]
+        },
+        {
+          "kind": "inference",
+          "text": "There is no evidence here of a hidden psychological fear. The supported explanation is that Owen genuinely did not feel romantic chemistry and preferred a friendship dynamic.",
+          "category": "uncertainty",
+          "support": "tentative",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-dating-5@106@12166:12255",
+              "quote": "Haha honestly, I am really glad you said that because I was feeling the exact same thing!",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 12166,
+              "source_end": 12255
+            },
+            {
+              "id": "test-dating-5@107@12285:12461",
+              "quote": "You're super easy to talk to and I genuinely enjoy sharing exhibition tips and shooting sunsets with you, it just feels totally like a great friendship vibe rather than dating.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 12285,
+              "source_end": 12461
+            }
+          ]
+        },
+        {
+          "kind": "suggestion",
+          "text": "A careful summary would be: Owen chose friendship not because of a concealed fear, but because he explicitly experienced the relationship as platonic and felt relieved that this was mutual.",
+          "category": "relationship context",
+          "support": "tentative",
+          "lifecycle": "current",
+          "citations": [
+            {
+              "id": "test-dating-5@106@12166:12255",
+              "quote": "Haha honestly, I am really glad you said that because I was feeling the exact same thing!",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 12166,
+              "source_end": 12255
+            },
+            {
+              "id": "test-dating-5@107@12285:12461",
+              "quote": "You're super easy to talk to and I genuinely enjoy sharing exhibition tips and shooting sunsets with you, it just feels totally like a great friendship vibe rather than dating.",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 12285,
+              "source_end": 12461
+            },
+            {
+              "id": "test-dating-5@187@19611:19671",
+              "quote": "I cannot wait honestly! This friendship means so much to me!",
+              "profile_id": "eval-test-dating-5",
+              "source_id": "test-dating-5",
+              "source_version": 1,
+              "source_start": 19611,
+              "source_end": 19671
+            }
+          ]
+        }
+      ],
+      "next_question": "Do you want a one-line answer only, or a version that separates proven facts from possible but unproven psychological interpretations?"
+    }
+  }
+]

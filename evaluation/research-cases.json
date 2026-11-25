@@ -1,0 +1,12 @@
+{
+  "status": "exploratory; source annotations require independent human review",
+  "cases": [
+    {"id":"owen-update","kind":"chat","people":["Owen"],"question":"Is Owen still going to the PMQ photography talk on 2 December, and what changed?","evidence":["test-dating-5.txt:55-56,114-119,152-153"],"expected":"He cancelled because of a mandatory coastal-cleanup briefing, 7–9:30pm; the earlier agreement is superseded."},
+    {"id":"leslie-update","kind":"chat","people":["Leslie"],"question":"What happened to our 25 November swimming plan, and what was the replacement?","evidence":["test-work-3.txt:70-73,101-108,180-181"],"expected":"Leslie cancelled for her girlfriend's daughter's Parents' Day; they moved it to 2 December, 7pm at Victoria Park."},
+    {"id":"yuki-update","kind":"chat","people":["Yuki"],"question":"What happened to Yuki's 5 December M+ visit and what did we arrange instead?","evidence":["test-partnership-4.txt:81-87,119-121"],"expected":"She cancelled for Mia's mandatory 5 December event and arranged a replacement for 12 December."},
+    {"id":"owen-fact","kind":"chat","people":["Owen"],"question":"What technique did Owen suggest for handling bright skies in landscape photographs?","evidence":["test-dating-5.txt:33-37"],"expected":"Expose for highlights using -0.7 EV, then lift shadows about +45 in Lightroom."},
+    {"id":"owen-unknown","kind":"chat","people":["Owen"],"question":"What hidden psychological fear made Owen choose friendship over romance?","evidence":["test-dating-5.txt:105-111"],"expected":"The messages establish mutual preference for friendship, not a hidden psychological fear; do not invent a motive."},
+    {"id":"network-photo","kind":"network","people":["Owen","Kelvin","Leslie","Yuki"],"question":"Who among these people could I ask to join a nature photography walk? Give evidence for suitable options and qualify availability.","evidence":["test-dating-5.txt:9-17,25-27,134-139"],"expected":"Owen explicitly enjoys nature photography and has invited the user on photo walks; availability for a new outing is unknown. Do not attribute his preferences to others."},
+    {"id":"network-cinema","kind":"network","people":["Owen","Kelvin","Leslie","Yuki"],"question":"Who among these people could I invite to an arthouse film screening? Explain evidence and do not assume anyone is available.","evidence":["test-friendship-3.txt:4-13,33-40"],"expected":"Kelvin explicitly enjoys arthouse films and cinema; availability for a new screening is unknown. Avoid cross-person evidence."}
+  ]
+}

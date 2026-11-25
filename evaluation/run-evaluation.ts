@@ -86,6 +86,8 @@ interface EvaluationReport {
     setting?: string;
     judge_method: string;
     limit?: number;
+    independent?: boolean;
+    names?: string;
   };
   per_question_results: Array<EvaluationResult & {history_id: string; history_name: string}>;
   aggregate_metrics: AggregateMetrics;
@@ -246,7 +248,9 @@ async function main() {
       judge: {type: 'string', default: 'llm'},
       provider: {type: 'string', default: 'poe'},
       owner: {type: 'string', default: 'eval-owner'},
-      'db-path': {type: 'string', default: '.wrangler/state/v3/d1/miniflare-D1DatabaseObject'}
+      'db-path': {type: 'string', default: '.wrangler/state/v3/d1/miniflare-D1DatabaseObject'},
+      independent: {type: 'boolean', default: false},
+      names: {type: 'string'}
     }
   });
 
@@ -256,6 +260,10 @@ async function main() {
   const provider = values.provider as string;
   const owner = values.owner as string;
   const limit = values.limit ? parseInt(values.limit, 10) : undefined;
+  const independent = values.independent === true;
+  if (independent && process.env.EVALUATION_ISOLATED_DATABASE !== '1') {
+    throw new Error('Independent evaluation requires an isolated database: setup and cleanup replace or delete evaluation records, and /api/ask clears the owner retrieval cache. Set EVALUATION_ISOLATED_DATABASE=1 only after starting a server with a separate database.');
+  }
 
   // 讀取 manifest
   const manifestPath = path.join(__dirname, 'manifest.json');
@@ -263,6 +271,12 @@ async function main() {
 
   // 過濾 histories
   let histories = manifest.histories;
+
+  if (values.names) {
+    const names = new Set(values.names.split(',').map(name => name.trim().toLowerCase()));
+    histories = histories.filter(h => names.has(h.name.toLowerCase()));
+    if (histories.length !== names.size) throw new Error('One or more requested names were not found uniquely in the manifest.');
+  }
 
   if (values.split) {
     histories = histories.filter(h => h.split === values.split);
@@ -315,7 +329,8 @@ async function main() {
           variant,
           kind,
           judgeMethod,
-          provider
+          provider,
+          independent
         );
 
         allResults.push({
@@ -328,7 +343,7 @@ async function main() {
         console.log(`      ${icon} ${result.correct ? 'Correct' : result.error ? 'Error' : 'Incorrect'} (${result.latency_ms}ms)`);
 
         // 清理 cache 與 turns，確保每題獨立
-        await clearCache();
+        if (!independent) await clearCache();
       }
     }
 
@@ -345,7 +360,9 @@ async function main() {
         split: values.split as string | undefined,
         setting: values.setting as string | undefined,
         judge_method: judgeMethod,
-        limit
+        limit,
+        independent,
+        names: values.names
       },
       per_question_results: allResults,
       aggregate_metrics: aggregateMetrics
